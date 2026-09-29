@@ -37,7 +37,7 @@
     nav {
       background-color: #263c32;
       color: white;
-      padding: 18px 8%;
+      padding: 18px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -48,18 +48,19 @@
       font-size: 1.15rem;
       font-weight: bold;
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: center;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -299,7 +300,7 @@
 
     /* ---------- MOBILE ---------- */
 
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
 
       nav {
         flex-direction: column;
@@ -307,6 +308,7 @@
       }
 
       .nav-links {
+        flex-wrap: wrap;
         gap: 15px;
       }
 
@@ -339,8 +341,9 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#work">Case Studies</a>
-      <a href="#side-projects">Problems I Couldn't Leave Alone</a>
-      <a href="#background">Professional Background</a>
+      <a href="#side-projects">Side Projects</a>
+      <a href="#background">Resume</a>
+      <a href="#background">Recommendations</a>
 
       <a
         href="https://www.linkedin.com/in/loraanderson410"
@@ -405,7 +408,7 @@
           About Me
         </div>
 
-        <h2>Problem solving has been the common thread throughout my career.</h2>
+        <h2>Curious by nature. Solution focused by habit.</h2>
 
         <p class="section-intro">
           My background spans operations, compliance, administration,
@@ -418,8 +421,9 @@
         <p class="section-intro">
           I'm also a lifelong learner. If I don't know how to do something,
           I'm usually more interested in figuring it out than avoiding it.
-          This portfolio is both a collection of my work and a place to
-          document what I'm learning along the way.
+          This is a place to share some of what I've built along the way,
+          whether it started with a business problem, something I wanted
+          to learn, or simply a question I couldn't leave alone.
         </p>
 
       </div>
@@ -448,11 +452,19 @@
           </p>
 
           <p>
-            A fictional business case study exploring workforce management,
-            customer operations, and organizational performance using
-            synthetic data. The project follows the information from data
-            preparation and analysis through visualization and, ultimately,
-            operational recommendations.
+            I created Northstar IT because I wanted a realistic environment
+            where I could keep building my data skills while working through
+            the kinds of operational problems I actually enjoy solving.
+          </p>
+
+          <p>
+            Northstar is a fictional IT company with people management and
+            operational challenges. I'm building the synthetic data behind
+            the company, then using Excel, SQL, and Power BI to clean it,
+            explore it, and turn it into useful information. The end goal
+            isn't just a dashboard. It's to use the data to identify problems,
+            make operational recommendations, and create the kind of reporting
+            leadership could actually use to make decisions.
           </p>
 
           <div class="tags">
@@ -497,21 +509,48 @@
         <div class="side-project-list">
 
           <div class="side-project-item">
-            <h3>Public Benefits Process Analysis</h3>
+
+            <h3>When a Process Becomes the Project</h3>
+
             <p>
-              An independent look at a complex public benefits process,
-              documenting the user journey, communication gaps, friction
-              points, and opportunities for process improvement.
+              My experience navigating Oregon's unemployment process left me
+              with a lot of questions about the process itself. After enough
+              confusing instructions, communication gaps, and dead ends, my
+              operations brain took over.
             </p>
+
+            <p>
+              It was easier to start mapping the process and thinking about
+              how it could work better than to keep getting annoyed by it.
+              The result is an independent look at the user journey, friction
+              points, communication gaps, and opportunities for improvement.
+            </p>
+
           </div>
 
+
           <div class="side-project-item">
-            <h3>Canine Allergy Data Tracker</h3>
+
+            <h3>Thor's Allergy Tracker</h3>
+
             <p>
-              Turning inconsistent observations into structured data that
-              can reveal trends and support more productive conversations
-              with a veterinary professional.
+              Thor, my Catahoula Beagle mix, developed a nasty skin allergy
+              that we haven't been able to pin down. With food, medication,
+              grooming, weather, and environmental factors all potentially
+              playing a role, “I think it might be worse” wasn't giving us
+              much useful information.
             </p>
+
+            <p>
+              So naturally, I decided to build a spreadsheet.
+            </p>
+
+            <p>
+              The goal is to track his symptoms alongside the things that
+              could be influencing them, look for patterns over time, and
+              give his vet something more useful to work with than my memory.
+            </p>
+
           </div>
 
         </div>
@@ -627,7 +666,5 @@
 
 
 </body>
-
-</html>
 
 </html>
