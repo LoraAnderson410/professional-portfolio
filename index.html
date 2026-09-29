@@ -170,6 +170,22 @@
       background-color: white;
     }
 
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    }
+
 
     /* ---------- FEATURED PROJECT ---------- */
 
@@ -246,6 +262,16 @@
       margin-top: 0;
     }
 
+    .side-projects .button {
+      background-color: #f8f7f3;
+      color: #263c32;
+      margin-top: 8px;
+    }
+
+    .side-projects .button:hover {
+      background-color: #e8ece6;
+    }
+
 
     /* ---------- PROFESSIONAL BACKGROUND ---------- */
 
@@ -318,8 +344,13 @@
       }
 
       .side-project-list,
-      .background-grid {
+      .background-grid,
+      .about-layout {
         grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        max-width: 300px;
       }
 
     }
@@ -342,7 +373,7 @@
       <a href="#about">About</a>
       <a href="#work">Case Studies</a>
       <a href="#side-projects">Side Projects</a>
-      <a href="#background">Resume</a>
+      <a href="LA%20Resume.pdf" target="_blank">Resume</a>
       <a href="#background">Recommendations</a>
 
       <a
@@ -404,27 +435,42 @@
 
       <div class="section-content">
 
-        <div class="eyebrow">
-          About Me
+        <div class="about-layout">
+
+          <div>
+
+            <div class="eyebrow">
+              About Me
+            </div>
+
+            <h2>Curious by nature. Solution focused by habit.</h2>
+
+            <p class="section-intro">
+              My background spans operations, compliance, administration,
+              process improvement, and people leadership. Regardless of the
+              role, I tend to do the same thing: understand how the work is
+              actually happening, identify what is getting in the way, and
+              build practical solutions that make it work better.
+            </p>
+
+            <p class="section-intro">
+              I'm also a lifelong learner. If I don't know how to do something,
+              I'm usually more interested in figuring it out than avoiding it.
+              This is a place to share some of what I've built along the way,
+              whether it started with a business problem, something I wanted
+              to learn, or simply a question I couldn't leave alone.
+            </p>
+
+          </div>
+
+          <div>
+            <img
+              class="about-photo"
+              src="Lora_and_Thor_Portfolio.png"
+              alt="Lora Anderson with Thor">
+          </div>
+
         </div>
-
-        <h2>Curious by nature. Solution focused by habit.</h2>
-
-        <p class="section-intro">
-          My background spans operations, compliance, administration,
-          process improvement, and people leadership. Regardless of the
-          role, I tend to do the same thing: understand how the work is
-          actually happening, identify what is getting in the way, and
-          build practical solutions that make it work better.
-        </p>
-
-        <p class="section-intro">
-          I'm also a lifelong learner. If I don't know how to do something,
-          I'm usually more interested in figuring it out than avoiding it.
-          This is a place to share some of what I've built along the way,
-          whether it started with a business problem, something I wanted
-          to learn, or simply a question I couldn't leave alone.
-        </p>
 
       </div>
 
@@ -526,6 +572,13 @@
               points, communication gaps, and opportunities for improvement.
             </p>
 
+            <a
+              class="button"
+              href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf"
+              target="_blank">
+              View Case Study
+            </a>
+
           </div>
 
 
@@ -582,6 +635,13 @@
               My professional experience across operations, leadership,
               compliance, administration, and process improvement.
             </p>
+
+            <a
+              class="button"
+              href="LA%20Resume.pdf"
+              target="_blank">
+              View Resume
+            </a>
 
           </div>
 
