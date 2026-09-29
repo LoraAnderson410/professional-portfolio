@@ -4,42 +4,630 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lora Anderson | Professional Portfolio</title>
+
+  <style>
+
+    /* ---------- BASIC PAGE SETTINGS ---------- */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2f3833;
+      background-color: #f8f7f3;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+      background-color: #263c32;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-name {
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      background-color: #e8ece6;
+      padding: 90px 8%;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #263c32;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1;
+    }
+
+    .professional-focus {
+      font-size: 1.3rem;
+      color: #5c6c63;
+      margin-top: 20px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      font-size: 1.15rem;
+      margin: 30px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #263c32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 6px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #395547;
+    }
+
+    .button-secondary {
+      background-color: transparent;
+      color: #263c32;
+      border: 2px solid #263c32;
+    }
+
+    .button-secondary:hover {
+      background-color: #263c32;
+      color: white;
+    }
+
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #263c32;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      color: #263c32;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      font-size: 1.05rem;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+      background-color: white;
+    }
+
+
+    /* ---------- FEATURED PROJECT ---------- */
+
+    .featured {
+      background-color: #f8f7f3;
+    }
+
+    .project-card {
+      background-color: white;
+      border-left: 5px solid #9a6b32;
+      padding: 35px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      margin-top: 30px;
+    }
+
+    .project-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 5px;
+    }
+
+    .project-subtitle {
+      color: #69766f;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    .tags {
+      margin-top: 25px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #e8ece6;
+      color: #34483e;
+      padding: 6px 12px;
+      margin: 4px 5px 4px 0;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+
+    /* ---------- SIDE PROJECTS ---------- */
+
+    .side-projects {
+      background-color: #263c32;
+      color: white;
+    }
+
+    .side-projects h2 {
+      color: white;
+    }
+
+    .side-projects .eyebrow {
+      color: #d7a85e;
+    }
+
+    .side-project-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .side-project-item {
+      border: 1px solid #6d8076;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .side-project-item h3 {
+      color: white;
+      margin-top: 0;
+    }
+
+
+    /* ---------- PROFESSIONAL BACKGROUND ---------- */
+
+    .background {
+      background-color: white;
+    }
+
+    .background-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .background-card {
+      background-color: #f8f7f3;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .background-card h3 {
+      margin-top: 0;
+    }
+
+
+    /* ---------- LINKEDIN ---------- */
+
+    .linkedin-section {
+      background-color: #e8ece6;
+      text-align: center;
+    }
+
+    .linkedin-section .section-content {
+      max-width: 720px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background-color: #1e2f27;
+      color: #d8dedb;
+      text-align: center;
+      padding: 30px 8%;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 750px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .side-project-list,
+      .background-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-  <header>
-    <h1>Lora Anderson</h1>
-    <p>Operations | Process Improvement | Data Driven Solutions</p>
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Lora Anderson
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Case Studies</a>
+      <a href="#side-projects">Problems I Couldn't Leave Alone</a>
+      <a href="#background">Professional Background</a>
+
+      <a
+        href="https://www.linkedin.com/in/loraanderson410"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Operations • Analysis • Improvement
+      </div>
+
+      <h1>Lora Anderson</h1>
+
+      <p class="professional-focus">
+        Operations | Process Improvement | Business Analytics
+      </p>
+
+      <p class="hero-description">
+        I build better ways of working. I look for what isn't working,
+        figure out why, and build practical solutions that make work
+        more efficient, measurable, and sustainable.
+      </p>
+
+      <a class="button" href="#work">
+        Explore My Work
+      </a>
+
+      <a
+        class="button button-secondary"
+        href="https://www.linkedin.com/in/loraanderson410"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+
+    </div>
+
   </header>
+
 
   <main>
 
-    <section>
-      <h2>About Me</h2>
-      <section>
-  <h2>About Me</h2>
 
-  <p>
-    I build better ways of working. My background spans operations, compliance,
-    administration, process improvement, and people leadership, but the common
-    thread throughout my career has been problem solving. I look for what isn't
-    working, figure out why, and build practical solutions that make work more
-    efficient, measurable, and sustainable.
-  </p>
+    <!-- ABOUT -->
 
-  <p>
-    I'm also a lifelong learner. If I don't know how to do something, I'm
-    usually more interested in figuring it out than avoiding it. This portfolio
-    is both a collection of my work and a place to document what I'm learning
-    along the way.
-  </p>
-</section>
+    <section class="about" id="about">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          About Me
+        </div>
+
+        <h2>Problem solving has been the common thread throughout my career.</h2>
+
+        <p class="section-intro">
+          My background spans operations, compliance, administration,
+          process improvement, and people leadership. Regardless of the
+          role, I tend to do the same thing: understand how the work is
+          actually happening, identify what is getting in the way, and
+          build practical solutions that make it work better.
+        </p>
+
+        <p class="section-intro">
+          I'm also a lifelong learner. If I don't know how to do something,
+          I'm usually more interested in figuring it out than avoiding it.
+          This portfolio is both a collection of my work and a place to
+          document what I'm learning along the way.
+        </p>
+
+      </div>
+
     </section>
+
+
+    <!-- FEATURED WORK -->
+
+    <section class="featured" id="work">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Featured Case Study
+        </div>
+
+        <h2>Turning information into operational decisions.</h2>
+
+        <div class="project-card">
+
+          <h3>Northstar IT</h3>
+
+          <p class="project-subtitle">
+            From Data to Operational Decisions
+          </p>
+
+          <p>
+            A fictional business case study exploring workforce management,
+            customer operations, and organizational performance using
+            synthetic data. The project follows the information from data
+            preparation and analysis through visualization and, ultimately,
+            operational recommendations.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Operations</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROBLEMS I COULDN'T LEAVE ALONE -->
+
+    <section class="side-projects" id="side-projects">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Curiosity + Problem Solving
+        </div>
+
+        <h2>Problems I Couldn't Leave Alone</h2>
+
+        <p class="section-intro">
+          Some projects start because I'm assigned a problem. Others start
+          because I encounter something that makes me wonder,
+          “Why does this work this way?”
+        </p>
+
+        <p class="section-intro">
+          I'm naturally solution focused. I'd rather put my energy into
+          figuring out how something could work better than continue being
+          annoyed by the problem.
+        </p>
+
+        <div class="side-project-list">
+
+          <div class="side-project-item">
+            <h3>Public Benefits Process Analysis</h3>
+            <p>
+              An independent look at a complex public benefits process,
+              documenting the user journey, communication gaps, friction
+              points, and opportunities for process improvement.
+            </p>
+          </div>
+
+          <div class="side-project-item">
+            <h3>Canine Allergy Data Tracker</h3>
+            <p>
+              Turning inconsistent observations into structured data that
+              can reveal trends and support more productive conversations
+              with a veterinary professional.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL BACKGROUND -->
+
+    <section class="background" id="background">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Professional Background
+        </div>
+
+        <h2>Experience is more than a list of job titles.</h2>
+
+        <div class="background-grid">
+
+          <div class="background-card">
+
+            <h3>Resume</h3>
+
+            <p>
+              My professional experience across operations, leadership,
+              compliance, administration, and process improvement.
+            </p>
+
+          </div>
+
+
+          <div class="background-card">
+
+            <h3>Professional Recommendations</h3>
+
+            <p>
+              Recommendations from people who have worked with me throughout
+              my career and can speak to how I work, lead, and solve problems.
+            </p>
+
+            <a
+              class="button"
+              href="NBAC%20Reference%20Letter.pdf"
+              target="_blank">
+              NBAC Recommendation
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="PC%20Geeks%20Reference%20Letter.pdf"
+              target="_blank">
+              PC Geeks Recommendation
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LINKEDIN -->
+
+    <section class="linkedin-section">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          More Than a Resume
+        </div>
+
+        <h2>See how I think.</h2>
+
+        <p>
+          I write about operations, leadership, process improvement,
+          workplace culture, continuous improvement, and the people side
+          of business.
+        </p>
+
+        <a
+          class="button"
+          href="https://www.linkedin.com/in/loraanderson410"
+          target="_blank"
+          rel="noopener noreferrer">
+          Visit My LinkedIn ↗
+        </a>
+
+      </div>
+
+    </section>
+
 
   </main>
 
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Lora Anderson</p>
+
+    <p>
+      Built by me while learning GitHub, HTML, and CSS.
+    </p>
+
+  </footer>
+
+
 </body>
+
+</html>
 
 </html>
