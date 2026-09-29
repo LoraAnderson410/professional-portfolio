@@ -1,5 +1,31 @@
 ## Professional Recommendations
 
+**Dorothy Provencio**  
+Executive Director (Retired)
+
+*Recommendation forthcoming*
+
+### Family Solutions
+
+**Linda Spangler**  
+Human Resources Specialist (Retired)
+
+*Recommendation forthcoming*
+
+### Family Solutions
+
+**Eric Day**  
+Safety & Facilities Manager
+
+*Recommendation forthcoming*
+
+### Zenith IT
+
+**Eric Theisen**  
+Chief Technology Officer
+
+*Recommendation forthcoming*
+
 ### National Builders & Acceptance Corporation
 
 **Neal Scoratow**  
