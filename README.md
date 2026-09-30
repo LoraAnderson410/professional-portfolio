@@ -11,21 +11,21 @@ Executive Director (Retired)
 **William Yanakos**  
 CEO
 
-[View recommendation letter](add link)
+[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/WorkWell%20Reference%20Letter.pdf))
 
 ### Friends of Children & Families
 
 **Emily Carpenter**  
 Director of HR & Finance
 
-[View recommendation letter](add link)
+[View recommendation letter]([add link](https://github.com/LoraAnderson410/professional-portfolio/blob/main/Friends%20Reference%20Letter.pdf))
 
 ### Main Street Enid
 
 **Lindy Chandler**  
 Executive Director
 
-[View recommendation letter](add link)
+[View recommendation letter]([add link](https://github.com/LoraAnderson410/professional-portfolio/blob/main/Main%20Street%20Reference-Lindy.pdf))
 
 ### National Builders & Acceptance Corporation
 
