@@ -297,14 +297,32 @@
     }
 
     .recommendation-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
       margin-top: 18px;
     }
 
-    .recommendation-links .button {
-      margin: 0;
+    .recommendation-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #d8ddd9;
+      color: #263c32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .recommendation-link:first-child {
+      border-top: 1px solid #d8ddd9;
+    }
+
+    .recommendation-link:hover {
+      color: #9a6b32;
+    }
+
+    .recommendation-arrow {
+      flex-shrink: 0;
+      font-size: 1.1rem;
     }
 
 
@@ -677,45 +695,51 @@
             <div class="recommendation-links">
 
               <a
-  class="button button-secondary"
-  href="FS%20Reference%20Letter.pdf"
-  target="_blank">
-  Family Solutions
-</a>
+                class="recommendation-link"
+                href="FS%20Reference%20Letter.pdf"
+                target="_blank">
+                Family Solutions
+                <span class="recommendation-arrow">→</span>
+              </a>
 
               <a
-                class="button button-secondary"
+                class="recommendation-link"
                 href="WorkWell%20Reference%20Letter.pdf"
                 target="_blank">
                 WorkWell
+                <span class="recommendation-arrow">→</span>
               </a>
 
               <a
-                class="button button-secondary"
+                class="recommendation-link"
                 href="Friends%20Reference%20Letter.pdf"
                 target="_blank">
                 Friends of Children & Families
+                <span class="recommendation-arrow">→</span>
               </a>
 
               <a
-                class="button button-secondary"
+                class="recommendation-link"
                 href="Main%20Street%20Reference-Lindy.pdf"
                 target="_blank">
                 Main Street Enid
+                <span class="recommendation-arrow">→</span>
               </a>
 
               <a
-                class="button button-secondary"
+                class="recommendation-link"
                 href="NBAC%20Reference%20Letter.pdf"
                 target="_blank">
-                NBAC
+                National Builders & Acceptance Corporation
+                <span class="recommendation-arrow">→</span>
               </a>
 
               <a
-                class="button button-secondary"
+                class="recommendation-link"
                 href="PC%20Geeks%20Reference%20Letter.pdf"
                 target="_blank">
                 PC Geeks
+                <span class="recommendation-arrow">→</span>
               </a>
 
             </div>
