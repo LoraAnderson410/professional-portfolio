@@ -1,31 +1,933 @@
-<a href="Northstar Business Operating Model.docx" target="_blank">
-  Business & Operating Model
-</a>
+<!DOCTYPE html>
+<html lang="en">
 
-<a href="01_Northstar_Org_Chart.png" target="_blank">
-  Organization Chart
-</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a href="02_Customer_Lifecycle_Flowchart.png" target="_blank">
-  Customer Lifecycle
-</a>
+  <title>Northstar IT | Lora Anderson</title>
 
-<a href="03_Support_Escalation_Flowchart.png" target="_blank">
-  Support Escalation
-</a>
+  <style>
 
-<a href="04_Employee_Lifecycle_Flowchart.png" target="_blank">
-  Employee Lifecycle
-</a>
+    /* ---------- BASIC PAGE SETTINGS ---------- */
 
-<a href="Northstar_RACI_preview.png" target="_blank">
-  RACI Matrix
-</a>
+    * {
+      box-sizing: border-box;
+    }
 
-<a href="Northstar_Risk_preview.png" target="_blank">
-  Risk Register
-</a>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-<a href="Northstar_Governance_Matrices.xlsx" target="_blank">
-  Governance & KPI Workbook
-</a>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2f3833;
+      background-color: #f8f7f3;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+      background-color: #263c32;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-name {
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      background-color: #e8ece6;
+      padding: 80px 8%;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #263c32;
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: #5c6c63;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .hero-description {
+      max-width: 800px;
+      font-size: 1.08rem;
+      margin-top: 25px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .button {
+      display: inline-block;
+      background-color: #263c32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #395547;
+    }
+
+    .button-secondary {
+      background-color: transparent;
+      color: #263c32;
+      border: 2px solid #263c32;
+    }
+
+    .button-secondary:hover {
+      background-color: #263c32;
+      color: white;
+    }
+
+
+    /* ---------- CATEGORY NAVIGATION ---------- */
+
+    .category-nav {
+      max-width: 1000px;
+      margin: 35px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-link {
+      display: inline-block;
+      background-color: white;
+      color: #34483e;
+      padding: 9px 16px;
+      border-radius: 22px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      border: 1px solid #ccd5d0;
+    }
+
+    .category-link:hover {
+      background-color: #263c32;
+      color: white;
+      border-color: #263c32;
+    }
+
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #263c32;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #263c32;
+      margin-top: 0;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+
+    /* ---------- OVERVIEW ---------- */
+
+    .overview {
+      background-color: white;
+    }
+
+    .overview-card {
+      background-color: #f8f7f3;
+      border-left: 5px solid #9a6b32;
+      padding: 32px;
+      border-radius: 8px;
+    }
+
+
+    /* ---------- PROJECT SECTIONS ---------- */
+
+    .project-section {
+      background-color: #f8f7f3;
+    }
+
+    .project-section.alt {
+      background-color: white;
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .artifact-card {
+      background-color: white;
+      border: 1px solid #d8ddd9;
+      border-radius: 8px;
+      padding: 25px;
+    }
+
+    .project-section.alt .artifact-card {
+      background-color: #f8f7f3;
+    }
+
+    .artifact-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .artifact-card p {
+      margin-top: 0;
+    }
+
+
+    /* ---------- COMING SOON ---------- */
+
+    .coming-soon {
+      color: #69766f;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background-color: #1e2f27;
+      color: #d8dedb;
+      text-align: center;
+      padding: 30px 8%;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 850px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .artifact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Northstar IT
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Portfolio Home
+      </a>
+
+      <a href="#business-design">
+        Business Design
+      </a>
+
+      <a href="#operations">
+        Operations
+      </a>
+
+      <a href="#governance">
+        Governance
+      </a>
+
+      <a href="#data">
+        Data Architecture
+      </a>
+
+      <a href="#analytics">
+        Analytics &amp; BI
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Featured Case Study
+      </div>
+
+      <h1>Northstar IT</h1>
+
+      <p class="hero-subtitle">
+        From Business Design to Operational Decisions
+      </p>
+
+      <p class="hero-description">
+        Northstar IT is a fictional B2B technology company I created
+        as a working environment for business planning, operations,
+        systems design, data architecture, analytics, and continuous learning.
+      </p>
+
+      <div class="category-nav">
+
+        <a class="category-link" href="#business-design">
+          Business Design
+        </a>
+
+        <a class="category-link" href="#operations">
+          Operations
+        </a>
+
+        <a class="category-link" href="#governance">
+          Governance
+        </a>
+
+        <a class="category-link" href="#data">
+          Data Architecture
+        </a>
+
+        <a class="category-link" href="#analytics">
+          Analytics &amp; BI
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- WHY NORTHSTAR EXISTS -->
+
+    <section class="overview">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Why Northstar Exists
+        </div>
+
+        <h2>A place to keep thinking, learning, and building.</h2>
+
+        <div class="overview-card">
+
+          <p>
+            I created Northstar IT because I wanted a realistic environment
+            where I could keep building my technical skills.
+            I also wanted something that would keep me thinking,
+            learning, and solving real problems.
+          </p>
+
+          <p>
+            My professional background spans operations, compliance,
+            administration, process improvement, people leadership,
+            systems, reporting, and business analysis.
+            Northstar gives me a place to connect those areas
+            instead of presenting them as unrelated skills on a resume.
+          </p>
+
+          <p>
+            The project also gives me room to learn tools and concepts
+            I have not worked with as deeply before.
+            That includes MariaDB, SQL, Power BI, Tableau,
+            relational database design, and integrated business analytics.
+          </p>
+
+          <p>
+            The goal is not just to build dashboards.
+            It is to understand how strategy, people, processes,
+            systems, data, and reporting work together.
+            Then I can use that information to make better operational decisions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BUSINESS DESIGN -->
+
+    <section class="project-section" id="business-design">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Business Design
+        </div>
+
+        <h2>Building the company before building the system.</h2>
+
+        <p class="section-intro">
+          The technical work needs a realistic business behind it.
+          These artifacts define how Northstar operates,
+          what it sells, how the organization is structured,
+          and what leadership needs the business to accomplish.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
+            <h3>Business &amp; Operating Model</h3>
+
+            <p>
+              Northstar's business model, revenue structure,
+              operating functions, core processes,
+              systems landscape, and management priorities.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar%20Business%20Operating%20Model.docx"
+              target="_blank">
+              View Operating Model
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Organization Chart</h3>
+
+            <p>
+              Visual structure showing Northstar's leadership,
+              departments, and reporting relationships.
+            </p>
+
+            <a
+              class="button"
+              href="01_Northstar_Org_Chart.png"
+              target="_blank">
+              View Org Chart
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OPERATIONS -->
+
+    <section class="project-section alt" id="operations">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Operations
+        </div>
+
+        <h2>How work moves through the business.</h2>
+
+        <p class="section-intro">
+          These process maps define key workflows
+          across customers, service delivery, support, and employees.
+          They also help identify what information the database
+          eventually needs to capture.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
+            <h3>Customer Lifecycle</h3>
+
+            <p>
+              Lead through sale, implementation,
+              adoption, support, renewal, expansion, or churn.
+            </p>
+
+            <a
+              class="button"
+              href="02_Customer_Lifecycle_Flowchart.png"
+              target="_blank">
+              View Customer Lifecycle
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Support Escalation</h3>
+
+            <p>
+              Ticket intake, prioritization,
+              SLA management, escalation,
+              resolution, and customer satisfaction.
+            </p>
+
+            <a
+              class="button"
+              href="03_Support_Escalation_Flowchart.png"
+              target="_blank">
+              View Support Flow
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Employee Lifecycle</h3>
+
+            <p>
+              Recruiting through onboarding,
+              training, performance, development,
+              movement, and separation.
+            </p>
+
+            <a
+              class="button"
+              href="04_Employee_Lifecycle_Flowchart.png"
+              target="_blank">
+              View Employee Lifecycle
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GOVERNANCE -->
+
+    <section class="project-section" id="governance">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Governance
+        </div>
+
+        <h2>Defining ownership, controls, and risk.</h2>
+
+        <p class="section-intro">
+          Governance connects processes to accountability.
+          These artifacts show who owns decisions,
+          where risk exists, and how the organization
+          creates repeatable controls around its work.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
+            <h3>RACI Matrix</h3>
+
+            <p>
+              High-level accountability across strategy,
+              operations, customer delivery, finance,
+              workforce planning, technology, and data.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar_RACI_preview.png"
+              target="_blank">
+              View RACI Matrix
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Risk Register</h3>
+
+            <p>
+              Operational, customer, financial,
+              people, technology, data,
+              security, and continuity risks.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar_Risk_preview.png"
+              target="_blank">
+              View Risk Register
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Governance Workbook</h3>
+
+            <p>
+              Working workbook containing the RACI,
+              risk register, policy and SOP indexes,
+              succession planning, data ownership,
+              and KPI dictionary.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar_Governance_Matrices.xlsx"
+              target="_blank">
+              View Governance Workbook
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DATA ARCHITECTURE -->
+
+    <section class="project-section alt" id="data">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Data Architecture
+        </div>
+
+        <h2>Connecting the business through data.</h2>
+
+        <p class="section-intro">
+          This is the next major development phase.
+          The source data now spans HR, customers,
+          subscriptions, support, projects, billing,
+          finance, sales, and product usage.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
+            <h3>Systems of Record &amp; Data Ownership</h3>
+
+            <p>
+              Defines where information originates,
+              who owns it, how sensitive it is,
+              and how it will move into the integrated environment.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar_Governance_Matrices.xlsx"
+              target="_blank">
+              View Data Ownership Matrix
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Entity Relationship Diagram</h3>
+
+            <p>
+              The ERD will define the relationships
+              between employees, customers, subscriptions,
+              projects, support, finance, and other business entities.
+            </p>
+
+            <p class="coming-soon">
+              Coming next
+            </p>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>MariaDB Database</h3>
+
+            <p>
+              The database will include raw staging,
+              validation and transformation logic,
+              normalized business tables,
+              keys, constraints, and reporting views.
+            </p>
+
+            <p class="coming-soon">
+              In development
+            </p>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>SQL Analysis</h3>
+
+            <p>
+              SQL will be used to validate the data,
+              calculate business metrics,
+              investigate operational questions,
+              and prepare reporting datasets.
+            </p>
+
+            <p class="coming-soon">
+              Coming after database build
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANALYTICS & BI -->
+
+    <section class="project-section" id="analytics">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Analytics &amp; BI
+        </div>
+
+        <h2>Turning the connected data into decisions.</h2>
+
+        <p class="section-intro">
+          Once the database is established,
+          Northstar's data will support financial,
+          customer, workforce, service,
+          and operational analysis.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
+            <h3>KPI Dictionary</h3>
+
+            <p>
+              Working definitions for growth,
+              customer, support, delivery,
+              people, and financial metrics.
+              These definitions will evolve as the SQL
+              and BI layers are developed.
+            </p>
+
+            <a
+              class="button"
+              href="Northstar_Governance_Matrices.xlsx"
+              target="_blank">
+              View KPI Dictionary
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Power BI</h3>
+
+            <p>
+              Interactive business reporting
+              and management dashboards
+              using the integrated Northstar data.
+            </p>
+
+            <p class="coming-soon">
+              Dashboard development coming soon
+            </p>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Tableau</h3>
+
+            <p>
+              A second visualization environment
+              for exploring the data and continuing
+              to build my analytics skill set.
+            </p>
+
+            <p class="coming-soon">
+              Dashboard development coming later
+            </p>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <h3>Findings &amp; Recommendations</h3>
+
+            <p>
+              The final analysis will focus on
+              what the data says about Northstar,
+              what is driving the results,
+              and what leadership could do differently.
+            </p>
+
+            <p class="coming-soon">
+              Built from the analysis, not predetermined
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Lora Anderson</p>
+
+    <p>
+      Northstar IT is a fictional business environment
+      created for learning and portfolio development.
+    </p>
+
+    <p>
+      <a href="index.html">
+        Return to Portfolio
+      </a>
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
