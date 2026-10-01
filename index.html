@@ -332,6 +332,61 @@
     }
 
 
+    /* ---------- LEARNING + LEADERSHIP ---------- */
+
+    .resources {
+      background-color: #f8f7f3;
+      scroll-margin-top: 30px;
+    }
+
+    .resource-intro {
+      max-width: 780px;
+      margin-bottom: 35px;
+    }
+
+    .resource-library-title {
+      margin-top: 40px;
+      margin-bottom: 8px;
+    }
+
+    .resource-library-intro {
+      max-width: 760px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #5c6c63;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .resource-card {
+      background-color: white;
+      border: 1px solid #d8ddd9;
+      border-radius: 8px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .resource-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .resource-card p {
+      margin-top: 0;
+      flex-grow: 1;
+    }
+
+    .resource-card .button {
+      margin-top: 10px;
+    }
+
+
     /* ---------- LINKEDIN ---------- */
 
     .linkedin-section {
@@ -379,7 +434,8 @@
       }
 
       .side-project-list,
-      .about-layout {
+      .about-layout,
+      .resource-grid {
         grid-template-columns: 1fr;
       }
 
@@ -421,6 +477,7 @@
       <a href="#side-projects">Side Projects</a>
       <a href="LA%20Resume-Public.pdf" target="_blank">Resume</a>
       <a href="#recommendations">Recommendations</a>
+      <a href="#resources">Guides</a>
 
       <a
         href="https://www.linkedin.com/in/loraanderson410"
@@ -571,9 +628,11 @@
             data, and reporting work together.
             Then I can use that information to make better operational decisions.
           </p>
- <a class="button" href="northstar.html">
+
+          <a class="button" href="northstar.html">
             Explore Northstar
           </a>
+
           <div class="tags">
             <span class="tag">Business Design</span>
             <span class="tag">Operations</span>
@@ -581,8 +640,6 @@
             <span class="tag">Data Architecture</span>
             <span class="tag">Analytics &amp; BI</span>
           </div>
-
-         
 
         </div>
 
@@ -779,40 +836,156 @@
 
     </section>
 
+
     <!-- LEARNING + LEADERSHIP -->
 
-<section class="resources" id="resources">
+    <section class="resources" id="resources">
 
-  <div class="section-content">
+      <div class="section-content">
 
-    <div class="eyebrow">
-      Learning + Leadership
-    </div>
+        <div class="eyebrow">
+          Learning + Leadership
+        </div>
 
-    <h2>Growth is better when it's shared.</h2>
+        <h2>Growth is better when it's shared.</h2>
 
-    <p class="section-intro">
-      I'm passionate about learning, but I don't think growth should stop
-      with the person who learned something.
-    </p>
+        <div class="resource-intro">
 
-    <p class="section-intro">
-      One of the things I value most in leadership is helping other people
-      build confidence, develop new skills, and have the tools they need to
-      succeed. When I learn something useful, I naturally want to document it,
-      simplify it, and make it easier for someone else to use.
-    </p>
+          <p class="section-intro">
+            I'm passionate about learning, but I don't think growth should stop
+            with the person who learned something.
+          </p>
 
-    <p class="section-intro">
-      This is a growing collection of practical guides and quick-reference
-      tools I've created for exactly that reason. They're meant to be useful,
-      approachable, and easy to come back to when you know what you're trying
-      to do but cannot remember the exact formula, syntax, or next step.
-    </p>
+          <p class="section-intro">
+            One of the things I value most in leadership is helping other people
+            build confidence, develop new skills, and have the tools they need to
+            succeed. When I learn something useful, I naturally want to document it,
+            simplify it, and make it easier for someone else to use.
+          </p>
 
-  </div>
+          <p class="section-intro">
+            This is a growing collection of practical guides and quick-reference
+            tools I've created for exactly that reason. They're meant to be useful,
+            approachable, and easy to come back to when you know what you're trying
+            to do but cannot remember the exact formula, syntax, or next step.
+          </p>
 
-</section>
+        </div>
+
+        <h3 class="resource-library-title">
+          Practical Tools &amp; Guides
+        </h3>
+
+        <p class="resource-library-intro">
+          Simple references for real-world work, learning, troubleshooting,
+          and those moments when your brain needs a little backup.
+        </p>
+
+        <div class="resource-grid">
+
+          <div class="resource-card">
+
+            <h3>Practical SQL How-To Guide</h3>
+
+            <p>
+              A beginner-friendly guide to querying, joins, data cleanup,
+              imports, validation, troubleshooting, and common SQL patterns.
+            </p>
+
+            <a
+              class="button"
+              href="Practical_SQL_How_To_Guide.pdf"
+              target="_blank">
+              View Guide
+            </a>
+
+          </div>
+
+
+          <div class="resource-card">
+
+            <h3>HeidiSQL Quick Guide</h3>
+
+            <p>
+              A practical reference for working with MariaDB through HeidiSQL,
+              including CSV imports, parser settings, warnings, and common
+              troubleshooting.
+            </p>
+
+            <a
+              class="button"
+              href="HeidiSQL_Quick_Guide.pdf"
+              target="_blank">
+              View Guide
+            </a>
+
+          </div>
+
+
+          <div class="resource-card">
+
+            <h3>Data Validation Checklist</h3>
+
+            <p>
+              Repeatable checks for row counts, duplicates, relationships,
+              reconciliation, dates, status logic, NULLs, and business rules
+              before reporting or dashboards are trusted.
+            </p>
+
+            <a
+              class="button"
+              href="Data_Validation_Checklist.pdf"
+              target="_blank">
+              View Checklist
+            </a>
+
+          </div>
+
+
+          <div class="resource-card">
+
+            <h3>Excel Formula Cheat Sheet</h3>
+
+            <p>
+              Frequently used and frequently forgotten Excel formulas for
+              lookups, conditional logic, dates, text cleanup, calculations,
+              and everyday business analysis.
+            </p>
+
+            <a
+              class="button"
+              href="Excel_Formula_Cheat_Sheet.pdf"
+              target="_blank">
+              View Cheat Sheet
+            </a>
+
+          </div>
+
+
+          <div class="resource-card">
+
+            <h3>Helpful Tools &amp; When to Use Them</h3>
+
+            <p>
+              A plain-English guide to choosing between Excel, SQL,
+              Power Query, database clients, BI tools, and other common
+              business technology.
+            </p>
+
+            <a
+              class="button"
+              href="Helpful_Tools_When_To_Use_Them.pdf"
+              target="_blank">
+              View Guide
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
     <!-- LINKEDIN -->
