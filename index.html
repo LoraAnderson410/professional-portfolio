@@ -341,32 +341,32 @@
 
     .resource-intro {
       max-width: 780px;
-      margin-bottom: 35px;
+      margin-bottom: 32px;
     }
 
     .resource-library-title {
-      margin-top: 40px;
-      margin-bottom: 8px;
+      margin-top: 35px;
+      margin-bottom: 6px;
     }
 
     .resource-library-intro {
       max-width: 760px;
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       color: #5c6c63;
     }
 
     .resource-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .resource-card {
       background-color: white;
       border: 1px solid #d8ddd9;
       border-radius: 8px;
-      padding: 25px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -374,16 +374,22 @@
 
     .resource-card h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
 
     .resource-card p {
       margin-top: 0;
+      margin-bottom: 12px;
       flex-grow: 1;
+      font-size: 0.95rem;
     }
 
     .resource-card .button {
-      margin-top: 10px;
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding: 10px 16px;
+      font-size: 0.9rem;
     }
 
 
@@ -434,9 +440,12 @@
       }
 
       .side-project-list,
-      .about-layout,
-      .resource-grid {
+      .about-layout {
         grid-template-columns: 1fr;
+      }
+
+      .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .about-photo {
@@ -451,7 +460,8 @@
 
     @media (max-width: 550px) {
 
-      .recommendation-buttons {
+      .recommendation-buttons,
+      .resource-grid {
         grid-template-columns: 1fr;
       }
 
@@ -888,8 +898,7 @@
             <h3>Practical SQL How-To Guide</h3>
 
             <p>
-              A beginner-friendly guide to querying, joins, data cleanup,
-              imports, validation, troubleshooting, and common SQL patterns.
+              SQL basics, joins, cleanup, imports, validation, and troubleshooting.
             </p>
 
             <a
@@ -907,9 +916,7 @@
             <h3>HeidiSQL Quick Guide</h3>
 
             <p>
-              A practical reference for working with MariaDB through HeidiSQL,
-              including CSV imports, parser settings, warnings, and common
-              troubleshooting.
+              HeidiSQL imports, parser settings, warnings, and common troubleshooting.
             </p>
 
             <a
@@ -927,9 +934,7 @@
             <h3>Data Validation Checklist</h3>
 
             <p>
-              Repeatable checks for row counts, duplicates, relationships,
-              reconciliation, dates, status logic, NULLs, and business rules
-              before reporting or dashboards are trusted.
+              Quick checks for counts, duplicates, relationships, dates, and business rules.
             </p>
 
             <a
@@ -947,9 +952,7 @@
             <h3>Excel Formula Cheat Sheet</h3>
 
             <p>
-              Frequently used and frequently forgotten Excel formulas for
-              lookups, conditional logic, dates, text cleanup, calculations,
-              and everyday business analysis.
+              Common Excel formulas for lookups, dates, text, logic, and everyday analysis.
             </p>
 
             <a
@@ -967,9 +970,7 @@
             <h3>Helpful Tools &amp; When to Use Them</h3>
 
             <p>
-              A plain-English guide to choosing between Excel, SQL,
-              Power Query, database clients, BI tools, and other common
-              business technology.
+              A quick guide to choosing between Excel, SQL, Power Query, BI tools, and more.
             </p>
 
             <a
