@@ -9,8 +9,6 @@
 
   <style>
 
-    /* ---------- BASIC PAGE SETTINGS ---------- */
-
     * {
       box-sizing: border-box;
     }
@@ -32,9 +30,6 @@
       color: inherit;
     }
 
-
-    /* ---------- NAVIGATION ---------- */
-
     nav {
       background-color: #263c32;
       color: white;
@@ -43,7 +38,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 30px;
-
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -73,16 +67,14 @@
       text-decoration: underline;
     }
 
-
-    /* ---------- HERO ---------- */
-
     .hero {
       background-color: #e8ece6;
-      padding: 80px 8%;
+      padding: 78px 8%;
     }
 
-    .hero-content {
-      max-width: 1000px;
+    .hero-content,
+    .section-content {
+      max-width: 1050px;
       margin: auto;
     }
 
@@ -90,7 +82,7 @@
       color: #9a6b32;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: bold;
       margin-bottom: 8px;
     }
@@ -100,6 +92,17 @@
       color: #263c32;
       font-size: clamp(3rem, 7vw, 5rem);
       line-height: 1;
+    }
+
+    h2 {
+      color: #263c32;
+      font-size: 2rem;
+      margin: 0 0 15px;
+    }
+
+    h3 {
+      color: #263c32;
+      margin-top: 0;
     }
 
     .hero-subtitle {
@@ -115,8 +118,9 @@
       margin-top: 25px;
     }
 
-
-    /* ---------- BUTTONS ---------- */
+    section {
+      padding: 70px 8%;
+    }
 
     .button {
       display: inline-block;
@@ -125,216 +129,83 @@
       text-decoration: none;
       padding: 12px 20px;
       border-radius: 6px;
-      margin-right: 8px;
-      margin-bottom: 10px;
       font-weight: bold;
+      margin-top: 12px;
     }
 
     .button:hover {
       background-color: #395547;
     }
 
-    .button-secondary {
-      background-color: transparent;
-      color: #263c32;
-      border: 2px solid #263c32;
-    }
-
-    .button-secondary:hover {
-      background-color: #263c32;
-      color: white;
-    }
-
-    .button-disabled {
-      display: inline-block;
-      background-color: #d9dedb;
-      color: #68746e;
-      padding: 12px 20px;
-      border-radius: 6px;
-      margin-right: 8px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      cursor: default;
-    }
-
-
-    /* ---------- CATEGORY NAVIGATION ---------- */
-
-    .category-nav {
-      max-width: 1000px;
-      margin: 35px auto 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .category-link {
-      display: inline-block;
-      background-color: white;
-      color: #34483e;
-      padding: 9px 16px;
-      border-radius: 22px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: bold;
-      border: 1px solid #ccd5d0;
-    }
-
-    .category-link:hover {
-      background-color: #263c32;
-      color: white;
-      border-color: #263c32;
-    }
-
-
-    /* ---------- GENERAL SECTIONS ---------- */
-
-    section {
-      padding: 70px 8%;
-    }
-
-    .section-content {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #263c32;
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-
-    h3 {
-      color: #263c32;
-      margin-top: 0;
-    }
-
-    .section-intro {
-      max-width: 830px;
-      font-size: 1.05rem;
-      margin-bottom: 30px;
-    }
-
-
-    /* ---------- OVERVIEW ---------- */
-
-    .overview {
+    .project-section {
       background-color: white;
     }
 
-    .overview-card {
+    .project-section.alt {
+      background-color: #f8f7f3;
+    }
+
+    .project-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .project-layout.reverse .project-image {
+      order: -1;
+    }
+
+    .project-copy p {
+      max-width: 700px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .project-image img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    }
+
+    .project-note {
       background-color: #f8f7f3;
       border-left: 5px solid #9a6b32;
-      padding: 32px;
-      border-radius: 8px;
+      padding: 20px 22px;
+      border-radius: 7px;
+      margin: 24px 0;
     }
 
-
-    /* ---------- PROJECT CARDS ---------- */
-
-    .projects-section {
-      background-color: #f8f7f3;
-    }
-
-    .projects-section.alt {
+    .project-section.alt .project-note {
       background-color: white;
     }
 
-    .project-card {
-      background-color: white;
-      border: 1px solid #d8ddd9;
-      border-radius: 10px;
-      padding: 32px;
-      margin-top: 28px;
+    .project-note p {
+      margin: 0;
     }
 
-    .projects-section.alt .project-card {
-      background-color: #f8f7f3;
+    .closing {
+      background-color: #263c32;
+      color: white;
     }
 
-    .project-card.featured {
-      border-left: 6px solid #9a6b32;
+    .closing h2 {
+      color: white;
     }
 
-    .project-type {
-      color: #9a6b32;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.75rem;
-      font-weight: bold;
-      margin-bottom: 6px;
+    .closing .eyebrow {
+      color: #d7a85e;
     }
 
-    .project-subtitle {
-      color: #5c6c63;
-      font-weight: bold;
+    .closing-copy {
+      max-width: 850px;
       font-size: 1.08rem;
-      margin-top: -4px;
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 30px;
+    .closing-copy p {
+      margin-bottom: 16px;
     }
-
-    .project-grid .project-card {
-      margin-top: 0;
-    }
-
-
-    /* ---------- TAGS ---------- */
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 20px 0 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      background-color: #ece8df;
-      color: #4f5e56;
-      padding: 6px 10px;
-      border-radius: 18px;
-      font-size: 0.8rem;
-      font-weight: bold;
-    }
-
-
-    /* ---------- WHAT IT SHOWS ---------- */
-
-    .skills-list {
-      margin: 18px 0 22px;
-      padding-left: 20px;
-    }
-
-    .skills-list li {
-      margin-bottom: 6px;
-    }
-
-
-    /* ---------- FUTURE PROJECTS ---------- */
-
-    .future-card {
-      border: 2px dashed #c8cfcb;
-      background-color: transparent;
-      text-align: center;
-    }
-
-    .future-card h3 {
-      color: #56635c;
-    }
-
-    .future-card p {
-      color: #69766f;
-    }
-
-
-    /* ---------- FOOTER ---------- */
 
     footer {
       background-color: #1e2f27;
@@ -348,9 +219,6 @@
       margin: 5px 0;
     }
 
-
-    /* ---------- MOBILE ---------- */
-
     @media (max-width: 850px) {
 
       nav {
@@ -358,12 +226,13 @@
         align-items: flex-start;
       }
 
-      .nav-links {
-        gap: 14px;
+      .project-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
       }
 
-      .project-grid {
-        grid-template-columns: 1fr;
+      .project-layout.reverse .project-image {
+        order: 0;
       }
 
       .hero {
@@ -390,21 +259,15 @@
 
     <div class="nav-links">
 
-      <a href="index.html">
-        Portfolio Home
-      </a>
+      <a href="index.html">Portfolio Home</a>
 
-      <a href="#northstar">
-        Northstar
-      </a>
+      <a href="#unemployment">Process Project</a>
 
-      <a href="#process-improvement">
-        Process Improvement
-      </a>
+      <a href="#thor">Thor's Tracker</a>
 
-      <a href="#personal-projects">
-        Personal Projects
-      </a>
+      <a href="guides.html">Guides</a>
+
+      <a href="recommendations.html">Recommendations</a>
 
     </div>
 
@@ -418,42 +281,25 @@
     <div class="hero-content">
 
       <div class="eyebrow">
-        Projects
+        Curiosity + Problem Solving
       </div>
 
-      <h1>Things I've Built</h1>
+      <h1>Problems I Couldn't Leave Alone</h1>
 
       <p class="hero-subtitle">
-        Business problems, personal questions, and the projects that grew from them.
+        Some projects are assigned. These weren't.
       </p>
 
       <p class="hero-description">
-        Some of my projects begin with a business question.
-        Others begin because I encounter a process, problem, or pattern
-        that I want to understand better.
+        These started because something wasn't working, didn't make sense,
+        or kept bothering me enough that I had to dig into it.
       </p>
 
       <p class="hero-description">
-        What they tend to have in common is the way I approach them:
-        understand the problem, organize the information, build something
-        useful, and keep improving it as I learn more.
+        Sometimes that turns into a case study. Sometimes it turns into
+        a spreadsheet for my dog. Either way, it usually starts the same way:
+        I want to understand what is actually going on.
       </p>
-
-      <div class="category-nav">
-
-        <a class="category-link" href="#northstar">
-          Northstar IT
-        </a>
-
-        <a class="category-link" href="#process-improvement">
-          Process Improvement
-        </a>
-
-        <a class="category-link" href="#personal-projects">
-          Personal Projects
-        </a>
-
-      </div>
 
     </div>
 
@@ -463,297 +309,201 @@
   <main>
 
 
-    <!-- PROJECT PHILOSOPHY -->
+    <!-- UNEMPLOYMENT PROJECT -->
 
-    <section class="overview">
-
-      <div class="section-content">
-
-        <div class="eyebrow">
-          How I Work
-        </div>
-
-        <h2>I usually start with a question.</h2>
-
-        <div class="overview-card">
-
-          <p>
-            I enjoy projects that require me to figure something out.
-            Sometimes that means working through a business process,
-            designing a system, analyzing data, or teaching myself a new tool.
-          </p>
-
-          <p>
-            I am especially drawn to situations where information exists
-            but is fragmented, a process technically works but creates
-            unnecessary friction, or a problem would be easier to manage
-            if the information were organized differently.
-          </p>
-
-          <p>
-            These projects are different in subject matter, but each one
-            reflects the same habits: curiosity, structured problem solving,
-            documentation, analysis, and a preference for practical solutions.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- NORTHSTAR -->
-
-    <section class="projects-section" id="northstar">
+    <section class="project-section" id="unemployment">
 
       <div class="section-content">
 
-        <div class="eyebrow">
-          Featured Project
-        </div>
+        <div class="project-layout">
 
-        <h2>Northstar IT</h2>
+          <div class="project-copy">
 
-        <p class="section-intro">
-          A fictional B2B technology company built as a complete working
-          environment for operations, governance, systems, data architecture,
-          SQL, analytics, and business intelligence.
-        </p>
-
-
-        <div class="project-card featured">
-
-          <div class="project-type">
-            Business + Analytics Case Study
-          </div>
-
-          <h3>From Business Design to Operational Decisions</h3>
-
-          <p class="project-subtitle">
-            Building the business, the processes, the data environment,
-            and the analysis behind the decisions.
-          </p>
-
-          <p>
-            I created Northstar IT because I wanted a realistic environment
-            where I could continue building technical skills while working
-            through the kinds of operational questions I actually enjoy.
-          </p>
-
-          <p>
-            Instead of starting with a dashboard, I started with the business.
-            Northstar includes an operating model, organizational structure,
-            customer and employee processes, governance materials, risk
-            management, workforce data, relational database design, SQL
-            analysis, and business intelligence.
-          </p>
-
-          <p>
-            The project allows me to connect disciplines that are often
-            treated separately: operations, people, systems, controls,
-            data quality, reporting, and decision support.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Operations</span>
-            <span class="tag">Business Design</span>
-            <span class="tag">Governance</span>
-            <span class="tag">MariaDB</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">Tableau</span>
-            <span class="tag">Data Analysis</span>
-          </div>
-
-          <a
-            class="button"
-            href="northstar.html">
-            Explore Northstar
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROCESS IMPROVEMENT -->
-
-    <section class="projects-section alt" id="process-improvement">
-
-      <div class="section-content">
-
-        <div class="eyebrow">
-          Process Improvement
-        </div>
-
-        <h2>When a frustrating process becomes an analysis project.</h2>
-
-        <p class="section-intro">
-          I tend to notice process friction quickly. When something is confusing,
-          repetitive, difficult to navigate, or requires unnecessary effort,
-          my instinct is to map what is happening and ask how it could work better.
-        </p>
-
-
-        <div class="project-card">
-
-          <div class="project-type">
-            Independent Process Analysis
-          </div>
-
-          <h3>Oregon Unemployment Identity Verification</h3>
-
-          <p class="project-subtitle">
-            A claimant-side look at process friction, exception handling,
-            communication, and accessibility.
-          </p>
-
-          <p>
-            While navigating Oregon's unemployment process, I encountered
-            unclear status messages, overlapping communication channels,
-            delayed mailed instructions, sequential document requests,
-            and an exception path that was difficult to understand.
-          </p>
-
-          <p>
-            Rather than simply documenting what went wrong, I began mapping
-            the experience as a process-improvement case study.
-          </p>
-
-          <p>
-            The analysis looks at the claimant journey, communication gaps,
-            handoffs, exception handling, accessibility, repeated contacts,
-            and opportunities to reduce both claimant effort and unnecessary
-            staff touches.
-          </p>
-
-          <p>
-            The goal is not to remove identity controls. It is to show how
-            strong controls and a clear user experience can coexist.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Process Mapping</span>
-            <span class="tag">Root Cause Analysis</span>
-            <span class="tag">Risk</span>
-            <span class="tag">Accessibility</span>
-            <span class="tag">Service Design</span>
-            <span class="tag">Continuous Improvement</span>
-          </div>
-
-          <ul class="skills-list">
-            <li>Documented the current-state claimant journey</li>
-            <li>Identified friction points and failure modes</li>
-            <li>Evaluated communication and exception pathways</li>
-            <li>Developed practical future-state recommendations</li>
-            <li>Considered both user experience and operational burden</li>
-          </ul>
-
-          <a
-            class="button"
-            href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf"
-            target="_blank">
-            View Case Study
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PERSONAL PROJECTS -->
-
-    <section class="projects-section" id="personal-projects">
-
-      <div class="section-content">
-
-        <div class="eyebrow">
-          Personal Problem Solving
-        </div>
-
-        <h2>Sometimes the spreadsheet starts at home.</h2>
-
-        <p class="section-intro">
-          Not every useful project begins at work. Personal projects can
-          reveal the same habits I use professionally: organize the information,
-          create a repeatable structure, track what changes, and look for
-          patterns instead of relying on memory.
-        </p>
-
-
-        <div class="project-grid">
-
-
-          <!-- THOR TRACKER -->
-
-          <div class="project-card">
-
-            <div class="project-type">
-              Tracking + Analysis
+            <div class="eyebrow">
+              Process Improvement
             </div>
 
-            <h3>Thor's Allergy Tracker</h3>
+            <h2>Turning Frustration Into a Case Study</h2>
 
             <p>
-              My Catahoula/Beagle mix Thor developed persistent skin and allergy symptoms with several
-              possible contributing factors, including food, medication,
-              grooming, environmental exposure, and weather.
+              This was not some massive months-long project.
+              I put most of it together in a day because I had reached the point
+              where being frustrated with the process was getting me nowhere.
             </p>
 
             <p>
-              Rather than relying on memory or impressions, I built a tracker
-              to document symptoms and possible influences over time.
+              Oregon's unemployment identity-verification process had me moving
+              between portal messages, phone calls, mailed instructions,
+              document submissions, and more waiting without always knowing
+              what was supposed to happen next.
             </p>
 
             <p>
-              The goal is to make patterns easier to recognize and provide
-              more useful information for conversations with his veterinarian.
+              Eventually my operations brain took over.
+              Instead of continuing to be annoyed, I started mapping the process,
+              documenting where things became unclear, and thinking about what
+              would make the experience easier for the person trying to navigate it.
             </p>
 
-            <div class="tags">
-              <span class="tag">Excel</span>
-              <span class="tag">Tracking</span>
-              <span class="tag">Pattern Recognition</span>
-              <span class="tag">Data Organization</span>
+            <div class="project-note">
+
+              <p>
+                In a strange way, turning it into a process problem helped.
+                It gave my brain something useful to do with the frustration.
+              </p>
+
             </div>
+
+            <p>
+              The result is a short case study looking at the claimant experience,
+              communication gaps, process loops, and a few practical ways the
+              system could be clearer.
+            </p>
 
             <a
               class="button"
-              href="Thor%20Allergy%20Tracker.xlsx"
+              href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf"
               target="_blank">
-              View Allergy Tracker
+              View Case Study
             </a>
 
           </div>
 
 
-          <!-- FUTURE PROJECT -->
+          <div class="project-image">
 
-          <div class="project-card future-card">
-
-            <div class="project-type">
-              Future Project
-            </div>
-
-            <h3>More Problems I Couldn't Leave Alone</h3>
-
-            <p>
-              This portfolio is intentionally designed to grow.
-              New projects will be added here when I find another
-              question, process, dataset, or system worth exploring.
-            </p>
-
-            <span class="button-disabled">
-              More Coming
-            </span>
+            <img
+              src="unemployment_process_loop.png"
+              alt="Circular process graphic showing repeated steps in the unemployment identity verification process">
 
           </div>
 
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THOR PROJECT -->
+
+    <section class="project-section alt" id="thor">
+
+      <div class="section-content">
+
+        <div class="project-layout reverse">
+
+
+          <div class="project-copy">
+
+            <div class="eyebrow">
+              Personal Project
+            </div>
+
+            <h2>Of Course I Built a Spreadsheet for My Dog</h2>
+
+            <p>
+              Thor has dealt with some pretty miserable skin allergies,
+              and after trying different foods, treatments, medications,
+              grooming changes, and everything else we could think of,
+              I realized I was relying far too much on memory.
+            </p>
+
+            <p>
+              Was he actually scratching more this week?
+              Did something improve after a treatment?
+              Was the weather making it worse?
+              Was I remembering the timing correctly?
+            </p>
+
+            <p>
+              "I think it might be helping" is not especially useful data.
+            </p>
+
+            <p>
+              So naturally, I built a spreadsheet.
+            </p>
+
+            <div class="project-note">
+
+              <p>
+                The goal was simple: stop guessing, keep the information
+                in one place, and make it easier to notice patterns over time.
+              </p>
+
+            </div>
+
+            <p>
+              The tracker gives me a way to record symptoms, treatments,
+              food and environmental changes, and anything else that might
+              matter. More importantly, it gives me something concrete to bring
+              to his vet instead of trying to reconstruct weeks of observations
+              from memory.
+            </p>
+
+            <p>
+              Is it the world's most sophisticated analytics project? No.
+              But it solved a real problem I cared about, which is usually
+              where my favorite projects start.
+            </p>
+
+            <a
+              class="button"
+              href="Thor%20Allergy%20Tracker.xlsx"
+              target="_blank">
+              View Thor's Allergy Tracker
+            </a>
+
+          </div>
+
+
+          <div class="project-image">
+
+            <img
+              src="thor_project_image.png"
+              alt="Thor lying in the grass">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="closing">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          What They Have in Common
+        </div>
+
+        <h2>Different problem. Same instinct.</h2>
+
+        <div class="closing-copy">
+
+          <p>
+            An unemployment process and a dog's allergy tracker obviously
+            have very little in common on the surface.
+          </p>
+
+          <p>
+            What connects them is how I tend to respond when something
+            is confusing, frustrating, or just isn't working very well.
+            I start organizing the information. I ask questions.
+            I look for patterns. Eventually I usually build something.
+          </p>
+
+          <p>
+            Sometimes that becomes a formal analysis.
+            Sometimes it is just how I get my brain to stop spinning.
+            Either way, I usually end up understanding the problem better
+            than I did when I started — and with something useful to show for it.
+          </p>
 
         </div>
 
@@ -772,14 +522,7 @@
     <p>© 2026 Lora Anderson</p>
 
     <p>
-      Projects reflect independent work, professional development,
-      and practical problem solving.
-    </p>
-
-    <p>
-      <a href="index.html">
-        Return to Portfolio
-      </a>
+      Built from real questions, real problems, and a tendency to keep digging.
     </p>
 
   </footer>
