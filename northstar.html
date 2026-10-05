@@ -144,6 +144,18 @@
       color: white;
     }
 
+    .button-disabled {
+      display: inline-block;
+      background-color: #d9dedb;
+      color: #68746e;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      cursor: default;
+    }
+
 
     /* ---------- CATEGORY NAVIGATION ---------- */
 
@@ -198,7 +210,7 @@
     }
 
     .section-intro {
-      max-width: 800px;
+      max-width: 850px;
       font-size: 1.05rem;
       margin-bottom: 30px;
     }
@@ -252,6 +264,15 @@
 
     .artifact-card p {
       margin-top: 0;
+    }
+
+    .artifact-type {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 6px;
     }
 
 
@@ -338,7 +359,7 @@
       </a>
 
       <a href="#data">
-        Data Architecture
+        Data &amp; SQL
       </a>
 
       <a href="#analytics">
@@ -367,9 +388,16 @@
       </p>
 
       <p class="hero-description">
-        Northstar IT is a fictional B2B technology company I created
-        as a working environment for business planning, operations,
-        systems design, data architecture, analytics, and continuous learning.
+        Northstar IT is a fictional B2B technology company I created as a
+        working environment for business planning, operations, governance,
+        process design, relational data, SQL analysis, business intelligence,
+        and continuous learning.
+      </p>
+
+      <p class="hero-description">
+        Rather than developing isolated technical exercises, I am building
+        Northstar as an interconnected business environment where strategy,
+        people, processes, systems, data, and reporting influence one another.
       </p>
 
       <div class="category-nav">
@@ -387,7 +415,7 @@
         </a>
 
         <a class="category-link" href="#data">
-          Data Architecture
+          Data &amp; SQL
         </a>
 
         <a class="category-link" href="#analytics">
@@ -420,31 +448,29 @@
 
           <p>
             I created Northstar IT because I wanted a realistic environment
-            where I could keep building my technical skills.
-            I also wanted something that would keep me thinking,
-            learning, and solving real problems.
+            where I could continue developing both technical and analytical
+            skills while solving the kinds of business problems that interest me.
           </p>
 
           <p>
             My professional background spans operations, compliance,
             administration, process improvement, people leadership,
-            systems, reporting, and business analysis.
-            Northstar gives me a place to connect those areas
-            instead of presenting them as unrelated skills on a resume.
+            systems, reporting, analytics, and business analysis.
+            Northstar gives me a place to connect those disciplines
+            rather than presenting them as unrelated skills on a resume.
           </p>
 
           <p>
-            The project also gives me room to learn tools and concepts
-            I have not worked with as deeply before.
-            That includes MariaDB, SQL, Power BI, Tableau,
-            relational database design, and integrated business analytics.
+            The project also gives me room to deepen my experience with
+            MariaDB, SQL, Power BI, Tableau, relational database design,
+            data validation, analytics, and integrated business reporting.
           </p>
 
           <p>
-            The goal is not just to build dashboards.
-            It is to understand how strategy, people, processes,
-            systems, data, and reporting work together.
-            Then I can use that information to make better operational decisions.
+            The goal is not simply to produce dashboards or technical files.
+            The goal is to understand what the data means, identify the
+            operational story behind it, and translate those findings into
+            decisions leadership could actually use.
           </p>
 
         </div>
@@ -467,10 +493,10 @@
         <h2>Building the company before building the system.</h2>
 
         <p class="section-intro">
-          The technical work needs a realistic business behind it.
-          These artifacts define how Northstar operates,
-          what it sells, how the organization is structured,
-          and what leadership needs the business to accomplish.
+          A useful analytics environment needs a realistic organization behind it.
+          These artifacts establish Northstar's operating model, organizational
+          structure, business functions, and management priorities before the
+          technical architecture is built around them.
         </p>
 
         <div class="artifact-grid">
@@ -478,12 +504,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Business Model</div>
+
             <h3>Business &amp; Operating Model</h3>
 
             <p>
-              Northstar's business model, revenue structure,
-              operating functions, core processes,
-              systems landscape, and management priorities.
+              Defines Northstar's business model, revenue structure,
+              operating functions, core processes, systems landscape,
+              and management priorities.
             </p>
 
             <a
@@ -498,11 +526,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Organization Design</div>
+
             <h3>Organization Chart</h3>
 
             <p>
               Visual structure showing Northstar's leadership,
-              departments, and reporting relationships.
+              departments, reporting relationships, and functional
+              organization.
             </p>
 
             <a
@@ -529,16 +560,16 @@
       <div class="section-content">
 
         <div class="eyebrow">
-          Operations
+          Operations &amp; Process Design
         </div>
 
-        <h2>How work moves through the business.</h2>
+        <h2>Understanding how work moves through the business.</h2>
 
         <p class="section-intro">
-          These process maps define key workflows
-          across customers, service delivery, support, and employees.
-          They also help identify what information the database
-          eventually needs to capture.
+          These process maps document important operational workflows across
+          customers, service delivery, support, and employees. Mapping the
+          processes helps identify ownership, handoffs, risks, decision points,
+          and the information the data environment needs to capture.
         </p>
 
         <div class="artifact-grid">
@@ -546,11 +577,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Process Map</div>
+
             <h3>Customer Lifecycle</h3>
 
             <p>
-              Lead through sale, implementation,
-              adoption, support, renewal, expansion, or churn.
+              Maps the customer journey from lead and sale through
+              implementation, adoption, support, renewal, expansion,
+              or churn.
             </p>
 
             <a
@@ -565,12 +599,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Process Map</div>
+
             <h3>Support Escalation</h3>
 
             <p>
-              Ticket intake, prioritization,
-              SLA management, escalation,
-              resolution, and customer satisfaction.
+              Maps ticket intake, prioritization, SLA management,
+              escalation, resolution, communication, and customer
+              satisfaction.
             </p>
 
             <a
@@ -585,12 +621,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Process Map</div>
+
             <h3>Employee Lifecycle</h3>
 
             <p>
-              Recruiting through onboarding,
-              training, performance, development,
-              movement, and separation.
+              Maps recruiting, hiring, onboarding, training,
+              performance, development, internal movement, and
+              employee separation.
             </p>
 
             <a
@@ -617,16 +655,16 @@
       <div class="section-content">
 
         <div class="eyebrow">
-          Governance
+          Governance &amp; People Practices
         </div>
 
-        <h2>Defining ownership, controls, and risk.</h2>
+        <h2>Turning expectations into repeatable systems.</h2>
 
         <p class="section-intro">
-          Governance connects processes to accountability.
-          These artifacts show who owns decisions,
-          where risk exists, and how the organization
-          creates repeatable controls around its work.
+          Governance connects operations to accountability. These materials
+          establish ownership, risk controls, workplace expectations,
+          decision responsibilities, policies, and management standards
+          for the fictional Northstar organization.
         </p>
 
         <div class="artifact-grid">
@@ -634,12 +672,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Governance</div>
+
             <h3>RACI Matrix</h3>
 
             <p>
-              High-level accountability across strategy,
-              operations, customer delivery, finance,
-              workforce planning, technology, and data.
+              Defines high-level accountability across strategy,
+              operations, customer delivery, finance, workforce planning,
+              technology, and data.
             </p>
 
             <a
@@ -654,12 +694,13 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Risk Management</div>
+
             <h3>Risk Register</h3>
 
             <p>
-              Operational, customer, financial,
-              people, technology, data,
-              security, and continuity risks.
+              Documents operational, customer, financial, people,
+              technology, data, security, and business continuity risks.
             </p>
 
             <a
@@ -674,13 +715,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Governance</div>
+
             <h3>Governance Workbook</h3>
 
             <p>
-              Working workbook containing the RACI,
-              risk register, policy and SOP indexes,
-              succession planning, data ownership,
-              and KPI dictionary.
+              Working workbook containing the RACI, risk register,
+              policy and SOP indexes, succession planning,
+              data ownership, and KPI dictionary.
             </p>
 
             <a
@@ -693,6 +735,71 @@
           </div>
 
 
+          <div class="artifact-card">
+
+            <div class="artifact-type">Policy</div>
+
+            <h3>AI Acceptable Use</h3>
+
+            <p>
+              Establishes responsible expectations for employee use of
+              artificial intelligence, including confidentiality,
+              human oversight, data protection, verification,
+              and appropriate business use.
+            </p>
+
+            <!-- Replace this Coming Soon button with the exact filename
+                 once the complete GitHub filename is confirmed. -->
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">People Practices</div>
+
+            <h3>Workplace Fairness</h3>
+
+            <p>
+              Establishes expectations for consistent and fair workplace
+              practices, accountability, employee treatment, and
+              management decision-making.
+            </p>
+
+            <!-- Full filename was truncated in screenshot. -->
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">People Practices</div>
+
+            <h3>Employee Handbook</h3>
+
+            <p>
+              Creates a practical framework for employee expectations,
+              workplace standards, organizational practices, and
+              consistent application of policy.
+            </p>
+
+            <!-- Full filename was truncated in screenshot. -->
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
         </div>
 
       </div>
@@ -700,23 +807,24 @@
     </section>
 
 
-    <!-- DATA ARCHITECTURE -->
+    <!-- DATA & SQL -->
 
     <section class="project-section alt" id="data">
 
       <div class="section-content">
 
         <div class="eyebrow">
-          Data Architecture
+          Data Architecture &amp; SQL
         </div>
 
-        <h2>Connecting the business through data.</h2>
+        <h2>Building a connected environment for analysis.</h2>
 
         <p class="section-intro">
-          This is the next major development phase.
-          The source data now spans HR, customers,
-          subscriptions, support, projects, billing,
-          finance, sales, and product usage.
+          Northstar's data environment is designed to connect workforce,
+          customer, subscription, service, project, financial, sales,
+          and product information. SQL is used not only to retrieve data,
+          but also to validate it, investigate business questions,
+          reconcile inconsistencies, and create reusable analytical views.
         </p>
 
         <div class="artifact-grid">
@@ -724,12 +832,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Data Governance</div>
+
             <h3>Systems of Record &amp; Data Ownership</h3>
 
             <p>
-              Defines where information originates,
-              who owns it, how sensitive it is,
-              and how it will move into the integrated environment.
+              Defines where information originates, who owns it,
+              how sensitive it is, and how information should move
+              through the integrated environment.
             </p>
 
             <a
@@ -744,53 +854,124 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">SQL</div>
+
+            <h3>Analytical Views</h3>
+
+            <p>
+              Reusable SQL views designed to organize frequently used
+              business measures and create a consistent analytical layer
+              for reporting and investigation.
+            </p>
+
+            <a
+              class="button"
+              href="01_Analytical_Views.sql"
+              target="_blank">
+              View SQL
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">SQL</div>
+
+            <h3>Ad Hoc Analysis</h3>
+
+            <p>
+              SQL queries used to explore operational questions,
+              investigate patterns, test assumptions, and answer
+              specific business questions outside routine reporting.
+            </p>
+
+            <a
+              class="button"
+              href="02_Ad_Hoc_Analysis.sql"
+              target="_blank">
+              View SQL
+            </a>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">SQL Analysis</div>
+
+            <h3>Turnover &amp; Retention Analysis</h3>
+
+            <p>
+              Workforce analysis exploring employee turnover,
+              retention patterns, organizational differences,
+              and potential areas for management attention.
+            </p>
+
+            <!-- Full filename was truncated in screenshot. -->
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">Data Quality</div>
+
+            <h3>Data Quality Reconciliation</h3>
+
+            <p>
+              SQL-based validation and reconciliation work designed to
+              identify missing, conflicting, duplicated, or inconsistent
+              information before it reaches the reporting layer.
+            </p>
+
+            <!-- Full filename was truncated in screenshot. -->
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">Data Architecture</div>
+
             <h3>Entity Relationship Diagram</h3>
 
             <p>
-              The ERD will define the relationships
-              between employees, customers, subscriptions,
-              projects, support, finance, and other business entities.
+              Documents relationships between employees, customers,
+              subscriptions, projects, support activity, financial data,
+              and other Northstar business entities.
             </p>
 
-            <p class="coming-soon">
-              Coming next
-            </p>
+            <span class="button-disabled">
+              Coming Soon
+            </span>
 
           </div>
 
 
           <div class="artifact-card">
 
-            <h3>MariaDB Database</h3>
+            <div class="artifact-type">Database</div>
+
+            <h3>MariaDB Environment</h3>
 
             <p>
-              The database will include raw staging,
-              validation and transformation logic,
-              normalized business tables,
-              keys, constraints, and reporting views.
+              Relational database environment incorporating imported
+              source data, normalized business tables, keys,
+              relationships, validation logic, and reporting views.
             </p>
 
-            <p class="coming-soon">
-              In development
-            </p>
-
-          </div>
-
-
-          <div class="artifact-card">
-
-            <h3>SQL Analysis</h3>
-
-            <p>
-              SQL will be used to validate the data,
-              calculate business metrics,
-              investigate operational questions,
-              and prepare reporting datasets.
-            </p>
-
-            <p class="coming-soon">
-              Coming after database build
-            </p>
+            <span class="button-disabled">
+              Project Environment
+            </span>
 
           </div>
 
@@ -809,16 +990,16 @@
       <div class="section-content">
 
         <div class="eyebrow">
-          Analytics &amp; BI
+          Analytics &amp; Business Intelligence
         </div>
 
-        <h2>Turning the connected data into decisions.</h2>
+        <h2>Moving from data to management decisions.</h2>
 
         <p class="section-intro">
-          Once the database is established,
-          Northstar's data will support financial,
-          customer, workforce, service,
-          and operational analysis.
+          The purpose of the Northstar data environment is not reporting
+          for reporting's sake. The analysis is designed to identify
+          patterns, explain performance, highlight risk, and provide
+          leadership with information that can support better decisions.
         </p>
 
         <div class="artifact-grid">
@@ -826,14 +1007,14 @@
 
           <div class="artifact-card">
 
+            <div class="artifact-type">Metrics</div>
+
             <h3>KPI Dictionary</h3>
 
             <p>
-              Working definitions for growth,
-              customer, support, delivery,
-              people, and financial metrics.
-              These definitions will evolve as the SQL
-              and BI layers are developed.
+              Working definitions for growth, customer, support,
+              delivery, workforce, operational, and financial metrics
+              used throughout the Northstar environment.
             </p>
 
             <a
@@ -848,52 +1029,78 @@
 
           <div class="artifact-card">
 
-            <h3>Power BI</h3>
+            <div class="artifact-type">Business Intelligence</div>
+
+            <h3>Workforce Analysis</h3>
 
             <p>
-              Interactive business reporting
-              and management dashboards
-              using the integrated Northstar data.
+              Analysis of workforce composition, turnover, retention,
+              management patterns, and other people-related indicators
+              intended to move beyond simple HR reporting into
+              operational decision support.
             </p>
 
-            <p class="coming-soon">
-              Dashboard development coming soon
-            </p>
+            <span class="button-disabled">
+              Report Coming Soon
+            </span>
 
           </div>
 
 
           <div class="artifact-card">
 
-            <h3>Tableau</h3>
+            <div class="artifact-type">Power BI</div>
+
+            <h3>Power BI Dashboard</h3>
 
             <p>
-              A second visualization environment
-              for exploring the data and continuing
-              to build my analytics skill set.
+              Interactive management reporting developed from the
+              Northstar database, beginning with workforce analysis
+              and expanding as additional business areas are completed.
             </p>
 
-            <p class="coming-soon">
-              Dashboard development coming later
-            </p>
+            <span class="button-disabled">
+              Portfolio Preview Coming Soon
+            </span>
 
           </div>
 
 
           <div class="artifact-card">
+
+            <div class="artifact-type">Tableau</div>
+
+            <h3>Tableau Dashboard</h3>
+
+            <p>
+              The Northstar workforce analysis is also being recreated
+              in Tableau to compare visualization approaches and
+              demonstrate transferability across business intelligence tools.
+            </p>
+
+            <span class="button-disabled">
+              Interactive Dashboard Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <div class="artifact-type">Decision Support</div>
 
             <h3>Findings &amp; Recommendations</h3>
 
             <p>
-              The final analysis will focus on
-              what the data says about Northstar,
-              what is driving the results,
-              and what leadership could do differently.
+              The final analytical layer focuses on what the data says,
+              why the results may be occurring, where additional
+              investigation is warranted, and what actions leadership
+              could reasonably consider.
             </p>
 
-            <p class="coming-soon">
-              Built from the analysis, not predetermined
-            </p>
+            <span class="button-disabled">
+              Analysis In Progress
+            </span>
 
           </div>
 
@@ -915,8 +1122,13 @@
     <p>© 2026 Lora Anderson</p>
 
     <p>
-      Northstar IT is a fictional business environment
-      created for learning and portfolio development.
+      Northstar IT is a fictional business environment created
+      for learning, analysis, and portfolio development.
+    </p>
+
+    <p>
+      All company information, employees, customers, operational data,
+      and analytical findings associated with Northstar are fictional.
     </p>
 
     <p>
