@@ -42,7 +42,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 30px;
-
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -119,9 +118,8 @@
       text-decoration: none;
       padding: 12px 22px;
       border-radius: 6px;
-      margin-right: 10px;
-      margin-bottom: 10px;
       font-weight: bold;
+      transition: background-color 0.2s ease;
     }
 
     .button:hover {
@@ -143,7 +141,7 @@
     /* ---------- GENERAL SECTIONS ---------- */
 
     section {
-      padding: 75px 8%;
+      padding: 70px 8%;
     }
 
     .section-content {
@@ -155,7 +153,7 @@
       color: #263c32;
       font-size: 2rem;
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     h3 {
@@ -165,6 +163,7 @@
     .section-intro {
       max-width: 760px;
       font-size: 1.05rem;
+      margin-bottom: 30px;
     }
 
 
@@ -191,88 +190,132 @@
     }
 
 
-    /* ---------- FEATURED PROJECT ---------- */
+    /* ---------- SHARED FEATURE CARD ---------- */
 
-    .featured {
-      background-color: #f8f7f3;
-    }
-
-    .project-card {
+    .feature-card {
       background-color: white;
       border-left: 5px solid #9a6b32;
-      padding: 35px;
+      padding: 32px;
       border-radius: 8px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
-    .project-card h3 {
-      font-size: 1.7rem;
-      margin-bottom: 5px;
+    .feature-card h3 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 6px;
     }
 
-    .project-subtitle {
+    .feature-subtitle {
       color: #69766f;
       font-weight: bold;
       margin-top: 0;
+      margin-bottom: 18px;
     }
 
-    .tags {
-      margin-top: 25px;
+
+    /* ---------- CATEGORY BUTTON GRID ---------- */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
     }
 
-    .tag {
-      display: inline-block;
-      background-color: #e8ece6;
-      color: #34483e;
-      padding: 6px 12px;
-      margin: 4px 5px 4px 0;
-      border-radius: 20px;
-      font-size: 0.85rem;
+    .category-link {
+      border: 2px solid #263c32;
+      color: #263c32;
+      text-decoration: none;
+      border-radius: 7px;
+      min-height: 72px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       font-weight: bold;
+      line-height: 1.3;
+      background-color: white;
+      transition: all 0.2s ease;
     }
 
-
-    /* ---------- SIDE PROJECTS ---------- */
-
-    .side-projects {
+    .category-link:hover {
       background-color: #263c32;
       color: white;
     }
 
-    .side-projects h2 {
+    .category-link.primary {
+      background-color: #263c32;
       color: white;
     }
 
-    .side-projects .eyebrow {
+    .category-link.primary:hover {
+      background-color: #395547;
+    }
+
+
+    /* ---------- NORTHSTAR ---------- */
+
+    .northstar {
+      background-color: #f8f7f3;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects {
+      background-color: #263c32;
+      color: white;
+    }
+
+    .projects h2,
+    .projects h3 {
+      color: white;
+    }
+
+    .projects .eyebrow {
       color: #d7a85e;
     }
 
-    .side-project-list {
+    .projects .section-intro {
+      color: #eef2ef;
+    }
+
+    .project-preview-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
-    .side-project-item {
+    .project-preview {
       border: 1px solid #6d8076;
-      padding: 25px;
+      padding: 24px;
       border-radius: 8px;
     }
 
-    .side-project-item h3 {
-      color: white;
+    .project-preview h3 {
       margin-top: 0;
+      margin-bottom: 8px;
     }
 
-    .side-projects .button {
+    .project-preview p {
+      margin-bottom: 0;
+      color: #eef2ef;
+    }
+
+    .projects-action {
+      margin-top: 28px;
+    }
+
+    .projects .button {
       background-color: #f8f7f3;
       color: #263c32;
-      margin-top: 8px;
     }
 
-    .side-projects .button:hover {
+    .projects .button:hover {
       background-color: #e8ece6;
     }
 
@@ -283,113 +326,40 @@
       background-color: white;
     }
 
+    .background-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
     .background-card {
       background-color: #f8f7f3;
-      padding: 35px;
+      padding: 30px;
       border-radius: 8px;
-      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
     }
 
     .background-card h3 {
       margin-top: 0;
+      font-size: 1.35rem;
     }
 
-    .resume-area {
-      padding-bottom: 30px;
-      border-bottom: 1px solid #d8ddd9;
+    .background-card p {
+      flex-grow: 1;
+      margin-bottom: 22px;
     }
 
-    .resume-area p {
-      max-width: 700px;
-    }
-
-    .recommendations-area {
-      padding-top: 25px;
-      scroll-margin-top: 30px;
-    }
-
-    .recommendations-area p {
-      max-width: 760px;
-    }
-
-    .recommendation-buttons {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .recommendation-buttons .button {
-      margin: 0;
-      padding: 13px 15px;
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 1.3;
-      font-size: 0.9rem;
+    .background-card .button {
+      align-self: flex-start;
     }
 
 
-    /* ---------- LEARNING + LEADERSHIP ---------- */
+    /* ---------- GUIDES ---------- */
 
     .resources {
       background-color: #f8f7f3;
-      scroll-margin-top: 30px;
-    }
-
-    .resource-intro {
-      max-width: 780px;
-      margin-bottom: 32px;
-    }
-
-    .resource-library-title {
-      margin-top: 35px;
-      margin-bottom: 6px;
-    }
-
-    .resource-library-intro {
-      max-width: 760px;
-      margin-top: 0;
-      margin-bottom: 22px;
-      color: #5c6c63;
-    }
-
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .resource-card {
-      background-color: white;
-      border: 1px solid #d8ddd9;
-      border-radius: 8px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .resource-card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .resource-card p {
-      margin-top: 0;
-      margin-bottom: 12px;
-      flex-grow: 1;
-      font-size: 0.95rem;
-    }
-
-    .resource-card .button {
-      margin-top: 8px;
-      margin-bottom: 0;
-      padding: 10px 16px;
-      font-size: 0.9rem;
     }
 
 
@@ -439,29 +409,28 @@
         padding-bottom: 60px;
       }
 
-      .side-project-list,
       .about-layout {
         grid-template-columns: 1fr;
-      }
-
-      .resource-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
 
       .about-photo {
         max-width: 300px;
       }
 
-      .recommendation-buttons {
+      .category-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .project-preview-grid,
+      .background-grid {
+        grid-template-columns: 1fr;
       }
 
     }
 
     @media (max-width: 550px) {
 
-      .recommendation-buttons,
-      .resource-grid {
+      .category-grid {
         grid-template-columns: 1fr;
       }
 
@@ -482,12 +451,24 @@
     </div>
 
     <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
       <a href="#about">About</a>
-      <a href="#work">Case Studies</a>
-      <a href="#side-projects">Side Projects</a>
-      <a href="LA%20Resume-Public.pdf" target="_blank">Resume</a>
-      <a href="#recommendations">Recommendations</a>
-      <a href="#resources">Guides</a>
+
+      <a href="northstar.html">Northstar</a>
+
+      <a href="projects.html">Projects</a>
+
+      <a href="guides.html">Guides</a>
+
+      <a href="recommendations.html">Recommendations</a>
+
+      <a
+        href="LA%20Resume-Public.pdf"
+        target="_blank">
+        Resume
+      </a>
 
       <a
         href="https://www.linkedin.com/in/loraanderson410"
@@ -523,16 +504,8 @@
         more efficient, measurable, and sustainable.
       </p>
 
-      <a class="button" href="#work">
+      <a class="button" href="#northstar">
         Explore My Work
-      </a>
-
-      <a
-        class="button button-secondary"
-        href="https://www.linkedin.com/in/loraanderson410"
-        target="_blank"
-        rel="noopener noreferrer">
-        LinkedIn ↗
       </a>
 
     </div>
@@ -570,18 +543,20 @@
             <p class="section-intro">
               I'm also a lifelong learner. If I don't know how to do something,
               I'm usually more interested in figuring it out than avoiding it.
-              This is a place to share some of what I've built along the way,
-              whether it started with a business problem, something I wanted
-              to learn, or simply a question I couldn't leave alone.
+              This portfolio is a place to share some of what I've built,
+              learned, analyzed, and improved along the way.
             </p>
 
           </div>
 
+
           <div>
+
             <img
               class="about-photo"
               src="Lora_and_Thor_Portfolio.png"
               alt="Lora Anderson with Thor">
+
           </div>
 
         </div>
@@ -591,9 +566,9 @@
     </section>
 
 
-    <!-- FEATURED WORK -->
+    <!-- NORTHSTAR -->
 
-    <section class="featured" id="work">
+    <section class="northstar" id="northstar">
 
       <div class="section-content">
 
@@ -601,54 +576,66 @@
           Featured Case Study
         </div>
 
-        <h2>Turning information into operational decisions.</h2>
+        <h2>Northstar IT</h2>
 
-        <div class="project-card">
+        <p class="section-intro">
+          Northstar IT is a fictional B2B technology company I created as a
+          realistic environment for business design, operations, analytics,
+          workforce planning, governance, and data systems.
+        </p>
 
-          <h3>Northstar IT</h3>
+        <div class="feature-card">
 
-          <p class="project-subtitle">
-            From Business Design to Operational Decisions
+          <h3>Explore Northstar</h3>
+
+          <p class="feature-subtitle">
+            One business. Multiple operating disciplines.
           </p>
 
           <p>
-            I created Northstar IT because I wanted a realistic environment
-            where I could keep building my technical skills.
-            I also wanted something that would keep me thinking,
-            learning, and solving real problems.
+            The project continues to grow as I build the systems,
+            processes, controls, analysis, documentation, and reporting
+            that would support an operating organization.
           </p>
 
-          <p>
-            Northstar is a fictional B2B technology company.
-            It has realistic business structure, people-management challenges,
-            customer workflows, financial operations, governance,
-            and data systems.
-          </p>
+          <div class="category-grid">
 
-          <p>
-            I'm designing the business model, processes, controls,
-            source data, and database architecture.
-            Then I'm using MariaDB, SQL, Excel, Power BI, Tableau,
-            and other tools to connect the pieces.
-          </p>
+            <a
+              class="category-link"
+              href="northstar.html#business-operations">
+              Business &amp; Operations
+            </a>
 
-          <p>
-            The goal isn't just to build dashboards.
-            It's to understand how strategy, people, processes, systems,
-            data, and reporting work together.
-            Then I can use that information to make better operational decisions.
-          </p>
+            <a
+              class="category-link"
+              href="northstar.html#data-analytics">
+              Data &amp; Analytics
+            </a>
 
-          <a class="button" href="northstar.html">
-            Explore Northstar
-          </a>
+            <a
+              class="category-link"
+              href="northstar.html#workforce-people">
+              Workforce &amp; People
+            </a>
 
-          <div class="tags">
-            <span class="tag">Business Design</span>
-            <span class="tag">Operations</span>
-            <span class="tag">Governance</span>
-            <span class="tag">Data Architecture</span>
-            <span class="tag">Analytics &amp; BI</span>
+            <a
+              class="category-link"
+              href="northstar.html#governance-risk">
+              Governance &amp; Risk
+            </a>
+
+            <a
+              class="category-link"
+              href="northstar.html#systems-process">
+              Systems &amp; Process Design
+            </a>
+
+            <a
+              class="category-link primary"
+              href="northstar.html">
+              Explore All Northstar Work
+            </a>
+
           </div>
 
         </div>
@@ -658,9 +645,9 @@
     </section>
 
 
-    <!-- PROBLEMS I COULDN'T LEAVE ALONE -->
+    <!-- PROJECTS -->
 
-    <section class="side-projects" id="side-projects">
+    <section class="projects" id="projects">
 
       <div class="section-content">
 
@@ -671,77 +658,45 @@
         <h2>Problems I Couldn't Leave Alone</h2>
 
         <p class="section-intro">
-          Some projects start because I'm assigned a problem. Others start
-          because I encounter something that makes me wonder,
-          “Why does this work this way?”
+          Some projects start with an assignment. Others start because I
+          encounter a problem and cannot stop thinking about how it could
+          work better.
         </p>
 
-        <p class="section-intro">
-          I'm naturally solution focused. I'd rather put my energy into
-          figuring out how something could work better than continue being
-          annoyed by the problem.
-        </p>
+        <div class="project-preview-grid">
 
-        <div class="side-project-list">
+          <div class="project-preview">
 
-          <div class="side-project-item">
-
-            <h3>When a Process Becomes the Project</h3>
+            <h3>Oregon Unemployment Process</h3>
 
             <p>
-              My experience navigating Oregon's unemployment process left me
-              with a lot of questions about the process itself. After enough
-              confusing instructions, communication gaps, and dead ends, my
-              operations brain took over.
+              Process mapping, communication gaps, user experience,
+              and practical improvement recommendations.
             </p>
-
-            <p>
-              It was easier to start mapping the process and thinking about
-              how it could work better than to keep getting annoyed by it.
-              The result is an independent look at the user journey, friction
-              points, communication gaps, and opportunities for improvement.
-            </p>
-
-            <a
-              class="button"
-              href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf"
-              target="_blank">
-              View Case Study
-            </a>
 
           </div>
 
 
-          <div class="side-project-item">
+          <div class="project-preview">
 
             <h3>Thor's Allergy Tracker</h3>
 
             <p>
-              Thor, my Catahoula Beagle mix, developed a nasty skin allergy
-              that we haven't been able to pin down. With food, medication,
-              grooming, weather, and environmental factors all potentially
-              playing a role, “I think it might be worse” wasn't giving us
-              much useful information.
+              A practical tracking system designed to turn scattered
+              observations into useful patterns over time.
             </p>
-
-            <p>
-              So naturally, I decided to build a spreadsheet.
-            </p>
-
-            <p>
-              The goal is to track his symptoms alongside the things that
-              could be influencing them, look for patterns over time, and
-              give his vet something more useful to work with than my memory.
-            </p>
-
-            <a
-              class="button"
-              href="Thor%20Allergy%20Tracker.xlsx"
-              target="_blank">
-              View Allergy Tracker
-            </a>
 
           </div>
+
+        </div>
+
+        <div class="projects-action">
+
+          <a
+            class="button"
+            href="projects.html">
+            Explore Projects
+          </a>
 
         </div>
 
@@ -762,15 +717,16 @@
 
         <h2>Experience is more than a list of job titles.</h2>
 
-        <div class="background-card">
+        <div class="background-grid">
 
-          <div class="resume-area">
+
+          <div class="background-card">
 
             <h3>Resume</h3>
 
             <p>
               My professional experience across operations, leadership,
-              compliance, administration, and process improvement.
+              compliance, administration, analytics, and process improvement.
             </p>
 
             <a
@@ -783,62 +739,24 @@
           </div>
 
 
-          <div class="recommendations-area" id="recommendations">
+          <div class="background-card">
 
             <h3>Professional Recommendations</h3>
 
             <p>
-              Recommendations from people who have worked with me throughout
-              my career and can speak to how I work, lead, and solve problems.
+              Recommendations from leaders who have worked with me and can
+              speak to my leadership, judgment, problem solving, and
+              organizational impact.
             </p>
 
-            <div class="recommendation-buttons">
-
-              <a
-                class="button button-secondary"
-                href="FS%20Reference%20Letter.pdf"
-                target="_blank">
-                Family Solutions
-              </a>
-
-              <a
-                class="button button-secondary"
-                href="WorkWell%20Reference%20Letter.pdf"
-                target="_blank">
-                WorkWell
-              </a>
-
-              <a
-                class="button button-secondary"
-                href="Friends%20Reference%20Letter.pdf"
-                target="_blank">
-                Friends of Children & Families
-              </a>
-
-              <a
-                class="button button-secondary"
-                href="Main%20Street%20Reference-Lindy.pdf"
-                target="_blank">
-                Main Street Enid
-              </a>
-
-              <a
-                class="button button-secondary"
-                href="NBAC%20Reference%20Letter.pdf"
-                target="_blank">
-                National Builders & Acceptance Corporation
-              </a>
-
-              <a
-                class="button button-secondary"
-                href="PC%20Geeks%20Reference%20Letter.pdf"
-                target="_blank">
-                PC Geeks
-              </a>
-
-            </div>
+            <a
+              class="button"
+              href="recommendations.html">
+              View Recommendations
+            </a>
 
           </div>
+
 
         </div>
 
@@ -847,7 +765,7 @@
     </section>
 
 
-    <!-- LEARNING + LEADERSHIP -->
+    <!-- GUIDES -->
 
     <section class="resources" id="resources">
 
@@ -857,127 +775,58 @@
           Learning + Leadership
         </div>
 
-        <h2>Growth is better when it's shared.</h2>
+        <h2>Practical Tools &amp; Guides</h2>
 
-        <div class="resource-intro">
-
-          <p class="section-intro">
-            I'm passionate about learning, but I don't think growth should stop
-            with the person who learned something.
-          </p>
-
-          <p class="section-intro">
-            One of the things I value most in leadership is helping other people
-            build confidence, develop new skills, and have the tools they need to
-            succeed. When I learn something useful, I naturally want to document it,
-            simplify it, and make it easier for someone else to use.
-          </p>
-
-          <p class="section-intro">
-            This is a growing collection of practical guides and quick reference
-            tools I've created for exactly that reason. They're meant to be useful,
-            approachable, and easy to come back to when you know what you're trying
-            to do but cannot remember the exact formula, syntax, or next step.
-          </p>
-
-        </div>
-
-        <h3 class="resource-library-title">
-          Practical Tools &amp; Guides
-        </h3>
-
-        <p class="resource-library-intro">
-          Simple references for real world work, learning, troubleshooting,
-          and those moments when your brain needs a little backup.
+        <p class="section-intro">
+          When I learn something useful, I tend to document it,
+          simplify it, and turn it into something I can use again
+          or share with someone else.
         </p>
 
-        <div class="resource-grid">
+        <div class="feature-card">
 
-          <div class="resource-card">
+          <h3>Explore the Resource Library</h3>
 
-            <h3>Practical SQL How-To Guide</h3>
+          <p class="feature-subtitle">
+            Practical references for learning, analysis, operations, and everyday work.
+          </p>
 
-            <p>
-              SQL basics, joins, cleanup, imports, validation, and troubleshooting.
-            </p>
+          <div class="category-grid">
 
             <a
-              class="button"
-              href="Practical_SQL_How_To_Guide.pdf"
-              target="_blank">
-              View Guide
+              class="category-link"
+              href="guides.html#sql-databases">
+              SQL &amp; Databases
             </a>
 
-          </div>
-
-
-          <div class="resource-card">
-
-            <h3>HeidiSQL Quick Guide</h3>
-
-            <p>
-              HeidiSQL imports, parser settings, warnings, and common troubleshooting.
-            </p>
-
             <a
-              class="button"
-              href="HeidiSQL_Quick_Guide.pdf"
-              target="_blank">
-              View Guide
+              class="category-link"
+              href="guides.html#data-quality">
+              Data Quality &amp; Validation
             </a>
 
-          </div>
-
-
-          <div class="resource-card">
-
-            <h3>Data Validation Checklist</h3>
-
-            <p>
-              Quick checks for counts, duplicates, relationships, dates, and business rules.
-            </p>
-
             <a
-              class="button"
-              href="Data_Validation_Checklist.pdf"
-              target="_blank">
-              View Checklist
+              class="category-link"
+              href="guides.html#excel-tools">
+              Excel &amp; Data Tools
             </a>
 
-          </div>
-
-
-          <div class="resource-card">
-
-            <h3>Excel Formula Cheat Sheet</h3>
-
-            <p>
-              Common Excel formulas for lookups, dates, text, logic, and everyday analysis.
-            </p>
-
             <a
-              class="button"
-              href="Excel_Formula_Cheat_Sheet.pdf"
-              target="_blank">
-              View Cheat Sheet
+              class="category-link"
+              href="guides.html#business-intelligence">
+              Business Intelligence
             </a>
 
-          </div>
-
-
-          <div class="resource-card">
-
-            <h3>Helpful Tools &amp; When to Use Them</h3>
-
-            <p>
-              A quick guide to choosing between Excel, SQL, Power Query, BI tools, and more.
-            </p>
+            <a
+              class="category-link"
+              href="guides.html#process-operations">
+              Process &amp; Operations
+            </a>
 
             <a
-              class="button"
-              href="Helpful_Tools_When_To_Use_Them.pdf"
-              target="_blank">
-              View Guide
+              class="category-link primary"
+              href="guides.html">
+              Explore All Guides
             </a>
 
           </div>
@@ -1003,8 +852,8 @@
 
         <p>
           I write about operations, leadership, process improvement,
-          workplace culture, continuous improvement, and the people side
-          of business.
+          workplace culture, continuous improvement, and the people
+          side of business.
         </p>
 
         <a
