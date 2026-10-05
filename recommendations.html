@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recommendations | Lora Anderson</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2f3833;
+      background-color: #f8f7f3;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+      background-color: #263c32;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-name {
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      background-color: #e8ece6;
+      padding: 80px 8%;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #263c32;
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: #5c6c63;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .hero-description {
+      max-width: 820px;
+      font-size: 1.08rem;
+      margin-top: 25px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .button {
+      display: inline-block;
+      background-color: #263c32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #395547;
+    }
+
+    .button-secondary {
+      background-color: transparent;
+      color: #263c32;
+      border: 2px solid #263c32;
+    }
+
+    .button-secondary:hover {
+      background-color: #263c32;
+      color: white;
+    }
+
+
+    /* ---------- GENERAL ---------- */
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #263c32;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #263c32;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      max-width: 820px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+
+    /* ---------- OVERVIEW ---------- */
+
+    .overview {
+      background-color: white;
+    }
+
+    .overview-card {
+      background-color: #f8f7f3;
+      border-left: 5px solid #9a6b32;
+      padding: 32px;
+      border-radius: 8px;
+    }
+
+
+    /* ---------- RECOMMENDATIONS ---------- */
+
+    .recommendations {
+      background-color: #f8f7f3;
+    }
+
+    .recommendation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .recommendation-card {
+      background-color: white;
+      border: 1px solid #d8ddd9;
+      border-radius: 9px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recommendation-type {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .recommendation-card p {
+      margin-top: 0;
+      flex-grow: 1;
+    }
+
+    .recommendation-card .button {
+      align-self: flex-start;
+      margin-top: 12px;
+    }
+
+
+    /* ---------- CLOSING ---------- */
+
+    .closing-section {
+      background-color: white;
+      text-align: center;
+    }
+
+    .closing-section .section-content {
+      max-width: 760px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background-color: #1e2f27;
+      color: #d8dedb;
+      text-align: center;
+      padding: 30px 8%;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 850px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .recommendation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-name">
+      Lora Anderson
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Portfolio Home
+      </a>
+
+      <a href="#recommendations">
+        Recommendations
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/loraanderson410"
+        target="_blank"
+        rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Professional Recommendations
+      </div>
+
+      <h1>What Others Say About My Work</h1>
+
+      <p class="hero-subtitle">
+        Perspective from people who have worked with me throughout my career.
+      </p>
+
+      <p class="hero-description">
+        A resume can describe responsibilities and accomplishments.
+        Recommendations add something different: the perspective of people
+        who have actually worked alongside me and can speak to how I lead,
+        solve problems, communicate, and contribute.
+      </p>
+
+      <p class="hero-description">
+        These letters come from different points in my career and different
+        types of organizations, but together they provide a broader view
+        of how I show up at work.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- CONTEXT -->
+
+    <section class="overview">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Beyond Job Titles
+        </div>
+
+        <h2>Experience is also about how people experience working with you.</h2>
+
+        <div class="overview-card">
+
+          <p>
+            My career has included operations, administration, risk,
+            people leadership, systems, analytics, process improvement,
+            and cross-functional work.
+          </p>
+
+          <p>
+            The responsibilities have changed from one organization to another,
+            but the way I approach the work has been fairly consistent:
+            understand the problem, take ownership, communicate clearly,
+            build practical solutions, and try to leave the organization
+            stronger than I found it.
+          </p>
+
+          <p>
+            These recommendations provide independent perspective on those
+            qualities from people who have worked with me in different roles
+            and at different stages of my career.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RECOMMENDATION LETTERS -->
+
+    <section class="recommendations" id="recommendations">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Reference Letters
+        </div>
+
+        <h2>Professional recommendations across my career.</h2>
+
+        <p class="section-intro">
+          Select any organization below to open the corresponding recommendation.
+        </p>
+
+        <div class="recommendation-grid">
+
+
+          <!-- FAMILY SOLUTIONS -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>Family Solutions</h3>
+
+            <p>
+              Recommendation from my most recent nonprofit leadership environment,
+              where my work included operations, systems, compliance,
+              organizational improvement, and cross-functional leadership.
+            </p>
+
+            <a
+              class="button"
+              href="FS%20Reference%20Letter.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+          <!-- WORKWELL -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>WorkWell</h3>
+
+            <p>
+              Recommendation reflecting my work in case management,
+              analytical oversight, risk identification, client coordination,
+              documentation, and executive-level stakeholder communication.
+            </p>
+
+            <a
+              class="button"
+              href="WorkWell%20Reference%20Letter.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+          <!-- FRIENDS -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>Friends of Children &amp; Families</h3>
+
+            <p>
+              Recommendation from my nonprofit and people-operations experience,
+              including administration, HR systems, training,
+              organizational support, and leadership.
+            </p>
+
+            <a
+              class="button"
+              href="Friends%20Reference%20Letter.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+          <!-- MAIN STREET -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>Main Street Enid</h3>
+
+            <p>
+              Recommendation from an earlier leadership role involving
+              operations, community initiatives, events, vendor coordination,
+              communication, and organizational management.
+            </p>
+
+            <a
+              class="button"
+              href="Main%20Street%20Reference-Lindy.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+          <!-- NBAC -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>National Builders &amp; Acceptance Corporation</h3>
+
+            <p>
+              Recommendation from an operations-intensive environment
+              that included property management, HR, training,
+              process development, budgeting, facilities,
+              reporting, and organizational oversight.
+            </p>
+
+            <a
+              class="button"
+              href="NBAC%20Reference%20Letter.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+          <!-- PC GEEKS -->
+
+          <div class="recommendation-card">
+
+            <div class="recommendation-type">
+              Professional Recommendation
+            </div>
+
+            <h3>PC Geeks</h3>
+
+            <p>
+              Recommendation from a technology-focused business where
+              my responsibilities expanded across operations,
+              HR, systems, administration, finance, process improvement,
+              and organizational growth.
+            </p>
+
+            <a
+              class="button"
+              href="PC%20Geeks%20Reference%20Letter.pdf"
+              target="_blank">
+              View Recommendation
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="closing-section">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          More Than a Resume
+        </div>
+
+        <h2>The work matters. So does how you do it.</h2>
+
+        <p>
+          I value accountability, curiosity, practical problem solving,
+          continuous improvement, and treating people fairly.
+          The strongest professional relationships I have built came from
+          doing the work well while also being someone others could rely on.
+        </p>
+
+        <a
+          class="button"
+          href="index.html">
+          Return to Portfolio
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="https://www.linkedin.com/in/loraanderson410"
+          target="_blank"
+          rel="noopener noreferrer">
+          Visit LinkedIn ↗
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Lora Anderson</p>
+
+    <p>
+      Professional recommendations are presented as provided by
+      colleagues and organizational leaders throughout my career.
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
