@@ -194,6 +194,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       margin-top: 30px;
+      align-items: stretch;
     }
 
     .artifact-card {
@@ -201,6 +202,10 @@
       border: 1px solid #d8ddd9;
       border-radius: 8px;
       padding: 25px;
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-section.alt .artifact-card {
@@ -211,8 +216,12 @@
       margin-top: 0;
     }
 
-    /* If a section ends with an odd number of cards,
-       the final card spans both columns so the layout stays balanced. */
+    .artifact-card .button,
+    .artifact-card .button-disabled {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
     .artifact-grid .artifact-card:last-child:nth-child(odd) {
       grid-column: 1 / -1;
     }
@@ -226,6 +235,7 @@
       font-size: 0.76rem;
       font-weight: bold;
       margin-bottom: 10px;
+      align-self: flex-start;
     }
 
 
@@ -254,6 +264,7 @@
       padding: 12px 20px;
       border-radius: 6px;
       font-weight: bold;
+      margin-bottom: 10px;
     }
 
 
