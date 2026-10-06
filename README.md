@@ -1,43 +1,33 @@
-## Professional Recommendations
+# Professional Portfolio
 
-### Family Solutions
+This repository contains the files behind my professional portfolio:
 
-**Dorothy Provencio**  
-Executive Director (Retired)
+https://loraanderson410.github.io/professional-portfolio/
 
-*Recommendation forthcoming*
+The site highlights my work across operations leadership, business strategy, process improvement, analytics, systems, governance, and organizational problem solving.
 
-### WorkWell
+## Featured Work
 
-**William Yanakos**  
-CEO
+### Northstar IT
+A fictional B2B technology company I created as a realistic learning environment for operations, workforce planning, governance, SQL, analytics, process design, reporting, and business decision support.
 
-[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/WorkWell%20Reference%20Letter.pdf)
+### Projects
+A collection of practical problem-solving projects, including process improvement case studies and tools built to solve real problems.
 
-### Friends of Children & Families
+### Guides & Resources
+Practical references, checklists, and learning tools covering Excel, SQL, data quality, decision support, and other areas I use in my work.
 
-**Emily Carpenter**  
-Director of HR & Finance
+### Professional Recommendations
+Letters from leaders and colleagues across multiple stages of my career.
 
-[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/Friends%20Reference%20Letter.pdf)
+## About This Repository
 
-### Main Street Enid
+The repository includes the HTML, CSS, documents, spreadsheets, images, and supporting files used by the portfolio site.
 
-**Lindy Chandler**  
-Executive Director
+Northstar IT is a fictional company created for learning, analysis, and portfolio development.
 
-[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/Main%20Street%20Reference-Lindy.pdf)
+## Connect
 
-### National Builders & Acceptance Corporation
+LinkedIn: https://www.linkedin.com/in/loraanderson410
 
-**Neal Scoratow**  
-President
-
-[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/NBAC%20Reference%20Letter.pdf)
-
-### PC Geeks
-
-**Stephen Underwood**  
-Owner
-
-[View recommendation letter](https://github.com/LoraAnderson410/professional-portfolio/blob/main/PC%20Geeks%20Reference%20Letter.pdf)
+Portfolio: https://loraanderson410.github.io/professional-portfolio/
