@@ -55,14 +55,14 @@
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .nav-links a {
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       white-space: nowrap;
     }
 
@@ -132,20 +132,23 @@
       max-width: 1050px;
       margin: 35px auto 0;
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-wrap: nowrap;
+      gap: 7px;
     }
 
     .category-link {
       display: inline-block;
       background-color: white;
       color: #34483e;
-      padding: 9px 16px;
+      padding: 8px 11px;
       border-radius: 22px;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: bold;
       border: 1px solid #ccd5d0;
+      white-space: nowrap;
+      text-align: center;
+      flex: 1 1 auto;
     }
 
     .category-link:hover {
@@ -202,7 +205,6 @@
       border: 1px solid #d8ddd9;
       border-radius: 8px;
       padding: 25px;
-
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -243,14 +245,20 @@
 
     .report-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-wrap: nowrap;
+      gap: 8px;
       margin-top: 22px;
+      align-items: stretch;
     }
 
     .report-links .button,
     .report-links .button-disabled {
       margin: 0;
+      padding: 10px 14px;
+      font-size: 0.84rem;
+      white-space: nowrap;
+      text-align: center;
+      flex: 1 1 auto;
       align-self: auto;
     }
 
@@ -319,12 +327,33 @@
         align-items: flex-start;
       }
 
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .category-nav {
+        flex-wrap: wrap;
+      }
+
+      .category-link {
+        flex: 1 1 auto;
+      }
+
       .artifact-grid {
         grid-template-columns: 1fr;
       }
 
       .artifact-grid .artifact-card:last-child:nth-child(odd) {
         grid-column: auto;
+      }
+
+      .report-links {
+        flex-wrap: wrap;
+      }
+
+      .report-links .button,
+      .report-links .button-disabled {
+        flex: 1 1 145px;
       }
 
       .hero {
@@ -1033,31 +1062,31 @@
               class="button"
               href="Northstar_Workforce_Analysis.pdf"
               target="_blank">
-              Workforce Analysis
+              Workforce
             </a>
 
             <span class="button-disabled">
-              Financial Analysis — Coming Soon
+              Financial
             </span>
 
             <span class="button-disabled">
-              Customer Analysis — Coming Soon
+              Customer
             </span>
 
             <span class="button-disabled">
-              Sales Analysis — Coming Soon
+              Sales
             </span>
 
             <span class="button-disabled">
-              Support Analysis — Coming Soon
+              Support
             </span>
 
             <span class="button-disabled">
-              Professional Services — Coming Soon
+              Professional Services
             </span>
 
             <span class="button-disabled">
-              Executive Recommendations — Ongoing
+              Executive Summary
             </span>
 
           </div>
