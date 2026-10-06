@@ -345,6 +345,8 @@
 
       <a href="#data">Data &amp; SQL</a>
 
+      <a href="#findings">Analysis &amp; Findings</a>
+
       <a href="#analytics">Analytics &amp; BI</a>
 
     </div>
@@ -397,6 +399,10 @@
 
         <a class="category-link" href="#data">
           Data &amp; SQL
+        </a>
+
+        <a class="category-link" href="#findings">
+          Analysis &amp; Findings
         </a>
 
         <a class="category-link" href="#analytics">
@@ -922,13 +928,17 @@
             <h3>Entity Relationship Diagram</h3>
 
             <p>
-              The ERD connects employees, customers, subscriptions,
-              projects, support, finance, and other parts of the business.
+              A visual map of how Northstar's core data connects across workforce,
+              customers, subscriptions, projects, support, finance, and related
+              business activity.
             </p>
 
-            <span class="button-disabled">
-              Coming Soon
-            </span>
+            <a
+              class="button"
+              href="Northstar_ERD.pdf"
+              target="_blank">
+              View ERD
+            </a>
 
           </div>
 
@@ -959,23 +969,24 @@
     </section>
 
 
-    <!-- ANALYTICS -->
+    <!-- ANALYSIS & FINDINGS -->
 
-    <section class="project-section" id="analytics">
+    <section class="project-section" id="findings">
 
       <div class="section-content">
 
         <div class="eyebrow">
-          Analytics &amp; Business Intelligence
+          Analysis, Findings &amp; Recommendations
         </div>
 
-        <h2>The numbers matter less than the question behind them.</h2>
+        <h2>What does the business data actually tell us?</h2>
 
         <p class="section-intro">
-          I am not interested in building dashboards just because dashboards
-          look impressive. I want the analysis to tell me something useful,
-          point to a problem, challenge an assumption, or help someone decide
-          what to do next.
+          This is where the Northstar data becomes decision support. Each analysis
+          focuses on a major part of the business, looks for patterns and risks,
+          and turns the numbers into questions leadership could act on. As new
+          analyses are completed, they can be added here without changing the
+          structure of the page.
         </p>
 
         <div class="artifact-grid">
@@ -983,15 +994,14 @@
 
           <div class="artifact-card">
 
-            <span class="tag">Workforce Analytics</span>
+            <span class="tag">Workforce Analysis</span>
 
             <h3>Workforce &amp; Operational Risk Analysis</h3>
 
             <p>
-              This report pulls together turnover, overtime, training,
-              recruiting, compensation, staffing, and workforce risk
-              into a leadership-level view of what is happening and
-              what deserves attention.
+              Pulls together turnover, overtime, training, recruiting,
+              compensation, staffing, and workforce risk into a leadership-level
+              view of what is happening and what deserves attention.
             </p>
 
             <a
@@ -1006,13 +1016,158 @@
 
           <div class="artifact-card">
 
+            <span class="tag">Financial Analysis</span>
+
+            <h3>Financial Performance Analysis</h3>
+
+            <p>
+              Will examine revenue, expenses, budget variance, margin,
+              accounts receivable, customer profitability, and project economics
+              to understand where financial performance is strong and where it
+              needs a closer look.
+            </p>
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <span class="tag">Customer Analysis</span>
+
+            <h3>Customer &amp; Subscription Analysis</h3>
+
+            <p>
+              Will connect customer health, subscription activity, product usage,
+              onboarding, renewal, expansion, and churn to understand what drives
+              retention and where customer risk may be developing.
+            </p>
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <span class="tag">Sales Analysis</span>
+
+            <h3>Sales &amp; Pipeline Analysis</h3>
+
+            <p>
+              Will look at opportunity volume, stage progression, pipeline value,
+              close patterns, ownership, and expansion opportunities to understand
+              how sales activity is translating into growth.
+            </p>
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <span class="tag">Service Analysis</span>
+
+            <h3>Support &amp; Service Analysis</h3>
+
+            <p>
+              Will examine ticket volume, priority mix, resolution time,
+              SLA performance, escalation, repeat issues, workload, and CSAT
+              to identify service patterns and operational pressure points.
+            </p>
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <span class="tag">Project Analysis</span>
+
+            <h3>Professional Services Analysis</h3>
+
+            <p>
+              Will connect project delivery, time entries, labor effort,
+              customer work, budget performance, and margin so project execution
+              can be evaluated as both an operational and financial question.
+            </p>
+
+            <span class="button-disabled">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <div class="artifact-card">
+
+            <span class="tag">Executive Decision Support</span>
+
+            <h3>Northstar Findings &amp; Recommendations</h3>
+
+            <p>
+              The final synthesis will bring the major analyses together:
+              what appears to be happening across the business, where the risks
+              and opportunities intersect, what I would investigate next, and
+              what leadership could reasonably do about it.
+            </p>
+
+            <span class="button-disabled">
+              Ongoing
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANALYTICS & BUSINESS INTELLIGENCE -->
+
+    <section class="project-section alt" id="analytics">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Analytics &amp; Business Intelligence
+        </div>
+
+        <h2>Different tools, one goal: make the information useful.</h2>
+
+        <p class="section-intro">
+          These are the tools and reporting layers I am using to define,
+          explore, visualize, and eventually automate the Northstar analysis.
+          The tools may change over time; the business questions stay at the center.
+        </p>
+
+        <div class="artifact-grid">
+
+
+          <div class="artifact-card">
+
             <span class="tag">Metrics</span>
 
             <h3>KPI Dictionary</h3>
 
             <p>
-              Defines the measures Northstar uses so the same metric
-              means the same thing across SQL, reporting, and leadership discussions.
+              Defines the measures Northstar uses so the same metric means
+              the same thing across SQL, reporting, dashboards, and leadership
+              discussions.
             </p>
 
             <a
@@ -1032,9 +1187,9 @@
             <h3>Power BI Dashboard</h3>
 
             <p>
-              A management view built from the Northstar data model,
-              starting with workforce analysis and expanding as the rest
-              of the business is developed.
+              A management reporting layer built from the Northstar data model.
+              It begins with workforce analysis and can expand as additional
+              business analyses are completed.
             </p>
 
             <span class="button-disabled">
@@ -1051,8 +1206,9 @@
             <h3>Tableau Dashboard</h3>
 
             <p>
-              I am also rebuilding parts of the analysis in Tableau
-              so I can compare tools and keep expanding my BI skills.
+              A second visualization layer for rebuilding selected Northstar
+              analysis in Tableau, comparing approaches, and continuing to
+              expand my business-intelligence skills.
             </p>
 
             <span class="button-disabled">
@@ -1069,10 +1225,9 @@
             <h3>Python for Business Analysis</h3>
 
             <p>
-              Once the current Northstar work is complete, I plan to add Python
-              so I can automate repeatable analysis, work with data outside of
-              SQL and spreadsheets, and keep expanding the ways I can investigate
-              business questions.
+              A future layer for automating repeatable analysis, working with
+              Northstar data outside of SQL and spreadsheets, and exploring
+              additional ways to investigate business questions.
             </p>
 
             <span class="button-disabled">
@@ -1089,33 +1244,13 @@
             <h3>Northstar AI Agent</h3>
 
             <p>
-              A future project to build an AI assistant around Northstar and
-              explore how an agent could retrieve information, work across
-              company documentation and data, answer business questions,
-              and support analysis.
+              A future project exploring how an AI assistant could retrieve
+              information, work across Northstar documentation and data,
+              answer business questions, and support analysis.
             </p>
 
             <span class="button-disabled">
               Coming Soon
-            </span>
-
-          </div>
-
-
-          <div class="artifact-card">
-
-            <span class="tag">Decision Support</span>
-
-            <h3>Findings &amp; Recommendations</h3>
-
-            <p>
-              The final step is the part I enjoy most:
-              what the data appears to be saying, what I would investigate next,
-              and what leadership could reasonably do about it.
-            </p>
-
-            <span class="button-disabled">
-              Ongoing
             </span>
 
           </div>
@@ -1129,9 +1264,9 @@
           <p>
             <strong>Northstar is intentionally unfinished.</strong>
             I am continuing to build it as I learn new tools and find
-            new questions worth answering. The goal is not to create
-            a perfect fictional company. It is to have a realistic place
-            where I can keep practicing how I think through real business problems.
+            new questions worth answering. The structure is designed to grow:
+            completed work can replace a "Coming Soon" button without requiring
+            the rest of the page to be rebuilt.
           </p>
 
         </div>
