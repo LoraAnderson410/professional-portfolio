@@ -137,6 +137,13 @@
       background-color: #395547;
     }
 
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
     .project-section {
       background-color: white;
     }
@@ -240,6 +247,11 @@
         padding-bottom: 60px;
       }
 
+      .button-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
 
   </style>
@@ -264,6 +276,8 @@
       <a href="#unemployment">Process Project</a>
 
       <a href="#thor">Thor's Tracker</a>
+
+      <a href="#autoimmune">Autoimmune Tracker</a>
 
       <a href="guides.html">Guides</a>
 
@@ -297,7 +311,8 @@
 
       <p class="hero-description">
         Sometimes that turns into a case study. Sometimes it turns into
-        a spreadsheet for my dog. And other times, it may turn into something else. Regardless, it usually starts the same way:
+        a spreadsheet for my dog. And other times, it may turn into something else.
+        Regardless, it usually starts the same way:
         I want to understand what is actually going on.
       </p>
 
@@ -373,8 +388,8 @@
           <div class="project-image">
 
             <img
-  src="The%20Claim%20Process%20Loop%20Infographic.png"
-  alt="Circular process graphic showing repeated steps in the unemployment identity verification process">
+              src="The%20Claim%20Process%20Loop%20Infographic.png"
+              alt="Circular process graphic showing repeated steps in the unemployment identity verification process">
 
           </div>
 
@@ -459,9 +474,9 @@
 
           <div class="project-image">
 
-           <img
-  src="Thor%20in%20a%20Sunlit%20Grassy%20Yard.png"
-  alt="Thor lying in the grass">
+            <img
+              src="Thor%20in%20a%20Sunlit%20Grassy%20Yard.png"
+              alt="Thor lying in the grass">
 
           </div>
 
@@ -470,36 +485,134 @@
       </div>
 
     </section>
-<!-- FUTURE PROJECTS -->
 
-<section class="project-section">
 
-  <div class="section-content">
+    <!-- AUTOIMMUNE TRACKER PROJECT -->
 
-    <div class="eyebrow">
-      What Comes Next
-    </div>
+    <section class="project-section" id="autoimmune">
 
-    <h2>I Have a Feeling This Section Will Grow</h2>
+      <div class="section-content">
 
-    <div class="project-note">
+        <div class="project-layout">
 
-      <p>
-        I don’t really set out looking for side projects. They usually find me.
-        Something catches my attention, I start asking questions, and before long
-        I’ve built a spreadsheet, mapped a process, or gone much farther down a
-        rabbit hole than I originally intended.
-      </p>
+          <div class="project-copy">
 
-      <p style="margin-top: 14px;">
-        I’m sure these won’t be the last.
-      </p>
+            <div class="eyebrow">
+              Personal Project + Data Design
+            </div>
 
-    </div>
+            <h2>Turning Scattered Symptoms Into Something Useful</h2>
 
-  </div>
+            <p>
+               This project started because I was trying to help a friend make sense of a complicated mix of symptoms, treatments, 
+              appointments, and unanswered questions. As I started organizing the information, I realized the same problem affects a 
+              lot of people managing autoimmune conditions or still trying to understand what may be going on.
+            </p>
 
-</section>
+            <p>
+              What began as something for one person quickly became a much more flexible tracker that felt useful enough to share with
+              anyone who might need it.
+            </p>
+
+            <p>
+              The result is a customizable autoimmune pattern and care tracker
+              designed for people who may be newly diagnosed, still looking for
+              answers, changing medications, tracking flares, exploring nutrition
+              approaches, or simply trying to understand what their body has been
+              doing over time.
+            </p>
+
+            <div class="project-note">
+
+              <p>
+                The goal was to bring scattered information into one place so patterns are easier to see and important details are 
+                easier to make sense of.
+              </p>
+
+            </div>
+
+            <p>
+              The workbook includes daily symptom tracking, flare history, treatments,
+              treatment response, labs, appointments, lifestyle and trigger tracking,
+              AIP and nutrition observations, diagnostic history, and barriers such
+              as insurance denials or difficulty accessing treatment.
+            </p>
+
+            <p>
+              I also built it for people who are not advanced Excel users.
+              Dropdown choices can be customized from a simple list page, formulas
+              handle the calculations, workbook colors respond to Excel themes,
+              and a separate demo version shows how the tracker works using
+              fictional sample data.
+            </p>
+
+            <div class="button-group">
+
+              <a
+                class="button"
+                href="Autoimmune_Tracker.xlsx"
+                target="_blank">
+                Download Tracker
+              </a>
+
+              <a
+                class="button"
+                href="Autoimmune_Tracker_Demo.xlsx"
+                target="_blank">
+                View Demo Version
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-image">
+
+            <img
+              src="Autoimmune%20Tracker%20Dashboard.png"
+              alt="Autoimmune Pattern and Care Tracker dashboard">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FUTURE PROJECTS -->
+
+    <section class="project-section alt">
+
+      <div class="section-content">
+
+        <div class="eyebrow">
+          What Comes Next
+        </div>
+
+        <h2>I Have a Feeling This Section Will Grow</h2>
+
+        <div class="project-note">
+
+          <p>
+            I don’t really set out looking for side projects. They usually find me.
+            Something catches my attention, I start asking questions, and before long
+            I’ve built a spreadsheet, mapped a process, or gone much farther down a
+            rabbit hole than I originally intended.
+          </p>
+
+          <p style="margin-top: 14px;">
+            I’m sure these won’t be the last.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
 
     <!-- CLOSING -->
 
@@ -516,8 +629,8 @@
         <div class="closing-copy">
 
           <p>
-            An unemployment process and a dog's allergy tracker obviously
-            have very little in common on the surface.
+            An unemployment process, a dog's allergy tracker, and an autoimmune
+            tracking system obviously solve very different problems.
           </p>
 
           <p>
@@ -529,6 +642,7 @@
 
           <p>
             Sometimes that becomes a formal analysis.
+            Sometimes it becomes a tool someone else might be able to use.
             Sometimes it is just how I get my brain to stop spinning.
             Either way, I usually end up understanding the problem better
             than I did when I started, and with something useful to show for it.
