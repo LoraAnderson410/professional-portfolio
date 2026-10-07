@@ -192,6 +192,18 @@
       margin: 0;
     }
 
+    /* AUTOIMMUNE PROJECT */
+
+    .autoimmune-layout {
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 40px;
+    }
+
+    .autoimmune-image img {
+      width: 100%;
+      max-width: none;
+    }
+
     .closing {
       background-color: #263c32;
       color: white;
@@ -233,7 +245,8 @@
         align-items: flex-start;
       }
 
-      .project-layout {
+      .project-layout,
+      .autoimmune-layout {
         grid-template-columns: 1fr;
         gap: 28px;
       }
@@ -493,7 +506,7 @@
 
       <div class="section-content">
 
-        <div class="project-layout">
+        <div class="project-layout autoimmune-layout">
 
           <div class="project-copy">
 
@@ -504,46 +517,22 @@
             <h2>Turning Scattered Symptoms Into Something Useful</h2>
 
             <p>
-               This project started because I was trying to help a friend make sense of a complicated mix of symptoms, treatments, 
-              appointments, and unanswered questions. As I started organizing the information, I realized the same problem affects a 
-              lot of people managing autoimmune conditions or still trying to understand what may be going on.
+              This project started while I was helping a friend organize a complicated
+              mix of symptoms, treatments, appointments, and unanswered questions.
+              It quickly became clear that the same problem affects a lot of people.
             </p>
 
             <p>
-              What began as something for one person quickly became a much more flexible tracker that felt useful enough to share with
-              anyone who might need it.
+              I turned that idea into a customizable Excel tracker for symptoms,
+              flares, treatments, labs, nutrition, triggers, appointments,
+              diagnostic history, and barriers to care.
             </p>
 
             <p>
-              The result is a customizable autoimmune pattern and care tracker
-              designed for people who may be newly diagnosed, still looking for
-              answers, changing medications, tracking flares, exploring nutrition
-              approaches, or simply trying to understand what their body has been
-              doing over time.
-            </p>
-
-            <div class="project-note">
-
-              <p>
-                The goal was to bring scattered information into one place so patterns are easier to see and important details are 
-                easier to make sense of.
-              </p>
-
-            </div>
-
-            <p>
-              The workbook includes daily symptom tracking, flare history, treatments,
-              treatment response, labs, appointments, lifestyle and trigger tracking,
-              AIP and nutrition observations, diagnostic history, and barriers such
-              as insurance denials or difficulty accessing treatment.
-            </p>
-
-            <p>
-              I also built it for people who are not advanced Excel users.
-              Dropdown choices can be customized from a simple list page, formulas
-              handle the calculations, workbook colors respond to Excel themes,
-              and a separate demo version shows how the tracker works using
-              fictional sample data.
+              I designed it to be easy to use and personalize, even for someone
+              who only knows the basics of Excel. A separate demo version includes
+              fictional data so users can see how everything works before starting
+              their own tracker.
             </p>
 
             <div class="button-group">
@@ -567,7 +556,7 @@
           </div>
 
 
-          <div class="project-image">
+          <div class="project-image autoimmune-image">
 
             <img
               src="Autoimmune_Tracker_Dashboard.png"
