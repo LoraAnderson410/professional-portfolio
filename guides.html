@@ -1,14 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Guides & Resources | Lora Anderson</title>
+  <title>Guides &amp; Resources | Lora Anderson</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -30,25 +28,23 @@
       color: inherit;
     }
 
-
-    /* ---------- NAVIGATION ---------- */
+    /* NAVIGATION */
 
     nav {
       background-color: #263c32;
       color: white;
-      padding: 18px 6%;
+      padding: 14px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 30px;
-
+      gap: 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
     .nav-name {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: bold;
       letter-spacing: 0.5px;
       white-space: nowrap;
@@ -57,7 +53,7 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 14px;
       align-items: center;
     }
 
@@ -71,12 +67,11 @@
       text-decoration: underline;
     }
 
-
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
       background-color: #e8ece6;
-      padding: 80px 8%;
+      padding: 35px 8%;
     }
 
     .hero-content {
@@ -88,40 +83,39 @@
       color: #9a6b32;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: bold;
       margin-bottom: 8px;
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 12px;
       color: #263c32;
-      font-size: clamp(3rem, 7vw, 5rem);
-      line-height: 1;
+      font-size: clamp(26px, 3vw, 32px);
+      line-height: 1.2;
     }
 
     .hero-subtitle {
-      font-size: 1.35rem;
+      font-size: 1.1rem;
       color: #5c6c63;
-      margin-top: 20px;
-      font-weight: bold;
+      margin: 10px 0 14px;
+      font-weight: 600;
     }
 
     .hero-description {
       max-width: 820px;
-      font-size: 1.08rem;
-      margin-top: 25px;
+      font-size: 1rem;
+      margin: 0 0 14px;
     }
 
-
-    /* ---------- BUTTONS ---------- */
+    /* BUTTONS */
 
     .button {
       display: inline-block;
       background-color: #263c32;
       color: white;
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 10px 16px;
       border-radius: 6px;
       margin-right: 8px;
       margin-bottom: 10px;
@@ -136,7 +130,7 @@
       display: inline-block;
       background-color: #d9dedb;
       color: #68746e;
-      padding: 12px 20px;
+      padding: 10px 16px;
       border-radius: 6px;
       margin-right: 8px;
       margin-bottom: 10px;
@@ -144,12 +138,11 @@
       cursor: default;
     }
 
-
-    /* ---------- CATEGORY NAV ---------- */
+    /* CATEGORY NAVIGATION */
 
     .category-nav {
       max-width: 1000px;
-      margin: 35px auto 0;
+      margin: 22px auto 0;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -159,7 +152,7 @@
       display: inline-block;
       background-color: white;
       color: #34483e;
-      padding: 9px 16px;
+      padding: 8px 14px;
       border-radius: 22px;
       text-decoration: none;
       font-size: 0.9rem;
@@ -173,11 +166,10 @@
       border-color: #263c32;
     }
 
-
-    /* ---------- GENERAL SECTIONS ---------- */
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 70px 8%;
+      padding: 40px 8%;
     }
 
     .section-content {
@@ -187,24 +179,25 @@
 
     h2 {
       color: #263c32;
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 15px;
+      font-size: 26px;
+      line-height: 1.25;
+      margin: 0 0 12px;
     }
 
     h3 {
       color: #263c32;
-      margin-top: 0;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 0 0 12px;
     }
 
     .section-intro {
       max-width: 820px;
-      font-size: 1.05rem;
-      margin-bottom: 30px;
+      font-size: 1rem;
+      margin: 0 0 20px;
     }
 
-
-    /* ---------- OVERVIEW ---------- */
+    /* OVERVIEW */
 
     .overview {
       background-color: white;
@@ -213,12 +206,19 @@
     .overview-card {
       background-color: #f8f7f3;
       border-left: 5px solid #9a6b32;
-      padding: 32px;
+      padding: 22px;
       border-radius: 8px;
     }
 
+    .overview-card p:first-child {
+      margin-top: 0;
+    }
 
-    /* ---------- RESOURCE SECTIONS ---------- */
+    .overview-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* RESOURCE SECTIONS */
 
     .resource-section {
       background-color: #f8f7f3;
@@ -230,16 +230,16 @@
 
     .resource-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      margin-top: 30px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
     }
 
     .resource-card {
       background-color: white;
       border: 1px solid #d8ddd9;
       border-radius: 9px;
-      padding: 28px;
+      padding: 22px;
     }
 
     .resource-section.alt .resource-card {
@@ -257,16 +257,16 @@
 
     .resource-card p {
       margin-top: 0;
+      margin-bottom: 14px;
     }
 
-
-    /* ---------- TAGS ---------- */
+    /* TAGS */
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 18px 0 20px;
+      margin: 14px 0 18px;
     }
 
     .tag {
@@ -279,8 +279,7 @@
       font-weight: bold;
     }
 
-
-    /* ---------- FUTURE ---------- */
+    /* FUTURE RESOURCES */
 
     .future-card {
       border: 2px dashed #c8cfcb;
@@ -292,14 +291,13 @@
       color: #69766f;
     }
 
-
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
 
     footer {
       background-color: #1e2f27;
       color: #d8dedb;
       text-align: center;
-      padding: 30px 8%;
+      padding: 24px 8%;
       font-size: 0.9rem;
     }
 
@@ -307,18 +305,16 @@
       margin: 5px 0;
     }
 
-
-    /* ---------- MOBILE ---------- */
+    /* TABLET AND MOBILE */
 
     @media (max-width: 850px) {
-
       nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
       .nav-links {
-        gap: 14px;
+        gap: 12px;
       }
 
       .resource-grid {
@@ -326,76 +322,80 @@
       }
 
       .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding: 30px 6%;
       }
 
-    }
+      section {
+        padding: 32px 6%;
+      }
 
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .resource-card,
+      .overview-card {
+        padding: 18px;
+      }
+    }
   </style>
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
   <nav>
-
     <div class="nav-name">
       Lora Anderson
     </div>
 
     <div class="nav-links">
-
-      <a href="index.html">
-        Portfolio Home
-      </a>
-
-      <a href="#data-tools">
-        Data &amp; Technical
-      </a>
-
-      <a href="#decision-tools">
-        Decision Support
-      </a>
-
-      <a href="#future-guides">
-        Future Guides
-      </a>
-
+      <a href="index.html">Portfolio Home</a>
+      <a href="#data-tools">Data &amp; Technical</a>
+      <a href="#decision-tools">Decision Support</a>
+      <a href="#future-guides">Future Guides</a>
     </div>
-
   </nav>
-
 
   <!-- HERO -->
 
   <header class="hero">
-
     <div class="hero-content">
 
       <div class="eyebrow">
         Guides &amp; Resources
       </div>
 
-      <h1>Practical Tools & Guides</h1>
+      <h1>Practical Tools &amp; Guides</h1>
 
       <p class="hero-subtitle">
         Practical references for tools, analysis, data quality, and problem solving.
       </p>
 
       <p class="hero-description">
-I have always believed that part of being a good leader is helping people understand the work, not just telling them what to do. Over the years, I have created guides, training resources, checklists, and reference tools to make information easier to use and help people work with more confidence and independence.
+        I have always believed that part of being a good leader is helping people
+        understand the work, not just telling them what to do. Over the years,
+        I have created guides, training resources, checklists, and reference
+        tools to make information easier to use and help people work with more
+        confidence and independence.
       </p>
 
       <p class="hero-description">
-        I still build them when I am learning something new too. If I figure out something useful, my instinct is usually to document it so the next person does not have to start from scratch.
+        I still build them when I am learning something new too. If I figure
+        out something useful, my instinct is usually to document it so the
+        next person does not have to start from scratch.
       </p>
 
       <div class="category-nav">
-
         <a class="category-link" href="#data-tools">
           Data &amp; Technical
         </a>
@@ -407,21 +407,16 @@ I have always believed that part of being a good leader is helping people unders
         <a class="category-link" href="#future-guides">
           Future Guides
         </a>
-
       </div>
 
     </div>
-
   </header>
 
-
   <main>
-
 
     <!-- WHY I BUILD GUIDES -->
 
     <section class="overview">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -431,7 +426,6 @@ I have always believed that part of being a good leader is helping people unders
         <h2>Documentation is part of how I learn.</h2>
 
         <div class="overview-card">
-
           <p>
             I rarely want to solve the same problem from scratch twice.
             If I learn a useful process, formula, query pattern, or decision
@@ -448,18 +442,14 @@ I have always believed that part of being a good leader is helping people unders
             These guides are examples of that approach. Some are technical.
             Others help organize judgment and decision-making.
           </p>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- DATA & TECHNICAL -->
+    <!-- DATA AND TECHNICAL -->
 
     <section class="resource-section" id="data-tools">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -475,11 +465,9 @@ I have always believed that part of being a good leader is helping people unders
 
         <div class="resource-grid">
 
-
           <!-- EXCEL -->
 
           <div class="resource-card">
-
             <div class="resource-type">
               Excel
             </div>
@@ -503,14 +491,11 @@ I have always believed that part of being a good leader is helping people unders
               target="_blank">
               View Excel Guide
             </a>
-
           </div>
-
 
           <!-- HEIDISQL -->
 
           <div class="resource-card">
-
             <div class="resource-type">
               SQL / Database
             </div>
@@ -534,14 +519,11 @@ I have always believed that part of being a good leader is helping people unders
               target="_blank">
               View HeidiSQL Guide
             </a>
-
           </div>
-
 
           <!-- VALIDATION -->
 
           <div class="resource-card">
-
             <div class="resource-type">
               Data Quality
             </div>
@@ -565,14 +547,11 @@ I have always believed that part of being a good leader is helping people unders
               target="_blank">
               View Validation Checklist
             </a>
-
           </div>
-
 
           <!-- FUTURE TECHNICAL -->
 
           <div class="resource-card future-card">
-
             <div class="resource-type">
               Growing Library
             </div>
@@ -588,21 +567,15 @@ I have always believed that part of being a good leader is helping people unders
             <span class="button-disabled">
               More Coming
             </span>
-
           </div>
 
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- DECISION SUPPORT -->
 
     <section class="resource-section alt" id="decision-tools">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -621,11 +594,9 @@ I have always believed that part of being a good leader is helping people unders
 
         <div class="resource-grid">
 
-
           <!-- HELPFUL TOOLS -->
 
           <div class="resource-card">
-
             <div class="resource-type">
               Decision Framework
             </div>
@@ -651,14 +622,11 @@ I have always believed that part of being a good leader is helping people unders
               target="_blank">
               View Tool Guide
             </a>
-
           </div>
-
 
           <!-- FUTURE DECISION GUIDE -->
 
           <div class="resource-card future-card">
-
             <div class="resource-type">
               Future Resource
             </div>
@@ -675,21 +643,15 @@ I have always believed that part of being a good leader is helping people unders
             <span class="button-disabled">
               More Coming
             </span>
-
           </div>
 
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- FUTURE GUIDES -->
 
     <section class="resource-section" id="future-guides">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -699,7 +661,6 @@ I have always believed that part of being a good leader is helping people unders
         <h2>This section is meant to grow.</h2>
 
         <div class="overview-card">
-
           <p>
             I am actively continuing to build skills in Tableau, Python,
             AI-assisted workflows, database design, SQL, and analytics.
@@ -711,21 +672,16 @@ I have always believed that part of being a good leader is helping people unders
             It is to keep the guides that genuinely help me work better,
             learn faster, or explain a process more clearly.
           </p>
-
         </div>
 
       </div>
-
     </section>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
-
     <p>© 2026 Lora Anderson</p>
 
     <p>
@@ -734,14 +690,9 @@ I have always believed that part of being a good leader is helping people unders
     </p>
 
     <p>
-      <a href="index.html">
-        Return to Portfolio
-      </a>
+      <a href="index.html">Return to Portfolio</a>
     </p>
-
   </footer>
 
-
 </body>
-
 </html>
