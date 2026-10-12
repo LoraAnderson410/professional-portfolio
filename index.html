@@ -1,16 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Lora Anderson | Professional Portfolio</title>
+  <title>Guides &amp; Resources | Lora Anderson</title>
 
   <style>
-    /* GLOBAL */
-
     * {
       box-sizing: border-box;
     }
@@ -25,70 +21,11 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #2f3833;
       background-color: #f8f7f3;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     a {
       color: inherit;
-    }
-
-    section {
-      padding: 42px 8%;
-    }
-
-    .section-content {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      color: #9a6b32;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #263c32;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 5.3rem);
-      line-height: 1;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin: 0 0 14px 0;
-    }
-
-    h3 {
-      margin-top: 0;
-    }
-
-    .section-intro {
-      max-width: 820px;
-      margin: 0;
-      font-size: 1.02rem;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #263c32;
-      color: white;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background-color: #395547;
     }
 
     /* NAVIGATION */
@@ -96,11 +33,11 @@
     nav {
       background-color: #263c32;
       color: white;
-      padding: 14px 3%;
+      padding: 14px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
+      gap: 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -115,14 +52,14 @@
 
     .nav-links {
       display: flex;
-      gap: 11px;
-      align-items: center;
       flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
     }
 
     .nav-links a {
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       white-space: nowrap;
     }
 
@@ -134,214 +71,224 @@
 
     .hero {
       background-color: #e8ece6;
-      padding: 58px 8%;
+      padding: 35px 8%;
     }
 
     .hero-content {
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .professional-focus {
-      font-size: 1.2rem;
+    .eyebrow {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: #263c32;
+      font-size: clamp(26px, 3vw, 32px);
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
       color: #5c6c63;
-      margin: 16px 0 0 0;
+      margin: 10px 0 14px;
+      font-weight: 600;
     }
 
     .hero-description {
-      max-width: 760px;
-      font-size: 1.08rem;
-      margin: 20px 0 24px 0;
+      max-width: 820px;
+      font-size: 1rem;
+      margin: 0 0 14px;
     }
 
-    /* ABOUT */
+    /* BUTTONS */
 
-    .about {
-      background-color: white;
+    .button {
+      display: inline-block;
+      background-color: #263c32;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
 
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 40px;
-      align-items: center;
+    .button:hover {
+      background-color: #395547;
     }
 
-    .about-copy p {
-      margin: 0 0 14px 0;
-      max-width: 790px;
+    .button-disabled {
+      display: inline-block;
+      background-color: #d9dedb;
+      color: #68746e;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      cursor: default;
     }
 
-    .about-photo {
-      width: 100%;
-      max-width: 220px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-    }
+    /* CATEGORY NAVIGATION */
 
-    /* PROFESSIONAL SOLUTIONS */
-
-    .real-world {
-      background-color: #e8ece6;
-    }
-
-    .real-world .section-intro {
-      margin-bottom: 20px;
-    }
-
-    /* NORTHSTAR */
-
-    .northstar {
-      background-color: #f8f7f3;
-    }
-
-    /* COMPACT CARDS */
-
-    .compact-card {
-      background-color: white;
-      border-left: 5px solid #9a6b32;
-      padding: 24px;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-      margin-top: 20px;
-    }
-
-    .compact-card p {
-      margin: 0 0 18px 0;
-      max-width: 850px;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 9px;
+    .category-nav {
+      max-width: 1000px;
+      margin: 22px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .category-link {
-      min-height: 54px;
-      border: 2px solid #263c32;
-      color: #263c32;
+      display: inline-block;
       background-color: white;
+      color: #34483e;
+      padding: 8px 14px;
+      border-radius: 22px;
       text-decoration: none;
-      border-radius: 6px;
-      padding: 8px 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      font-size: 0.9rem;
       font-weight: bold;
-      font-size: 0.8rem;
-      line-height: 1.2;
-      transition: all 0.2s ease;
+      border: 1px solid #ccd5d0;
     }
 
     .category-link:hover {
       background-color: #263c32;
       color: white;
+      border-color: #263c32;
     }
 
-    .category-link.primary {
-      background-color: #263c32;
-      color: white;
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 40px 8%;
     }
 
-    .category-link.primary:hover {
-      background-color: #395547;
+    .section-content {
+      max-width: 1000px;
+      margin: auto;
     }
 
-    /* PROJECTS */
-
-    .projects {
-      background-color: #263c32;
-      color: white;
-    }
-
-    .projects h2 {
-      color: white;
-    }
-
-    .projects .eyebrow {
-      color: #d7a85e;
-    }
-
-    .projects .section-intro {
-      color: #eef2ef;
-    }
-
-    .projects-action {
-      margin-top: 22px;
-    }
-
-    .projects .button {
-      background-color: #f8f7f3;
+    h2 {
       color: #263c32;
+      font-size: 26px;
+      line-height: 1.25;
+      margin: 0 0 12px;
     }
 
-    .projects .button:hover {
-      background-color: #e8ece6;
+    h3 {
+      color: #263c32;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 0 0 12px;
     }
 
-    /* PROFESSIONAL BACKGROUND */
+    .section-intro {
+      max-width: 820px;
+      font-size: 1rem;
+      margin: 0 0 20px;
+    }
 
-    .background {
+    /* OVERVIEW */
+
+    .overview {
       background-color: white;
     }
 
-    .background-grid {
+    .overview-card {
+      background-color: #f8f7f3;
+      border-left: 5px solid #9a6b32;
+      padding: 22px;
+      border-radius: 8px;
+    }
+
+    .overview-card p:first-child {
+      margin-top: 0;
+    }
+
+    .overview-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* RESOURCE SECTIONS */
+
+    .resource-section {
+      background-color: #f8f7f3;
+    }
+
+    .resource-section.alt {
+      background-color: white;
+    }
+
+    .resource-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
       margin-top: 20px;
     }
 
-    .background-card {
-      background-color: #f8f7f3;
-      padding: 20px 22px;
-      border-radius: 7px;
-      display: flex;
-      flex-direction: column;
+    .resource-card {
+      background-color: white;
+      border: 1px solid #d8ddd9;
+      border-radius: 9px;
+      padding: 22px;
     }
 
-    .background-card h3 {
+    .resource-section.alt .resource-card {
+      background-color: #f8f7f3;
+    }
+
+    .resource-type {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.75rem;
+      font-weight: bold;
       margin-bottom: 6px;
-      font-size: 1.15rem;
     }
 
-    .background-card p {
-      margin: 0 0 16px 0;
-      font-size: 0.95rem;
-      flex-grow: 1;
+    .resource-card p {
+      margin-top: 0;
+      margin-bottom: 14px;
     }
 
-    .background-card .button {
-      align-self: flex-start;
-      padding: 9px 16px;
-      font-size: 0.9rem;
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
     }
 
-    /* GUIDES */
-
-    .resources {
-      background-color: #f8f7f3;
+    .tag {
+      display: inline-block;
+      background-color: #ece8df;
+      color: #4f5e56;
+      padding: 6px 10px;
+      border-radius: 18px;
+      font-size: 0.8rem;
+      font-weight: bold;
     }
 
-    /* LINKEDIN */
+    /* FUTURE RESOURCES */
 
-    .linkedin-section {
-      background-color: #e8ece6;
+    .future-card {
+      border: 2px dashed #c8cfcb;
+      background-color: transparent;
       text-align: center;
-      padding-top: 36px;
-      padding-bottom: 36px;
     }
 
-    .linkedin-section .section-content {
-      max-width: 720px;
-    }
-
-    .linkedin-section p {
-      margin: 0 0 18px 0;
+    .future-card p {
+      color: #69766f;
     }
 
     /* FOOTER */
@@ -351,81 +298,52 @@
       color: #d8dedb;
       text-align: center;
       padding: 24px 8%;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
     }
 
     footer p {
-      margin: 4px 0;
+      margin: 5px 0;
     }
 
-    /* TABLET */
+    /* TABLET AND MOBILE */
 
-    @media (max-width: 950px) {
+    @media (max-width: 850px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
-        padding: 14px 6%;
       }
 
-      .category-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .nav-links {
+        gap: 12px;
       }
-    }
 
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-      section {
-        padding: 34px 6%;
+      .resource-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero {
-        padding: 46px 6%;
+        padding: 30px 6%;
       }
 
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 22px;
+      section {
+        padding: 32px 6%;
       }
 
-      .about-photo {
-        max-width: 240px;
-      }
-
-      .background-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .compact-card {
-        padding: 20px;
-      }
-    }
-
-    /* SMALL MOBILE */
-
-    @media (max-width: 430px) {
-      .nav-links {
-        gap: 11px;
-      }
-
-      .nav-links a {
-        font-size: 0.84rem;
-      }
-
-      .category-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-link {
-        min-height: 46px;
+      h1 {
+        font-size: 26px;
       }
 
       h2 {
-        font-size: 1.7rem;
+        font-size: 22px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .resource-card,
+      .overview-card {
+        padding: 18px;
       }
     }
   </style>
@@ -441,26 +359,10 @@
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-      <a href="Real%20World%20Experience.html">Professional Solutions</a>
-      <a href="northstar.html">Northstar</a>
-      <a href="projects.html">Projects</a>
-      <a href="guides.html">Guides</a>
-      <a href="recommendations.html">Recommendations</a>
-
-      <a
-        href="LA%20Resume-Public.pdf"
-        target="_blank">
-        Resume
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/loraanderson410"
-        target="_blank"
-        rel="noopener noreferrer">
-        LinkedIn ↗
-      </a>
+      <a href="index.html">Portfolio Home</a>
+      <a href="#data-tools">Data &amp; Technical</a>
+      <a href="#decision-tools">Decision Support</a>
+      <a href="#future-guides">Future Guides</a>
     </div>
   </nav>
 
@@ -470,329 +372,307 @@
     <div class="hero-content">
 
       <div class="eyebrow">
-        Operations • Leadership • Improvement
+        Guides &amp; Resources
       </div>
 
-      <h1>Lora Anderson</h1>
+      <h1>Practical Tools &amp; Guides</h1>
 
-      <p class="professional-focus">
-        Operations Leadership | Business Strategy | Process Improvement
+      <p class="hero-subtitle">
+        Practical references for tools, analysis, data quality, and problem solving.
       </p>
 
       <p class="hero-description">
-        I build better ways of working. I tend to notice when something is
-        confusing, inefficient, or harder than it needs to be, then start
-        figuring out why and what would make it work better.
+        I have always believed that part of being a good leader is helping people
+        understand the work, not just telling them what to do. Over the years,
+        I have created guides, training resources, checklists, and reference
+        tools to make information easier to use and help people work with more
+        confidence and independence.
       </p>
 
-      <a class="button" href="#northstar">
-        Explore My Work
-      </a>
+      <p class="hero-description">
+        I still build them when I am learning something new too. If I figure
+        out something useful, my instinct is usually to document it so the
+        next person does not have to start from scratch.
+      </p>
+
+      <div class="category-nav">
+        <a class="category-link" href="#data-tools">
+          Data &amp; Technical
+        </a>
+
+        <a class="category-link" href="#decision-tools">
+          Decision Support
+        </a>
+
+        <a class="category-link" href="#future-guides">
+          Future Guides
+        </a>
+      </div>
 
     </div>
   </header>
 
   <main>
 
-    <!-- ABOUT -->
+    <!-- WHY I BUILD GUIDES -->
 
-    <section class="about" id="about">
+    <section class="overview">
       <div class="section-content">
-        <div class="about-layout">
 
-          <div class="about-copy">
+        <div class="eyebrow">
+          Why Guides?
+        </div>
 
-            <div class="eyebrow">
-              About Me
+        <h2>Documentation is part of how I learn.</h2>
+
+        <div class="overview-card">
+          <p>
+            I rarely want to solve the same problem from scratch twice.
+            If I learn a useful process, formula, query pattern, or decision
+            framework, I usually capture it somewhere so I can reuse it.
+          </p>
+
+          <p>
+            That habit has followed me throughout my career.
+            Good documentation makes work easier to repeat, easier to teach,
+            easier to improve, and less dependent on one person's memory.
+          </p>
+
+          <p>
+            These guides are examples of that approach. Some are technical.
+            Others help organize judgment and decision-making.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DATA AND TECHNICAL -->
+
+    <section class="resource-section" id="data-tools">
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Data &amp; Technical
+        </div>
+
+        <h2>References that make technical work easier to repeat.</h2>
+
+        <p class="section-intro">
+          These guides support the tools and practices I use while working
+          with spreadsheets, SQL, databases, validation, and analysis.
+        </p>
+
+        <div class="resource-grid">
+
+          <!-- EXCEL -->
+
+          <div class="resource-card">
+            <div class="resource-type">
+              Excel
             </div>
 
-            <h2>Curious by nature. Solution focused by habit.</h2>
+            <h3>Excel Formula Cheat Sheet</h3>
 
             <p>
-              I've spent most of my career figuring out how to make
-              organizations work better. I've led teams, managed operations,
-              and worked across HR, IT, compliance, facilities, finance,
-              data, and administration. I usually end up somewhere in the
-              middle, connecting the pieces.
+              A practical reference for commonly used Excel formulas
+              and analytical tasks.
             </p>
 
             <p>
-              I like understanding how a business actually works, not just
-              how the process says it works. I ask a lot of questions, look
-              for what is getting in the way, and start thinking about how
-              we could make it simpler, smarter, or more sustainable.
-            </p>
-
-            <p>
-              I'm also endlessly curious. If I don't know how to do something,
-              my first instinct is usually to figure it out. A lot of what I've
-              learned has started with a real problem, a new tool, or a question
-              I wanted answered.
-            </p>
-
-          </div>
-
-          <div>
-            <img
-              class="about-photo"
-              src="Lora_and_Thor_Portfolio.png"
-              alt="Lora Anderson with Thor">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL SOLUTIONS -->
-
-    <section class="real-world" id="real-world">
-      <div class="section-content">
-
-        <div class="eyebrow">
-          Work I've Implemented
-        </div>
-
-        <h2>Professional Solutions</h2>
-
-        <p class="section-intro">
-          Some of my favorite work has involved solving problems that affect
-          people and the way organizations operate. From improving employee
-          onboarding and retention to automating policy reviews, these case
-          studies show how I've approached real challenges, put solutions
-          into practice, and learned from the results.
-        </p>
-
-        <a class="button" href="Real%20World%20Experience.html">
-          Explore Professional Solutions
-        </a>
-
-      </div>
-    </section>
-
-    <!-- NORTHSTAR -->
-
-    <section class="northstar" id="northstar">
-      <div class="section-content">
-
-        <div class="eyebrow">
-          What I'm Building
-        </div>
-
-        <h2>Northstar IT</h2>
-
-        <p class="section-intro">
-          I built Northstar because I wanted one realistic place to keep
-          learning and connect the different parts of a business instead
-          of practicing each skill in isolation.
-        </p>
-
-        <p class="section-intro" style="margin-top: 14px;">
-          It started as a way to work with data, but it quickly grew into
-          much more, including operations, workforce planning, governance,
-          process design, SQL, reporting, policies, and all the little
-          decisions that make a company actually run.
-        </p>
-
-        <p class="section-intro" style="margin-top: 14px;">
-          I keep expanding it because every time I answer one question,
-          I usually find three more.
-        </p>
-
-        <div class="compact-card">
-          <div class="category-grid">
-
-            <a class="category-link" href="northstar.html#business-design">
-              Business Design
-            </a>
-
-            <a class="category-link" href="northstar.html#operations">
-              Operations
-            </a>
-
-            <a class="category-link" href="northstar.html#governance">
-              Governance
-            </a>
-
-            <a class="category-link" href="northstar.html#data">
-              Data &amp; SQL
-            </a>
-
-            <a class="category-link" href="northstar.html#analytics">
-              Analytics &amp; BI
-            </a>
-
-            <a class="category-link primary" href="northstar.html">
-              Explore Northstar
-            </a>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section class="projects" id="projects">
-      <div class="section-content">
-
-        <div class="eyebrow">
-          Curiosity + Problem Solving
-        </div>
-
-        <h2>Problems I Couldn't Leave Alone</h2>
-
-        <p class="section-intro">
-          Some projects start with an assignment. Others start because I
-          come across a problem I can't stop thinking about, or because
-          something piques my curiosity and I want to understand it better.
-        </p>
-
-        <p class="section-intro" style="margin-top: 14px;">
-          This is where those projects live.
-        </p>
-
-        <div class="projects-action">
-          <a class="button" href="projects.html">
-            Explore Projects
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL BACKGROUND -->
-
-    <section class="background" id="background">
-      <div class="section-content">
-
-        <div class="eyebrow">
-          Professional Background
-        </div>
-
-        <h2>Experience is more than a list of job titles.</h2>
-
-        <div class="background-grid">
-
-          <!-- RESUME -->
-
-          <div class="background-card">
-            <h3>Resume</h3>
-
-            <p>
-              My career has crossed operations, leadership, HR, IT,
-              compliance, finance, analytics, facilities, and process
-              improvement. The roles have changed, but figuring out how
-              to make things work better has been a pretty consistent theme.
+              The goal is not to memorize every function. It is to keep
+              useful patterns easy to find so the focus stays on solving
+              the business problem rather than searching for syntax.
             </p>
 
             <a
               class="button"
-              href="LA%20Resume-Public.pdf"
+              href="Excel_Formula_Cheat_Sheet.pdf"
               target="_blank">
-              View Resume
+              View Excel Guide
             </a>
           </div>
 
-          <!-- RECOMMENDATIONS -->
+          <!-- HEIDISQL -->
 
-          <div class="background-card">
-            <h3>Professional Recommendations</h3>
+          <div class="resource-card">
+            <div class="resource-type">
+              SQL / Database
+            </div>
+
+            <h3>HeidiSQL Quick Guide</h3>
 
             <p>
-              A resume can only tell you so much. Throughout my career,
-              leaders I worked with took the time to document the impact
-              I had as I moved on from their organizations. Their letters
-              speak to my accomplishments, leadership, judgment, and problem
-              solving.
+              A working reference for navigating HeidiSQL while using
+              MariaDB for database development and analysis.
             </p>
 
-            <a class="button" href="recommendations.html">
-              View Recommendations
+            <p>
+              It captures common tasks and reminders so I can spend less
+              time searching menus or re-learning steps and more time
+              working with the actual data.
+            </p>
+
+            <a
+              class="button"
+              href="HeidiSQL_Quick_Guide.pdf"
+              target="_blank">
+              View HeidiSQL Guide
             </a>
+          </div>
+
+          <!-- VALIDATION -->
+
+          <div class="resource-card">
+            <div class="resource-type">
+              Data Quality
+            </div>
+
+            <h3>Data Validation Checklist</h3>
+
+            <p>
+              A reusable checklist for reviewing data before it becomes
+              a report, dashboard, analysis, or decision.
+            </p>
+
+            <p>
+              The checklist helps create a consistent quality-control step
+              around completeness, consistency, duplicates, relationships,
+              unexpected values, and other common data problems.
+            </p>
+
+            <a
+              class="button"
+              href="Data_Validation_Checklist.pdf"
+              target="_blank">
+              View Validation Checklist
+            </a>
+          </div>
+
+          <!-- FUTURE TECHNICAL -->
+
+          <div class="resource-card future-card">
+            <div class="resource-type">
+              Growing Library
+            </div>
+
+            <h3>More Technical References</h3>
+
+            <p>
+              As I continue working with SQL, Tableau, Python,
+              AI tools, and other technologies, additional working
+              references will be added here.
+            </p>
+
+            <span class="button-disabled">
+              More Coming
+            </span>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- GUIDES -->
+    <!-- DECISION SUPPORT -->
 
-    <section class="resources" id="resources">
+    <section class="resource-section alt" id="decision-tools">
       <div class="section-content">
 
         <div class="eyebrow">
-          Leadership + Learning
+          Decision Support
         </div>
 
-        <h2>Practical Tools &amp; Guides</h2>
+        <h2>Choosing the right tool for the problem.</h2>
 
         <p class="section-intro">
-          I’ve always believed part of leadership is making information easier to understand
-          and helping people build confidence in what they do. Throughout my career, I’ve
-          created guides, tools, training resources, and documentation to help people
-          learn, solve problems, and work more independently. I still create them when
-          I’m learning something new too. If I figure out something useful, my instinct
-          is usually to document it so someone else doesn’t have to start from scratch.
+          Technical skill is useful, but using the most complicated tool
+          available is not the goal. Good problem solving includes knowing
+          when a spreadsheet is enough, when a database makes sense, when
+          visualization helps, and when a process problem is not really
+          a technology problem at all.
         </p>
 
-        <div class="compact-card">
-          <div class="category-grid">
+        <div class="resource-grid">
 
-            <a class="category-link" href="guides.html#data-tools">
-              Data &amp; Technical
+          <!-- HELPFUL TOOLS -->
+
+          <div class="resource-card">
+            <div class="resource-type">
+              Decision Framework
+            </div>
+
+            <h3>Helpful Tools: When to Use What</h3>
+
+            <p>
+              A practical guide for choosing among different tools based
+              on the problem being solved rather than choosing technology
+              for its own sake.
+            </p>
+
+            <p>
+              The resource is intended to help distinguish between tasks
+              that are best handled with Excel, SQL, a database,
+              visualization tools, documentation, automation, or another
+              approach.
+            </p>
+
+            <a
+              class="button"
+              href="05_Helpful_Tools_When_To_Use_Them.pdf"
+              target="_blank">
+              View Tool Guide
             </a>
-
-            <a class="category-link" href="guides.html#data-tools">
-              SQL &amp; Databases
-            </a>
-
-            <a class="category-link" href="guides.html#data-tools">
-              Excel &amp; Data Tools
-            </a>
-
-            <a class="category-link" href="guides.html#decision-tools">
-              Decision Support
-            </a>
-
-            <a class="category-link" href="guides.html#future-guides">
-              Future Guides
-            </a>
-
-            <a class="category-link primary" href="guides.html">
-              Explore Guides
-            </a>
-
           </div>
-        </div>
 
+          <!-- FUTURE DECISION GUIDE -->
+
+          <div class="resource-card future-card">
+            <div class="resource-type">
+              Future Resource
+            </div>
+
+            <h3>Process &amp; Analysis Guides</h3>
+
+            <p>
+              Future resources may include process-mapping references,
+              KPI design notes, dashboard-planning checklists,
+              SQL query patterns, or other materials that emerge
+              from current projects.
+            </p>
+
+            <span class="button-disabled">
+              More Coming
+            </span>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- LINKEDIN -->
+    <!-- FUTURE GUIDES -->
 
-    <section class="linkedin-section">
+    <section class="resource-section" id="future-guides">
       <div class="section-content">
 
         <div class="eyebrow">
-          More Than a Resume
+          Always Learning
         </div>
 
-        <h2>See How I Think.</h2>
+        <h2>This section is meant to grow.</h2>
 
-        <p>
-          I write about leadership, operations, workplace culture,
-          process improvement, and the things I notice about how
-          organizations actually work.
-        </p>
+        <div class="overview-card">
+          <p>
+            I am actively continuing to build skills in Tableau, Python,
+            AI-assisted workflows, database design, SQL, and analytics.
+          </p>
 
-        <a
-          class="button"
-          href="https://www.linkedin.com/in/loraanderson410"
-          target="_blank"
-          rel="noopener noreferrer">
-          Visit My LinkedIn ↗
-        </a>
+          <p>
+            As I develop useful references from that work, I will add them
+            here. The intent is not to build a giant resource library.
+            It is to keep the guides that genuinely help me work better,
+            learn faster, or explain a process more clearly.
+          </p>
+        </div>
 
       </div>
     </section>
@@ -803,7 +683,15 @@
 
   <footer>
     <p>© 2026 Lora Anderson</p>
-    <p>Built while learning GitHub and CSS.</p>
+
+    <p>
+      Guides and resources reflect independent learning,
+      documentation, and professional development.
+    </p>
+
+    <p>
+      <a href="index.html">Return to Portfolio</a>
+    </p>
   </footer>
 
 </body>
