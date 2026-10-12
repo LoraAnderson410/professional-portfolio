@@ -1,18 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lora Anderson | Professional Portfolio</title>
 
-
   <style>
-
-    /* ---------- GLOBAL ---------- */
+    /* GLOBAL */
 
     * {
       box-sizing: border-box;
@@ -94,8 +91,7 @@
       background-color: #395547;
     }
 
-
-    /* ---------- NAVIGATION ---------- */
+    /* NAVIGATION */
 
     nav {
       background-color: #263c32;
@@ -134,8 +130,7 @@
       text-decoration: underline;
     }
 
-
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
       background-color: #e8ece6;
@@ -159,8 +154,7 @@
       margin: 20px 0 24px 0;
     }
 
-
-    /* ---------- ABOUT ---------- */
+    /* ABOUT */
 
     .about {
       background-color: white;
@@ -187,15 +181,23 @@
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
     }
 
+    /* REAL WORLD EXPERIENCE */
 
-    /* ---------- NORTHSTAR ---------- */
+    .real-world {
+      background-color: #e8ece6;
+    }
+
+    .real-world .section-intro {
+      margin-bottom: 20px;
+    }
+
+    /* NORTHSTAR */
 
     .northstar {
       background-color: #f8f7f3;
     }
 
-
-    /* ---------- COMPACT CARDS ---------- */
+    /* COMPACT CARDS */
 
     .compact-card {
       background-color: white;
@@ -249,8 +251,7 @@
       background-color: #395547;
     }
 
-
-    /* ---------- PROJECTS ---------- */
+    /* PROJECTS */
 
     .projects {
       background-color: #263c32;
@@ -282,8 +283,7 @@
       background-color: #e8ece6;
     }
 
-
-    /* ---------- PROFESSIONAL BACKGROUND ---------- */
+    /* PROFESSIONAL BACKGROUND */
 
     .background {
       background-color: white;
@@ -321,15 +321,13 @@
       font-size: 0.9rem;
     }
 
-
-    /* ---------- GUIDES ---------- */
+    /* GUIDES */
 
     .resources {
       background-color: #f8f7f3;
     }
 
-
-    /* ---------- LINKEDIN ---------- */
+    /* LINKEDIN */
 
     .linkedin-section {
       background-color: #e8ece6;
@@ -346,8 +344,7 @@
       margin: 0 0 18px 0;
     }
 
-
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
 
     footer {
       background-color: #1e2f27;
@@ -361,11 +358,9 @@
       margin: 4px 0;
     }
 
-
-    /* ---------- TABLET ---------- */
+    /* TABLET */
 
     @media (max-width: 950px) {
-
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -374,14 +369,11 @@
       .category-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
     }
 
-
-    /* ---------- MOBILE ---------- */
+    /* MOBILE */
 
     @media (max-width: 700px) {
-
       section {
         padding: 34px 6%;
       }
@@ -410,14 +402,11 @@
       .compact-card {
         padding: 20px;
       }
-
     }
 
-
-    /* ---------- SMALL MOBILE ---------- */
+    /* SMALL MOBILE */
 
     @media (max-width: 430px) {
-
       .nav-links {
         gap: 11px;
       }
@@ -437,37 +426,26 @@
       h2 {
         font-size: 1.7rem;
       }
-
     }
-
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
   <nav>
-
     <div class="nav-name">
       Lora Anderson
     </div>
 
     <div class="nav-links">
-
       <a href="index.html">Home</a>
-
       <a href="#about">About</a>
-
+      <a href="real-world-work.html">Professional Solutions</a>
       <a href="northstar.html">Northstar</a>
-
       <a href="projects.html">Projects</a>
-
       <a href="guides.html">Guides</a>
-
       <a href="recommendations.html">Recommendations</a>
 
       <a
@@ -482,16 +460,12 @@
         rel="noopener noreferrer">
         LinkedIn ↗
       </a>
-
     </div>
-
   </nav>
-
 
   <!-- HERO -->
 
   <header class="hero">
-
     <div class="hero-content">
 
       <div class="eyebrow">
@@ -515,19 +489,14 @@
       </a>
 
     </div>
-
   </header>
 
-
   <main>
-
 
     <!-- ABOUT -->
 
     <section class="about" id="about">
-
       <div class="section-content">
-
         <div class="about-layout">
 
           <div class="about-copy">
@@ -562,27 +531,46 @@
 
           </div>
 
-
           <div>
-
             <img
               class="about-photo"
               src="Lora_and_Thor_Portfolio.png"
               alt="Lora Anderson with Thor">
-
           </div>
 
         </div>
-
       </div>
-
     </section>
 
+    <!-- REAL WORLD EXPERIENCE -->
+
+    <section class="real-world" id="real-world">
+      <div class="section-content">
+
+        <div class="eyebrow">
+          Work I've Implemented
+        </div>
+
+        <h2>Real World Experience</h2>
+
+        <p class="section-intro">
+          Some of my favorite work has involved solving problems that affect
+          people and the way organizations operate. From improving employee
+          onboarding and retention to automating policy reviews, these case
+          studies show how I've approached real challenges, put solutions
+          into practice, and learned from the results.
+        </p>
+
+        <a class="button" href="real-world-work.html">
+          Explore Real World Experience
+        </a>
+
+      </div>
+    </section>
 
     <!-- NORTHSTAR -->
 
     <section class="northstar" id="northstar">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -597,76 +585,54 @@
           of practicing each skill in isolation.
         </p>
 
-        <p
-          class="section-intro"
-          style="margin-top: 14px;">
+        <p class="section-intro" style="margin-top: 14px;">
           It started as a way to work with data, but it quickly grew into
           much more, including operations, workforce planning, governance,
           process design, SQL, reporting, policies, and all the little
           decisions that make a company actually run.
         </p>
 
-        <p
-          class="section-intro"
-          style="margin-top: 14px;">
+        <p class="section-intro" style="margin-top: 14px;">
           I keep expanding it because every time I answer one question,
           I usually find three more.
         </p>
 
-
         <div class="compact-card">
-
           <div class="category-grid">
 
-            <a
-              class="category-link"
-              href="northstar.html#business-design">
+            <a class="category-link" href="northstar.html#business-design">
               Business Design
             </a>
 
-            <a
-              class="category-link"
-              href="northstar.html#operations">
+            <a class="category-link" href="northstar.html#operations">
               Operations
             </a>
 
-            <a
-              class="category-link"
-              href="northstar.html#governance">
+            <a class="category-link" href="northstar.html#governance">
               Governance
             </a>
 
-            <a
-              class="category-link"
-              href="northstar.html#data">
+            <a class="category-link" href="northstar.html#data">
               Data &amp; SQL
             </a>
 
-            <a
-              class="category-link"
-              href="northstar.html#analytics">
+            <a class="category-link" href="northstar.html#analytics">
               Analytics &amp; BI
             </a>
 
-            <a
-              class="category-link primary"
-              href="northstar.html">
+            <a class="category-link primary" href="northstar.html">
               Explore Northstar
             </a>
 
           </div>
-
         </div>
 
       </div>
-
     </section>
-
 
     <!-- PROJECTS -->
 
     <section class="projects" id="projects">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -681,31 +647,22 @@
           something piques my curiosity and I want to understand it better.
         </p>
 
-        <p
-          class="section-intro"
-          style="margin-top: 14px;">
+        <p class="section-intro" style="margin-top: 14px;">
           This is where those projects live.
         </p>
 
         <div class="projects-action">
-
-          <a
-            class="button"
-            href="projects.html">
+          <a class="button" href="projects.html">
             Explore Projects
           </a>
-
         </div>
 
       </div>
-
     </section>
-
 
     <!-- PROFESSIONAL BACKGROUND -->
 
     <section class="background" id="background">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -716,11 +673,9 @@
 
         <div class="background-grid">
 
-
           <!-- RESUME -->
 
           <div class="background-card">
-
             <h3>Resume</h3>
 
             <p>
@@ -736,14 +691,11 @@
               target="_blank">
               View Resume
             </a>
-
           </div>
-
 
           <!-- RECOMMENDATIONS -->
 
           <div class="background-card">
-
             <h3>Professional Recommendations</h3>
 
             <p>
@@ -754,26 +706,18 @@
               solving.
             </p>
 
-            <a
-              class="button"
-              href="recommendations.html">
+            <a class="button" href="recommendations.html">
               View Recommendations
             </a>
-
           </div>
 
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- GUIDES -->
 
     <section class="resources" id="resources">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -783,63 +727,50 @@
         <h2>Practical Tools &amp; Guides</h2>
 
         <p class="section-intro">
-          I’ve always believed part of leadership is making information easier to understand and helping people build confidence in what they do. Throughout my career, I’ve created guides, tools, training resources, and documentation to help people learn, solve problems, and work more independently.
-I still create them when I’m learning something new too. If I figure out something useful, my instinct is usually to document it so someone else doesn’t have to start from scratch.
+          I’ve always believed part of leadership is making information easier to understand
+          and helping people build confidence in what they do. Throughout my career, I’ve
+          created guides, tools, training resources, and documentation to help people
+          learn, solve problems, and work more independently. I still create them when
+          I’m learning something new too. If I figure out something useful, my instinct
+          is usually to document it so someone else doesn’t have to start from scratch.
         </p>
 
         <div class="compact-card">
-
           <div class="category-grid">
 
-            <a
-              class="category-link"
-              href="guides.html#data-tools">
+            <a class="category-link" href="guides.html#data-tools">
               Data &amp; Technical
             </a>
 
-            <a
-              class="category-link"
-              href="guides.html#data-tools">
+            <a class="category-link" href="guides.html#data-tools">
               SQL &amp; Databases
             </a>
 
-            <a
-              class="category-link"
-              href="guides.html#data-tools">
+            <a class="category-link" href="guides.html#data-tools">
               Excel &amp; Data Tools
             </a>
 
-            <a
-              class="category-link"
-              href="guides.html#decision-tools">
+            <a class="category-link" href="guides.html#decision-tools">
               Decision Support
             </a>
 
-            <a
-              class="category-link"
-              href="guides.html#future-guides">
+            <a class="category-link" href="guides.html#future-guides">
               Future Guides
             </a>
 
-            <a
-              class="category-link primary"
-              href="guides.html">
+            <a class="category-link primary" href="guides.html">
               Explore Guides
             </a>
 
           </div>
-
         </div>
 
       </div>
-
     </section>
-
 
     <!-- LINKEDIN -->
 
     <section class="linkedin-section">
-
       <div class="section-content">
 
         <div class="eyebrow">
@@ -863,26 +794,16 @@ I still create them when I’m learning something new too. If I figure out somet
         </a>
 
       </div>
-
     </section>
 
-
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
-
     <p>© 2026 Lora Anderson</p>
-
-    <p>
-      Built while learning GitHub and CSS.
-    </p>
-
+    <p>Built while learning GitHub and CSS.</p>
   </footer>
 
-
 </body>
-
 </html>
