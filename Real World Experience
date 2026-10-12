@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Real world projects, process improvements, and results from Lora Anderson's professional experience.">
+<title>Real World Experience | Lora Anderson</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f7f3;
+  color: #2f3833;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid #9a6b32;
+  outline-offset: 4px;
+}
+
+nav {
+  background: #263c32;
+  color: #fff;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-name {
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: .9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.hero {
+  background: #e8ece6;
+  padding: 76px 8% 72px;
+}
+
+.eyebrow {
+  font-size: .84rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #9a6b32;
+  margin: 0 0 12px;
+}
+
+h1, h2, h3 {
+  color: #263c32;
+  line-height: 1.16;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  margin: 0 0 22px;
+}
+
+.lead {
+  font-size: 1.24rem;
+  color: #5c6c63;
+  font-weight: bold;
+  margin: 0 0 22px;
+}
+
+.hero p:not(.eyebrow):not(.lead) {
+  max-width: 790px;
+  font-size: 1.08rem;
+}
+
+section {
+  padding: 70px 8%;
+}
+
+section.white {
+  background: #fff;
+}
+
+section.cream {
+  background: #f8f7f3;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .75fr);
+  gap: 52px;
+  align-items: start;
+}
+
+p {
+  margin: 0 0 17px;
+}
+
+.stat-card {
+  background: #e8ece6;
+  border-radius: 12px;
+  padding: 27px 28px;
+  margin-top: 8px;
+}
+
+.stat {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: bold;
+  color: #263c32;
+  line-height: 1.1;
+}
+
+.stat-label {
+  margin: 10px 0 0;
+  font-size: .96rem;
+}
+
+.stat-divider {
+  height: 1px;
+  background: #c7d0c8;
+  margin: 24px 0;
+}
+
+.fine-print {
+  font-size: .82rem;
+  color: #5c6c63;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+.key-points {
+  margin: 20px 0 18px;
+  padding-left: 22px;
+}
+
+.key-points li {
+  margin-bottom: 9px;
+}
+
+.button {
+  display: inline-block;
+  background: #263c32;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 9px;
+}
+
+.button:hover {
+  background: #395547;
+}
+
+.support {
+  background: #edf0eb;
+  padding: 50px 8%;
+}
+
+.support p {
+  max-width: 850px;
+}
+
+footer {
+  background: #263c32;
+  color: #d8dedb;
+  text-align: center;
+  padding: 29px 8%;
+  font-size: .9rem;
+}
+
+footer p {
+  margin: 3px 0;
+}
+
+@media (max-width: 850px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .hero {
+    padding: 58px 8%;
+  }
+
+  section {
+    padding: 58px 8%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav aria-label="Main navigation">
+  <a class="nav-name" href="index.html">Lora Anderson</a>
+  <div class="nav-links">
+    <a href="index.html">Portfolio Home</a>
+    <a href="#onboarding">Onboarding</a>
+    <a href="#automation">Automation</a>
+    <a href="northstar.html">Northstar</a>
+    <a href="projects.html">Projects</a>
+    <a href="recommendations.html">Recommendations</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Professional Experience</p>
+
+    <h1>Projects, Processes &amp; Results</h1>
+
+    <p class="lead">
+      Real challenges, practical solutions, and lessons
+      from my professional experience.
+    </p>
+
+    <p>
+      Throughout my career, I've enjoyed identifying
+      problems, understanding what causes them, and
+      developing solutions that make a meaningful difference.
+      That might mean improving an employee's experience,
+      simplifying an administrative process, or finding
+      a better way to use technology.
+    </p>
+
+    <p>
+      This collection highlights work I've designed and
+      implemented in professional settings. Each case study
+      explores the challenge, my approach, the results,
+      and what I learned along the way.
+    </p>
+  </div>
+</header>
+
+<main>
+
+<section class="white" id="onboarding">
+  <div class="wrap case-grid">
+
+    <div>
+      <p class="eyebrow">
+        Employee Experience &amp; Retention
+      </p>
+
+      <h2>Redesigning the First 90 Days</h2>
+
+      <p>
+        At a residential youth services program,
+        one home was experiencing exceptionally high
+        turnover among new direct care employees.
+        Approximately 90% were leaving within
+        their first 90 days.
+      </p>
+
+      <p>
+        Rather than treating turnover solely as an
+        employee performance issue, I looked at how
+        we prepared and supported people entering
+        a demanding work environment.
+      </p>
+
+      <p>
+        I redesigned the onboarding process to include
+        completed training before placement, experienced
+        peer mentors, a gradual transition to independent
+        work, and structured conversations with leadership.
+        We also addressed staffing coverage and training
+        accountability.
+      </p>
+
+      <p>
+        The process required coordination across
+        residential homes and created additional
+        opportunities for employees to share concerns
+        before those concerns led to resignations.
+      </p>
+
+      <ul class="key-points">
+        <li>
+          60 hours of training completed before
+          the first floor shift
+        </li>
+        <li>
+          A structured 30, 60, and 90 day
+          onboarding progression
+        </li>
+        <li>
+          Volunteer mentorship and leadership
+          check ins
+        </li>
+      </ul>
+
+      <a class="button"
+         href="Onboarding_Case_Study.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
+        Read the Full Case Study
+      </a>
+    </div>
+
+    <aside class="stat-card">
+      <div class="stat">90% → 30%</div>
+
+      <p class="stat-label">
+        Approximate first 90 day turnover at
+        the highest turnover home, before and
+        after implementation.
+      </p>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat">9 months</div>
+
+      <p class="stat-label">
+        Approximate length of time the program
+        operated during my tenure.
+      </p>
+
+      <p class="fine-print">
+        Figures are historical estimates for one
+        location. The improvement was observed
+        during implementation and is not presented
+        as proof of a single cause.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<section class="cream" id="automation">
+  <div class="wrap case-grid">
+
+    <div>
+      <p class="eyebrow">
+        Business Process Automation &amp; Compliance
+      </p>
+
+      <h2>
+        Policy Lifecycle Management
+        &amp; Workflow Automation
+      </h2>
+
+      <p>
+        Managing hundreds of organizational policies
+        required significant administrative coordination.
+        Review deadlines, document requests, approvals,
+        and publication records were tracked through
+        largely manual processes.
+      </p>
+
+      <p>
+        I developed a connected workflow using Excel,
+        Microsoft Power Automate, Outlook, OneDrive,
+        and SharePoint to automate routine administrative
+        steps and improve visibility into the process.
+      </p>
+
+      <p>
+        The system initiated review requests, captured
+        returned documents, updated tracking information,
+        and notified appropriate staff when approved
+        policies were ready for publication.
+      </p>
+
+      <p>
+        An important part of the design was recognizing
+        what should remain a human responsibility.
+        Compliance review, evaluation of operational
+        practices, and board approval were intentionally
+        kept outside the automated process.
+      </p>
+
+      <ul class="key-points">
+        <li>
+          Automated review scheduling and
+          document routing
+        </li>
+        <li>
+          Integrated tracking across Microsoft 365
+          applications
+        </li>
+        <li>
+          Human approval checkpoints and
+          workflow failure alerts
+        </li>
+      </ul>
+
+      <a class="button"
+         href="Policy_Automation_Portfolio.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
+        Read the Full Case Study
+      </a>
+    </div>
+
+    <aside class="stat-card">
+
+      <div class="stat">~300</div>
+
+      <p class="stat-label">
+        Policies managed through the process.
+      </p>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat">~2 years</div>
+
+      <p class="stat-label">
+        Approximate time the automated workflows
+        remained in operational use.
+      </p>
+
+      <p class="fine-print">
+        No formal study was conducted to calculate
+        time saved or financial return. The case study
+        describes the implemented workflows and
+        operational improvements without claiming
+        unverified numerical results.
+      </p>
+
+    </aside>
+
+  </div>
+</section>
+
+<section class="support">
+  <div class="wrap">
+
+    <p class="eyebrow">About These Case Studies</p>
+
+    <h2>Real Experience, Responsibly Shared</h2>
+
+    <p>
+      These examples are based on work I completed
+      in professional settings. To respect confidentiality,
+      I have excluded identifying employee information,
+      internal documents, and proprietary materials.
+      Process diagrams are reconstructions created
+      to illustrate the approaches used.
+    </p>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Lora Anderson</p>
+</footer>
+
+</body>
+</html>
