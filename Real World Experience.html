@@ -6,13 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Professional solutions developed by Lora Anderson through practical problem solving, process improvement, technology, and organizational operations.">
+  <meta name="description" content="Professional solutions developed and implemented by Lora Anderson across operations, finance, human resources, technology, and compliance.">
 
   <title>Professional Solutions | Lora Anderson</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -25,8 +23,8 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: #f8f7f3;
       color: #2f3833;
-      background-color: #f8f7f3;
       line-height: 1.55;
     }
 
@@ -47,7 +45,7 @@
     /* NAVIGATION */
 
     nav {
-      background-color: #263c32;
+      background: #263c32;
       color: white;
       padding: 13px 4%;
       display: flex;
@@ -85,10 +83,10 @@
       text-decoration: underline;
     }
 
-    /* PAGE INTRODUCTION */
+    /* INTRODUCTION */
 
     .hero {
-      background-color: #e8ece6;
+      background: #e8ece6;
       padding: 30px 8%;
     }
 
@@ -112,25 +110,27 @@
     }
 
     .hero p.intro {
-      max-width: 920px;
-      margin: 0 0 12px;
+      max-width: 930px;
       font-size: 1rem;
+      margin: 0 0 12px;
     }
 
     .hero p.intro:last-child {
       margin-bottom: 0;
     }
 
-    /* SECTION FORMATTING */
+    /* SECTIONS */
 
-    .featured-section {
-      background-color: #f8f7f3;
+    .section {
       padding: 34px 8%;
     }
 
+    .featured-section {
+      background: #f8f7f3;
+    }
+
     .solutions-section {
-      background-color: white;
-      padding: 34px 8%;
+      background: white;
     }
 
     .section-heading {
@@ -141,12 +141,22 @@
 
     .section-description {
       max-width: 900px;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       color: #536259;
       margin: 0 0 20px;
     }
 
-    /* FEATURED CARDS */
+    .group-heading {
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .solution-group + .solution-group {
+      margin-top: 34px;
+    }
+
+    /* FEATURED CASE STUDIES */
 
     .featured-grid {
       display: grid;
@@ -155,7 +165,7 @@
     }
 
     .featured-card {
-      background-color: white;
+      background: white;
       border: 1px solid #d8ddd9;
       border-top: 4px solid #9a6b32;
       border-radius: 8px;
@@ -167,7 +177,7 @@
 
     .category {
       color: #9a6b32;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: bold;
       letter-spacing: 0.6px;
       text-transform: uppercase;
@@ -176,8 +186,8 @@
 
     .featured-card h3 {
       font-size: 20px;
-      line-height: 1.25;
-      margin: 0 0 11px;
+      line-height: 1.3;
+      margin: 0 0 12px;
     }
 
     .featured-card p {
@@ -186,7 +196,7 @@
     }
 
     .result {
-      background-color: #e8ece6;
+      background: #e8ece6;
       border-radius: 6px;
       padding: 12px 15px;
       margin: 5px 0 16px;
@@ -194,10 +204,10 @@
 
     .result strong {
       display: block;
-      font-size: 25px;
       color: #263c32;
+      font-size: 25px;
       line-height: 1.2;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .result span {
@@ -212,7 +222,7 @@
 
     .button {
       display: inline-block;
-      background-color: #263c32;
+      background: #263c32;
       color: white;
       text-decoration: none;
       padding: 10px 16px;
@@ -222,7 +232,7 @@
     }
 
     .button:hover {
-      background-color: #395547;
+      background: #395547;
     }
 
     /* ADDITIONAL SOLUTIONS */
@@ -235,7 +245,7 @@
     }
 
     .solution-card {
-      background-color: #f8f7f3;
+      background: #f8f7f3;
       border: 1px solid #e0e3df;
       border-radius: 8px;
       padding: 19px;
@@ -251,40 +261,37 @@
     .solution-card p {
       font-size: 0.92rem;
       margin: 0;
-      line-height: 1.55;
     }
 
-    /* CLOSING NOTE */
+    /* CLOSING */
 
-    .closing-note {
-      background-color: #edf0eb;
-      padding: 26px 8%;
+    .closing {
+      background: #edf0eb;
+      padding: 27px 8%;
     }
 
-    .closing-note h2 {
+    .closing h2 {
       font-size: 21px;
-      margin: 0 0 9px;
+      margin: 0 0 10px;
     }
 
-    .closing-note p {
+    .closing p {
+      max-width: 940px;
       font-size: 0.94rem;
-      max-width: 950px;
       margin: 0 0 12px;
     }
 
-    .closing-note p:last-child {
+    .closing p:last-child {
       margin-bottom: 0;
     }
 
-    .small-note {
-      font-size: 0.85rem !important;
+    .disclosure {
       color: #536259;
+      font-size: 0.84rem !important;
     }
 
-    /* FOOTER */
-
     footer {
-      background-color: #263c32;
+      background: #263c32;
       color: #d8dedb;
       text-align: center;
       padding: 22px 8%;
@@ -295,10 +302,9 @@
       margin: 0;
     }
 
-    /* TABLET */
+    /* RESPONSIVE LAYOUT */
 
     @media (max-width: 950px) {
-
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -307,20 +313,13 @@
       .solutions-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
     }
 
-    /* MOBILE */
-
     @media (max-width: 700px) {
-
-      .hero {
-        padding: 27px 6%;
-      }
-
-      .featured-section,
-      .solutions-section {
-        padding: 29px 6%;
+      .hero,
+      .section,
+      .closing {
+        padding: 28px 6%;
       }
 
       .featured-grid,
@@ -333,16 +332,16 @@
         padding: 18px;
       }
 
-      .closing-note {
-        padding: 25px 6%;
-      }
-
       h1 {
         font-size: 26px;
       }
 
       .section-heading {
         font-size: 22px;
+      }
+
+      .group-heading {
+        font-size: 20px;
       }
 
       .featured-card h3 {
@@ -352,17 +351,13 @@
       .solution-card h3 {
         font-size: 18px;
       }
-
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       html {
         scroll-behavior: auto;
       }
-
     }
-
   </style>
 </head>
 
@@ -377,21 +372,13 @@
     </a>
 
     <div class="nav-links">
-
       <a href="index.html">Portfolio Home</a>
-
       <a href="#featured">Case Studies</a>
-
       <a href="#solutions">Other Solutions</a>
-
       <a href="northstar.html">Northstar</a>
-
       <a href="projects.html">Projects</a>
-
       <a href="guides.html">Guides</a>
-
       <a href="recommendations.html">Recommendations</a>
-
     </div>
 
   </nav>
@@ -409,20 +396,23 @@
       <h1>Professional Solutions</h1>
 
       <p class="intro">
-        Every organization has different challenges, resources,
-        and limitations. I enjoy figuring out what's actually
-        causing a problem, understanding what an organization
-        needs, and finding a solution that works within
-        those realities.
+        Every organization has its own challenges,
+        resources, and limitations. I enjoy figuring
+        out what's actually causing a problem,
+        understanding what an organization needs,
+        and developing a solution that works
+        within those realities.
       </p>
 
       <p class="intro">
-        Sometimes that means implementing a new system.
-        Other times, it means getting creative with the
-        tools already available. The solutions featured here
-        aren't about using the most sophisticated technology.
-        They're about finding practical ways to make things
-        work better.
+        Sometimes the answer is a new system.
+        Other times, it's finding a creative way
+        to use the tools already available.
+        I've always found the most satisfaction
+        in turning a problem into something
+        practical that people can actually use.
+        These are some of the solutions I've
+        developed throughout my career.
       </p>
 
     </div>
@@ -433,7 +423,7 @@
 
     <!-- FEATURED CASE STUDIES -->
 
-    <section class="featured-section" id="featured">
+    <section class="section featured-section" id="featured">
 
       <div class="container">
 
@@ -446,15 +436,13 @@
         </h2>
 
         <p class="section-description">
-          Two examples of workplace challenges where I
-          designed and implemented solutions using the
-          resources, people, and systems available.
-          Each includes a detailed case study.
+          A closer look at two challenges, the solutions
+          I implemented, and the results observed.
         </p>
 
         <div class="featured-grid">
 
-          <!-- FEATURED CARD 1 -->
+          <!-- ONBOARDING CASE STUDY -->
 
           <article class="featured-card">
 
@@ -467,20 +455,22 @@
             </h3>
 
             <p>
-              A residential youth services program was
-              experiencing significant early turnover.
-              The existing approach wasn't providing
-              enough preparation and support for new staff
-              entering a demanding environment.
+              One residential youth services home was
+              losing approximately 90% of new employees
+              within their first three months.
+              The existing onboarding approach
+              wasn't preparing or supporting staff
+              adequately for demanding work.
             </p>
 
             <p>
-              I redesigned the onboarding process using
-              structured training, volunteer peer mentors,
-              existing orientation materials, and leadership
-              check ins. The solution relied on better
-              coordination and use of available resources
-              rather than purchasing another system.
+              I redesigned the process using existing
+              training resources, experienced volunteer
+              mentors, phased responsibilities, and
+              structured leadership conversations.
+              The approach focused on employee readiness
+              and support rather than introducing
+              another technology platform.
             </p>
 
             <div class="result">
@@ -488,10 +478,10 @@
               <strong>90% → 30%</strong>
 
               <span>
-                Approximate first 90 day turnover at one
-                home before and after implementation.
-                Historical estimates, not proof that
-                the redesign alone caused the change.
+                Approximate first 90 day turnover at
+                one home before and after implementation.
+                Historical estimates, not proof of
+                a single cause.
               </span>
 
             </div>
@@ -509,12 +499,12 @@
 
           </article>
 
-          <!-- FEATURED CARD 2 -->
+          <!-- POLICY AUTOMATION CASE STUDY -->
 
           <article class="featured-card">
 
             <p class="category">
-              Business Process Automation &amp; Compliance
+              Workflow Automation &amp; Compliance
             </p>
 
             <h3>
@@ -522,22 +512,23 @@
             </h3>
 
             <p>
-              Tracking hundreds of policies through
-              reviews, approvals, and publication
-              depended on manual reminders and
-              administrative follow up.
-              Important steps could be missed when
-              workloads changed or staff were unavailable.
+              Hundreds of organizational policies
+              required recurring reviews, document
+              collection, compliance assessment,
+              approval tracking, and publication.
+              The manual process depended heavily
+              on administrative follow through.
             </p>
 
             <p>
-              Rather than investing in a separate policy
-              management platform, I used existing
-              Microsoft 365 tools to build interconnected
-              workflows. Routine administrative tasks
-              were automated while substantive compliance
-              review and board approval remained
-              human responsibilities.
+              I connected existing Microsoft 365
+              tools to automate review requests,
+              document routing, status updates,
+              and notifications. Compliance review
+              and board approval remained human
+              responsibilities, while the routine
+              administrative work became more
+              systematic.
             </p>
 
             <div class="result">
@@ -545,8 +536,8 @@
               <strong>~300 Policies</strong>
 
               <span>
-                Supported by workflows operating for
-                approximately two years.
+                Supported by connected workflows
+                operating for approximately two years.
                 Time savings were not formally measured.
               </span>
 
@@ -571,305 +562,501 @@
 
     </section>
 
-    <!-- OTHER PROFESSIONAL SOLUTIONS -->
+    <!-- ADDITIONAL SOLUTIONS -->
 
-    <section class="solutions-section" id="solutions">
+    <section class="section solutions-section" id="solutions">
 
       <div class="container">
 
         <p class="eyebrow">
-          Practical Problem Solving
+          Additional Implementations
         </p>
 
         <h2 class="section-heading">
-          Problems Solved With Practical Thinking
+          Practical Solutions Across the Organization
         </h2>
 
         <p class="section-description">
-          These are additional examples of identifying
-          operational needs and developing workable
-          solutions. Not every problem requires new
-          software or a larger budget. Often the
-          challenge is figuring out how to make better
-          use of what's already available.
+          Not every solution needs a formal case study.
+          These examples show how I've addressed
+          different operational challenges, often
+          by making better use of existing technology,
+          information, and resources.
         </p>
 
-        <div class="solutions-grid">
+        <!-- GROUP 1 -->
 
-          <!-- SOLUTION 1 -->
+        <div class="solution-group">
 
-          <article class="solution-card">
+          <h3 class="group-heading">
+            Financial Controls &amp; Accountability
+          </h3>
 
-            <p class="category">
-              Safety &amp; Facilities
-            </p>
+          <div class="solutions-grid">
 
-            <h3>
-              Emergency Evacuation Map Redesign
-            </h3>
+            <!-- CREDIT CARD MANAGEMENT -->
 
-            <p>
-              Existing evacuation maps were hand drawn,
-              difficult to follow, and visually inconsistent.
-              Specialized mapping software wasn't
-              financially justified for the organization.
-              I used Excel to create clearer, more
-              professional evacuation maps using
-              software we already had.
-            </p>
+            <article class="solution-card">
 
-          </article>
+              <p class="category">
+                Financial Controls &amp; Automation
+              </p>
 
-          <!-- SOLUTION 2 -->
+              <h3>
+                Agency Credit Card Management
+              </h3>
 
-          <article class="solution-card">
+              <p>
+                Agency credit cards were being issued
+                without a formal process, creating
+                unnecessary accountability risks.
+                I developed a credit card policy,
+                a documented card issuance process,
+                and receipt collection procedures.
+                I also built a macro enabled Excel
+                tracker that incorporated monthly
+                credit card statements and provided
+                spending dashboards by location
+                and cardholder.
+              </p>
 
-            <p class="category">
-              Facilities &amp; Operations
-            </p>
+            </article>
 
-            <h3>
-              Maintenance Request Tracking
-            </h3>
+            <!-- CONSTRUCTION DASHBOARD -->
 
-            <p>
-              Maintenance work needed a more consistent
-              way to capture and track requests.
-              A dedicated maintenance portal wasn't
-              an available option, so I developed
-              an alternative tracking approach using
-              existing resources. The goal was to
-              improve visibility into outstanding
-              work without adding another paid system.
-            </p>
+            <article class="solution-card">
 
-          </article>
+              <p class="category">
+                Project Management &amp; Financial Analysis
+              </p>
 
-          <!-- SOLUTION 3 -->
+              <h3>
+                Construction Budget &amp; Project Tracking
+              </h3>
 
-          <article class="solution-card">
+              <p>
+                Renovation projects needed clearer
+                oversight of budgets and progress,
+                but purchasing project management
+                software wasn't an option.
+                I built an Excel tracking system,
+                wrote a query to incorporate updated
+                QuickBooks data each month, and
+                created a dashboard showing budget
+                performance and the status of
+                individual construction activities.
+              </p>
 
-            <p class="category">
-              IT Governance &amp; Information Management
-            </p>
+            </article>
 
-            <h3>
-              SharePoint Access Audit &amp; Cleanup
-            </h3>
+            <!-- FUNDRAISING -->
 
-            <p>
-              SharePoint files and access permissions
-              needed a thorough review, but our
-              available auditing and cleanup options
-              were limited. I developed a PowerShell
-              script to identify files and access
-              information, then led the manual
-              cleanup of the findings. It required
-              combining technical analysis with
-              detailed hands on work.
-            </p>
+            <article class="solution-card">
 
-          </article>
+              <p class="category">
+                Development Operations
+              </p>
 
-          <!-- SOLUTION 4 -->
+              <h3>
+                Fundraising &amp; Donor Tracking
+              </h3>
 
-          <article class="solution-card">
+              <p>
+                Fundraising information needed to
+                be organized and accessible, but
+                the budget didn't support a
+                dedicated CRM.
+                I developed a tracking solution
+                using Excel and Access to manage
+                information with tools already
+                available to the organization.
+                It provided a practical alternative
+                to purchasing another system.
+              </p>
 
-            <p class="category">
-              Human Resources &amp; Technology
-            </p>
+            </article>
 
-            <h3>
-              HRIS Implementation &amp; Process Change
-            </h3>
+            <!-- CONTRACTS -->
 
-            <p>
-              Human resources systems need to support
-              the way an organization actually operates,
-              not simply reproduce outdated procedures.
-              I've worked on HRIS implementations and
-              process changes involving UKG, ADP Workforce
-              Now, and Paychex. My focus has been on
-              aligning technology with operational
-              requirements, employee information,
-              and the people using the systems.
-            </p>
+            <article class="solution-card">
 
-          </article>
+              <p class="category">
+                Vendor Management &amp; Risk Reduction
+              </p>
 
-          <!-- SOLUTION 5 -->
+              <h3>
+                Contract Lifecycle Management
+              </h3>
 
-          <article class="solution-card">
+              <p>
+                Vendor contracts and renewal dates
+                needed a more reliable tracking
+                process than depending on individual
+                reminders or scattered records.
+                I developed a centralized contract
+                tracker with automated reminders
+                using available tools.
+                The system helped bring upcoming
+                contract decisions into view
+                before deadlines arrived.
+              </p>
 
-            <p class="category">
-              Vendor Management &amp; Administration
-            </p>
+            </article>
 
-            <h3>
-              Contract Lifecycle Management
-            </h3>
-
-            <p>
-              Vendor agreements and renewal dates can
-              become difficult to manage when information
-              is scattered or depends on someone
-              remembering an upcoming deadline.
-              I developed a centralized contract
-              tracking process with reminders using
-              available tools. This provided a more
-              structured way to review agreements
-              and plan for renewal decisions.
-            </p>
-
-          </article>
-
-          <!-- SOLUTION 6 -->
-
-          <article class="solution-card">
-
-            <p class="category">
-              Analytics &amp; Decision Support
-            </p>
-
-            <h3>
-              Operational Performance Dashboards
-            </h3>
-
-            <p>
-              Organizations often collect plenty of
-              information without having an effective
-              way to use it. I've developed Excel
-              and Power BI reporting tools to bring
-              operational and workforce measures
-              into a more useful format. The goal
-              was to help leadership see patterns,
-              ask better questions, and make more
-              informed decisions.
-            </p>
-
-          </article>
-
-          <!-- SOLUTION 7 -->
-
-          <article class="solution-card">
-
-            <p class="category">
-              Property Operations &amp; Technology
-            </p>
-
-            <h3>
-              Property Management System Implementation
-            </h3>
-
-            <p>
-              Paper based processes made property
-              information and routine administrative
-              work harder to manage consistently.
-              I participated in selecting and
-              implementing Buildium as a more
-              centralized approach. The work
-              involved understanding operational
-              requirements and helping transition
-              existing practices into a digital system.
-            </p>
-
-          </article>
-
-          <!-- SOLUTION 8 -->
-
-          <article class="solution-card">
-
-            <p class="category">
-              Safety &amp; Compliance
-            </p>
-
-            <h3>
-              Practical Safety &amp; Compliance Processes
-            </h3>
-
-            <p>
-              Written policies and completed forms
-              don't automatically create a safe
-              workplace. I've worked on training,
-              safety processes, and compliance
-              practices that needed to function
-              in daily operations, not just on paper.
-              My approach has been to consider how
-              responsibilities are communicated,
-              completed, and followed through.
-            </p>
-
-          </article>
-
-          <!-- SOLUTION 9 -->
-
-          <article class="solution-card">
-
-            <p class="category">
-              Workforce Planning &amp; Operations
-            </p>
-
-            <h3>
-              Workforce Scheduling &amp; Staffing Processes
-            </h3>
-
-            <p>
-              Staffing challenges often involve
-              more than filling an empty shift.
-              Coverage requirements, employee
-              availability, training, and
-              operational demands all affect
-              workable schedules. I've coordinated
-              staffing approaches that accounted
-              for those competing needs and
-              supported continuity of services.
-            </p>
-
-          </article>
-
-          <!-- FUTURE SOLUTIONS CAN BE ADDED HERE -->
+          </div>
 
         </div>
+
+        <!-- GROUP 2 -->
+
+        <div class="solution-group">
+
+          <h3 class="group-heading">
+            Technology &amp; Operational Systems
+          </h3>
+
+          <div class="solutions-grid">
+
+            <!-- HRIS -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Human Resources &amp; Systems
+              </p>
+
+              <h3>
+                HRIS Selection &amp; Implementation
+              </h3>
+
+              <p>
+                Different organizations needed HR
+                systems suited to their size,
+                operations, and administrative
+                requirements.
+                I've been involved in implementing
+                Paychex and UKG Ready.
+                At NBAC, I led the evaluation of
+                approximately a dozen HRIS options
+                before selecting and implementing
+                ADP Workforce Now for the organization.
+              </p>
+
+            </article>
+
+            <!-- SHAREPOINT -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                IT Governance &amp; Information Security
+              </p>
+
+              <h3>
+                SharePoint Access Audit &amp; Cleanup
+              </h3>
+
+              <p>
+                SharePoint files and access permissions
+                needed a thorough audit, but the
+                available tools were limited.
+                I developed a PowerShell script
+                to identify files and access
+                information, then led the manual
+                cleanup of the findings.
+                The solution combined technical
+                investigation with the detailed
+                work needed to address problems.
+              </p>
+
+            </article>
+
+            <!-- MAINTENANCE -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Facilities &amp; Operations
+              </p>
+
+              <h3>
+                Maintenance Request Tracking
+              </h3>
+
+              <p>
+                Maintenance activities needed
+                a consistent way to capture
+                requests and monitor outstanding
+                work.
+                A dedicated maintenance portal
+                wasn't an available option.
+                I developed an alternative
+                tracking process using existing
+                resources to provide better
+                visibility without the expense
+                of another platform.
+              </p>
+
+            </article>
+
+            <!-- PROPERTY MANAGEMENT -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Property Operations &amp; Technology
+              </p>
+
+              <h3>
+                Property Management System Implementation
+              </h3>
+
+              <p>
+                Paper based practices made property
+                management information and daily
+                administrative activities harder
+                to coordinate.
+                I helped select and implement
+                Buildium to centralize information
+                and support the organization's
+                property management processes.
+                The transition required considering
+                existing workflows and how staff
+                would use the system.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- GROUP 3 -->
+
+        <div class="solution-group">
+
+          <h3 class="group-heading">
+            Safety, Compliance &amp; Employee Support
+          </h3>
+
+          <div class="solutions-grid">
+
+            <!-- SAFETY AUTOMATION -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Workplace Safety &amp; Reporting
+              </p>
+
+              <h3>
+                Safety Monitoring &amp; Incident Reporting
+              </h3>
+
+              <p>
+                Safety oversight involved inspections,
+                drills, and workplace incidents
+                that needed consistent tracking
+                and management visibility.
+                I developed an Excel based system
+                with automated monthly email reports.
+                Microsoft Forms incident submissions
+                were also automated into the
+                safety spreadsheet, reducing
+                manual data handling.
+              </p>
+
+            </article>
+
+            <!-- TRAINING REPORTING -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Training Compliance &amp; Analytics
+              </p>
+
+              <h3>
+                Training Monitoring &amp; Automated Reports
+              </h3>
+
+              <p>
+                Managers needed timely information
+                about training activity and
+                compliance requirements.
+                I developed reporting processes
+                that organized training data and
+                automatically distributed monthly
+                reports by email.
+                The reports provided regular
+                information for monitoring
+                completion and identifying
+                areas needing attention.
+              </p>
+
+            </article>
+
+            <!-- AI GOVERNANCE -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                AI Governance &amp; Confidentiality
+              </p>
+
+              <h3>
+                Organizational AI Use Policy
+              </h3>
+
+              <p>
+                I discovered employees entering
+                sensitive clinical and personnel
+                information into public AI tools,
+                raising serious privacy and
+                confidentiality concerns.
+                I developed an organizational
+                AI policy to address appropriate
+                use and information protection.
+                The goal was to establish practical
+                safeguards while recognizing
+                that AI was becoming part
+                of everyday work.
+              </p>
+
+            </article>
+
+            <!-- EVACUATION MAPS -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Emergency Preparedness &amp; Facilities
+              </p>
+
+              <h3>
+                Emergency Evacuation Map Redesign
+              </h3>
+
+              <p>
+                Existing evacuation maps were
+                hand drawn, visually inconsistent,
+                and difficult for people to follow.
+                Specialized mapping software
+                couldn't be justified financially.
+                I used Excel to create clearer,
+                more professional evacuation
+                maps using a tool the organization
+                already owned.
+              </p>
+
+            </article>
+
+            <!-- STANDARD OPERATING PROCEDURES -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Knowledge Management &amp; Training
+              </p>
+
+              <h3>
+                Training Manuals &amp; Standard Procedures
+              </h3>
+
+              <p>
+                Important job knowledge can be
+                lost or inconsistently communicated
+                when employees change positions
+                or leave an organization.
+                I've developed detailed operating
+                procedures and training resources,
+                including a complete accounts
+                payable manual, program staff
+                instructions, and IT guides.
+                The goal was to make knowledge
+                easier to transfer and daily
+                processes easier to follow.
+              </p>
+
+            </article>
+
+            <!-- WORKFORCE PLANNING -->
+
+            <article class="solution-card">
+
+              <p class="category">
+                Workforce Planning &amp; Operations
+              </p>
+
+              <h3>
+                Staffing &amp; Training Coordination
+              </h3>
+
+              <p>
+                Staffing in residential services
+                required balancing coverage,
+                employee readiness, and mandatory
+                training requirements.
+                I helped coordinate staffing
+                approaches that allowed employees
+                to complete training while
+                maintaining service coverage.
+                The work required cooperation
+                among managers and experienced
+                staff across locations.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- ADD FUTURE SOLUTION GROUPS OR CARDS HERE -->
 
       </div>
 
     </section>
 
-    <!-- CLOSING STATEMENT -->
+    <!-- CLOSING -->
 
-    <section class="closing-note">
+    <section class="closing">
 
       <div class="container">
 
         <h2>
-          The Right Solution for the Right Problem
+          Finding What Works
         </h2>
 
         <p>
-          I don't believe every challenge needs
-          a new platform, a consultant, or a
-          larger budget. Sometimes those investments
-          are necessary. Sometimes the right answer
-          is a spreadsheet, a better process,
-          a small automation, or simply connecting
-          information that already exists.
+          I don't believe every challenge
+          requires new software, another
+          consultant, or a larger budget.
+          Sometimes those investments make sense.
+          Other times, the best solution is
+          a spreadsheet, an automation,
+          a clearer process, or a better
+          way to use existing information.
         </p>
 
         <p>
-          What matters is understanding the actual
-          problem, working within the organization's
-          resources and requirements, and building
-          something people can realistically use
-          and maintain.
+          The important part is understanding
+          the problem, recognizing the
+          organization's requirements and
+          limitations, and creating something
+          people can actually use and maintain.
+          That's the kind of work I enjoy.
         </p>
 
-        <p class="small-note">
-          These examples are drawn from my professional
-          experience. Confidential organizational
-          information and proprietary materials
-          have been excluded. The featured case
-          studies provide more detail about their
-          implementation, results, and limitations.
+        <p class="disclosure">
+          These examples are drawn from actual
+          professional experience. Confidential
+          information and proprietary organizational
+          materials have been excluded.
+          The featured case studies provide
+          additional implementation details
+          and explain the limitations of
+          reported results.
         </p>
 
       </div>
