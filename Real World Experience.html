@@ -1,565 +1,348 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Solutions | Lora Anderson</title>
 
-  <meta name="description"
-        content="Professional solutions, process improvements, and real workplace projects completed by Lora Anderson.">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <title>Professional Solutions | Lora Anderson</title>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f7f3;
+  color: #2f3833;
+  line-height: 1.5;
+}
 
-  <style>
+nav {
+  background: #263c32;
+  color: white;
+  padding: 14px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+.nav-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f8f7f3;
-      color: #2f3833;
-      line-height: 1.55;
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
 
-    a {
-      color: inherit;
-    }
+.nav-links a:hover {
+  text-decoration: underline;
+}
 
-    a:focus-visible {
-      outline: 3px solid #9a6b32;
-      outline-offset: 3px;
-    }
+.hero {
+  background: #e8ece6;
+  padding: 28px 8%;
+}
 
-    /* NAVIGATION */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    nav {
-      background-color: #263c32;
-      color: white;
-      padding: 14px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+.eyebrow {
+  color: #9a6b32;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
 
-    .nav-name {
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+h1 {
+  font-size: 30px;
+  color: #263c32;
+  margin: 0 0 10px;
+}
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      align-items: center;
-    }
+.hero p:last-child {
+  max-width: 850px;
+  margin: 0;
+  font-size: 1rem;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      font-size: 0.88rem;
-      white-space: nowrap;
-    }
+.projects {
+  padding: 30px 8%;
+}
 
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
 
-    /* PAGE INTRODUCTION */
+.card {
+  background: white;
+  border: 1px solid #d8ddd9;
+  border-top: 4px solid #9a6b32;
+  border-radius: 8px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
 
-    .hero {
-      background-color: #e8ece6;
-      padding: 32px 8%;
-    }
+.category {
+  color: #9a6b32;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+.card h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  color: #263c32;
+  margin: 0 0 12px;
+}
 
-    .eyebrow {
-      color: #9a6b32;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 0.78rem;
-      font-weight: bold;
-      margin: 0 0 8px;
-    }
+.card p {
+  font-size: 0.95rem;
+  margin: 0 0 14px;
+}
 
-    h1,
-    h2,
-    h3 {
-      color: #263c32;
-    }
+.result {
+  background: #e8ece6;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin: 4px 0 16px;
+}
 
-    h1 {
-      font-size: 32px;
-      line-height: 1.2;
-      margin: 0 0 12px;
-    }
+.result strong {
+  display: block;
+  font-size: 24px;
+  color: #263c32;
+}
 
-    .hero-description {
-      max-width: 850px;
-      font-size: 1rem;
-      margin: 0;
-    }
+.result span {
+  display: block;
+  font-size: 0.82rem;
+  color: #4f5e56;
+}
 
-    /* PROJECT CARDS */
+.button {
+  display: inline-block;
+  background: #263c32;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.88rem;
+}
 
-    .projects-section {
-      padding: 38px 8%;
-    }
+.button:hover {
+  background: #395547;
+}
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      align-items: stretch;
-    }
+.card-action {
+  margin-top: auto;
+}
 
-    .project-card {
-      background-color: white;
-      border: 1px solid #d8ddd9;
-      border-top: 5px solid #9a6b32;
-      border-radius: 8px;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
+.note {
+  padding: 18px 8%;
+  background: #edf0eb;
+  font-size: 0.85rem;
+  color: #4f5e56;
+}
 
-    .project-category {
-      color: #9a6b32;
-      font-size: 0.75rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
+.note p {
+  margin: 0;
+}
 
-    .project-card h2 {
-      font-size: 23px;
-      line-height: 1.25;
-      margin: 0 0 16px;
-    }
+footer {
+  background: #263c32;
+  color: #d8dedb;
+  padding: 20px 8%;
+  text-align: center;
+  font-size: 0.85rem;
+}
 
-    .project-card p {
-      margin: 0 0 14px;
-      font-size: 0.96rem;
-    }
+@media (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .project-card ul {
-      padding-left: 20px;
-      margin: 0 0 18px;
-      font-size: 0.94rem;
-    }
+  .hero {
+    padding: 25px 6%;
+  }
 
-    .project-card li {
-      margin-bottom: 8px;
-    }
+  .projects {
+    padding: 25px 6%;
+  }
 
-    /* RESULTS */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .results {
-      background-color: #e8ece6;
-      border-radius: 7px;
-      padding: 17px 19px;
-      margin: 10px 0 18px;
-    }
-
-    .result-number {
-      color: #263c32;
-      font-size: 29px;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-bottom: 4px;
-    }
-
-    .result-label {
-      font-size: 0.88rem;
-      margin: 0;
-    }
-
-    .result-note {
-      color: #5c6c63;
-      font-size: 0.78rem;
-      margin: 9px 0 0;
-      line-height: 1.4;
-    }
-
-    /* BUTTONS */
-
-    .card-action {
-      margin-top: auto;
-      padding-top: 8px;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #263c32;
-      color: white;
-      text-decoration: none;
-      padding: 11px 17px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background-color: #395547;
-    }
-
-    /* CASE STUDY NOTE */
-
-    .case-note {
-      background-color: #edf0eb;
-      padding: 30px 8%;
-    }
-
-    .case-note h2 {
-      font-size: 22px;
-      margin: 0 0 10px;
-    }
-
-    .case-note p {
-      max-width: 900px;
-      margin: 0;
-      font-size: 0.94rem;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background-color: #263c32;
-      color: #d8dedb;
-      text-align: center;
-      padding: 22px 8%;
-      font-size: 0.88rem;
-    }
-
-    footer p {
-      margin: 4px 0;
-    }
-
-    /* TABLET AND MOBILE */
-
-    @media (max-width: 850px) {
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 30px 6%;
-      }
-
-      .projects-section {
-        padding: 30px 6%;
-      }
-
-      .case-note {
-        padding: 28px 6%;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-
-      .project-card h2 {
-        font-size: 21px;
-      }
-
-      .project-card {
-        padding: 20px;
-      }
-
-    }
-
-  </style>
+  h1 {
+    font-size: 26px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+<nav>
+  <a class="nav-name" href="index.html">
+    Lora Anderson
+  </a>
 
-  <nav>
+  <div class="nav-links">
+    <a href="index.html">Portfolio Home</a>
+    <a href="northstar.html">Northstar</a>
+    <a href="projects.html">Projects</a>
+    <a href="guides.html">Guides</a>
+    <a href="recommendations.html">Recommendations</a>
+  </div>
+</nav>
 
-    <a class="nav-name" href="index.html">
-      Lora Anderson
-    </a>
+<header class="hero">
+  <div class="container">
 
-    <div class="nav-links">
-
-      <a href="index.html">Portfolio Home</a>
-
-      <a href="northstar.html">Northstar</a>
-
-      <a href="projects.html">Projects</a>
-
-      <a href="guides.html">Guides</a>
-
-      <a href="recommendations.html">Recommendations</a>
-
+    <div class="eyebrow">
+      Professional Experience
     </div>
 
-  </nav>
+    <h1>Professional Solutions</h1>
 
-  <!-- PAGE INTRODUCTION -->
+    <p>
+      Real workplace challenges, solutions I've developed,
+      and improvements I've implemented throughout my career.
+      These case studies highlight the work I enjoy most:
+      finding problems and building practical solutions.
+    </p>
 
-  <header class="hero">
+  </div>
+</header>
 
-    <div class="container">
+<main>
 
-      <p class="eyebrow">
-        Professional Experience
-      </p>
+<section class="projects">
+  <div class="container">
 
-      <h1>Professional Solutions</h1>
+    <div class="card-grid">
 
-      <p class="hero-description">
-        A collection of real workplace challenges I've tackled,
-        solutions I've developed, and improvements I've put into
-        practice throughout my career. This is the work I enjoy most:
-        taking a problem and figuring out how to make things better.
-      </p>
+      <!-- ONBOARDING CARD -->
 
-    </div>
+      <article class="card">
 
-  </header>
-
-  <main>
-
-    <!-- PROFESSIONAL PROJECTS -->
-
-    <section class="projects-section">
-
-      <div class="container">
-
-        <div class="projects-grid">
-
-          <!-- CARD 1: ONBOARDING -->
-
-          <article class="project-card" id="onboarding">
-
-            <div class="project-category">
-              Employee Experience &amp; Retention
-            </div>
-
-            <h2>
-              Redesigning the First 90 Days
-            </h2>
-
-            <p>
-              A residential youth services program was struggling
-              with significant employee turnover. At one home,
-              approximately 90% of new direct care staff were
-              leaving within their first 90 days.
-            </p>
-
-            <p>
-              I redesigned the onboarding experience to provide
-              stronger preparation, mentorship, and leadership
-              support during those critical first three months.
-            </p>
-
-            <p>
-              The new approach included:
-            </p>
-
-            <ul>
-              <li>
-                60 hours of training completed before the
-                first floor shift
-              </li>
-
-              <li>
-                A structured 30, 60, and 90 day progression
-                toward independent work
-              </li>
-
-              <li>
-                Experienced volunteer mentors and
-                scheduled leadership conversations
-              </li>
-
-              <li>
-                Improved staffing coordination and
-                training accountability
-              </li>
-            </ul>
-
-            <div class="results">
-
-              <div class="result-number">
-                90% → 30%
-              </div>
-
-              <p class="result-label">
-                Approximate first 90 day turnover at the
-                highest turnover home before and after
-                implementation.
-              </p>
-
-              <p class="result-note">
-                Historical site estimates. The observed
-                improvement is not attributed solely
-                to the onboarding redesign.
-              </p>
-
-            </div>
-
-            <div class="card-action">
-
-              <a
-                class="button"
-                href="Onboarding_Case_Study.pdf"
-                target="_blank"
-                rel="noopener noreferrer">
-                Read Full Case Study
-              </a>
-
-            </div>
-
-          </article>
-
-          <!-- CARD 2: POLICY AUTOMATION -->
-
-          <article class="project-card" id="automation">
-
-            <div class="project-category">
-              Process Automation &amp; Compliance
-            </div>
-
-            <h2>
-              Policy Lifecycle Management
-              &amp; Workflow Automation
-            </h2>
-
-            <p>
-              Managing approximately 300 organizational policies
-              required extensive manual tracking, document routing,
-              follow up, and coordination of review deadlines.
-            </p>
-
-            <p>
-              I designed and implemented an automated workflow
-              using Excel, Microsoft Power Automate, Outlook,
-              OneDrive, and SharePoint.
-            </p>
-
-            <p>
-              The solution included:
-            </p>
-
-            <ul>
-              <li>
-                Automated policy review requests
-                based on calculated dates
-              </li>
-
-              <li>
-                Document routing and tracking updates
-                triggered by email and file activity
-              </li>
-
-              <li>
-                Notifications for approved policies
-                and publication handoffs
-              </li>
-
-              <li>
-                Failure alerts and human checkpoints
-                for compliance review and board approval
-              </li>
-            </ul>
-
-            <div class="results">
-
-              <div class="result-number">
-                ~300 Policies
-              </div>
-
-              <p class="result-label">
-                Supported by connected workflows that
-                remained in operational use for
-                approximately two years.
-              </p>
-
-              <p class="result-note">
-                Time savings and financial benefits
-                were not formally measured.
-              </p>
-
-            </div>
-
-            <div class="card-action">
-
-              <a
-                class="button"
-                href="Policy_Automation_Portfolio.pdf"
-                target="_blank"
-                rel="noopener noreferrer">
-                Read Full Case Study
-              </a>
-
-            </div>
-
-          </article>
-
-          <!-- ADD FUTURE PROJECT CARDS HERE -->
-
+        <div class="category">
+          Employee Experience &amp; Retention
         </div>
 
-      </div>
+        <h2>Redesigning the First 90 Days</h2>
 
-    </section>
+        <p>
+          Redesigned onboarding for residential youth services
+          employees through structured training, peer mentorship,
+          and leadership support to improve early retention.
+        </p>
 
-    <!-- CONFIDENTIALITY NOTE -->
+        <div class="result">
+          <strong>90% → 30%</strong>
+          <span>
+            Approximate first 90 day turnover at one home
+            before and after implementation.
+          </span>
+        </div>
 
-    <section class="case-note">
+        <div class="card-action">
+          <a class="button"
+             href="Onboarding_Case_Study.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Case Study
+          </a>
+        </div>
 
-      <div class="container">
+      </article>
+
+      <!-- AUTOMATION CARD -->
+
+      <article class="card">
+
+        <div class="category">
+          Process Automation &amp; Compliance
+        </div>
 
         <h2>
-          Real Experience, Responsibly Shared
+          Policy Lifecycle Management &amp; Automation
         </h2>
 
         <p>
-          These case studies reflect work I completed in professional
-          settings. Employee information, confidential organizational
-          records, and proprietary materials have been excluded.
-          Process diagrams are reconstructions created to illustrate
-          the approaches used.
+          Designed and implemented connected Microsoft 365
+          workflows to automate policy scheduling, document
+          tracking, and administrative routing while retaining
+          human compliance review and board approval.
         </p>
 
-      </div>
+        <div class="result">
+          <strong>~300 Policies</strong>
+          <span>
+            Managed through automated workflows in use
+            for approximately two years.
+          </span>
+        </div>
 
-    </section>
+        <div class="card-action">
+          <a class="button"
+             href="Policy_Automation_Portfolio.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Case Study
+          </a>
+        </div>
 
-  </main>
+      </article>
 
-  <!-- FOOTER -->
+      <!-- ADD FUTURE CARDS HERE -->
 
-  <footer>
-    <p>© 2026 Lora Anderson</p>
-  </footer>
+    </div>
+  </div>
+</section>
+
+<section class="note">
+  <div class="container">
+    <p>
+      These case studies describe real professional implementations.
+      Confidential employee information and proprietary organizational
+      materials have been excluded. Historical results are identified
+      as estimates where applicable.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Lora Anderson
+</footer>
 
 </body>
 </html>
