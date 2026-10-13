@@ -1,348 +1,750 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional Solutions | Lora Anderson</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta name="description"
+        content="Professional solutions designed and implemented by Lora Anderson across operations, human resources, technology, compliance, and business improvement.">
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8f7f3;
-  color: #2f3833;
-  line-height: 1.5;
-}
+  <title>Professional Solutions | Lora Anderson</title>
 
-nav {
-  background: #263c32;
-  color: white;
-  padding: 14px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
+  <style>
 
-.nav-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: white;
-  text-decoration: none;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.88rem;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f7f3;
+      color: #2f3833;
+      line-height: 1.55;
+    }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
+    a {
+      color: inherit;
+    }
 
-.hero {
-  background: #e8ece6;
-  padding: 28px 8%;
-}
+    a:focus-visible {
+      outline: 3px solid #9a6b32;
+      outline-offset: 3px;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-.eyebrow {
-  color: #9a6b32;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 0.78rem;
-  font-weight: bold;
-  margin: 0 0 6px;
-}
+    /* NAVIGATION */
 
-h1 {
-  font-size: 30px;
-  color: #263c32;
-  margin: 0 0 10px;
-}
+    nav {
+      background-color: #263c32;
+      color: white;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.hero p:last-child {
-  max-width: 850px;
-  margin: 0;
-  font-size: 1rem;
-}
+    .nav-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-.projects {
-  padding: 30px 8%;
-}
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
 
-.card {
-  background: white;
-  border: 1px solid #d8ddd9;
-  border-top: 4px solid #9a6b32;
-  border-radius: 8px;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-}
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
 
-.category {
-  color: #9a6b32;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
+    /* PAGE INTRODUCTION */
 
-.card h2 {
-  font-size: 21px;
-  line-height: 1.25;
-  color: #263c32;
-  margin: 0 0 12px;
-}
+    .hero {
+      background-color: #e8ece6;
+      padding: 30px 8%;
+    }
 
-.card p {
-  font-size: 0.95rem;
-  margin: 0 0 14px;
-}
+    .eyebrow {
+      color: #9a6b32;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      margin: 0 0 7px;
+    }
 
-.result {
-  background: #e8ece6;
-  padding: 12px 15px;
-  border-radius: 6px;
-  margin: 4px 0 16px;
-}
+    h1, h2, h3 {
+      color: #263c32;
+    }
 
-.result strong {
-  display: block;
-  font-size: 24px;
-  color: #263c32;
-}
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
 
-.result span {
-  display: block;
-  font-size: 0.82rem;
-  color: #4f5e56;
-}
+    .hero-description {
+      max-width: 850px;
+      font-size: 1rem;
+      margin: 0;
+    }
 
-.button {
-  display: inline-block;
-  background: #263c32;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.88rem;
-}
+    /* MAIN SECTIONS */
 
-.button:hover {
-  background: #395547;
-}
+    .featured-section,
+    .additional-section {
+      padding: 36px 8%;
+    }
 
-.card-action {
-  margin-top: auto;
-}
+    .featured-section {
+      background-color: #f8f7f3;
+    }
 
-.note {
-  padding: 18px 8%;
-  background: #edf0eb;
-  font-size: 0.85rem;
-  color: #4f5e56;
-}
+    .additional-section {
+      background-color: #fff;
+    }
 
-.note p {
-  margin: 0;
-}
+    .section-heading {
+      font-size: 25px;
+      line-height: 1.25;
+      margin: 0 0 9px;
+    }
 
-footer {
-  background: #263c32;
-  color: #d8dedb;
-  padding: 20px 8%;
-  text-align: center;
-  font-size: 0.85rem;
-}
+    .section-description {
+      font-size: 0.96rem;
+      max-width: 820px;
+      margin: 0 0 22px;
+      color: #536259;
+    }
 
-@media (max-width: 750px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    /* FEATURED PROJECTS */
 
-  .hero {
-    padding: 25px 6%;
-  }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
 
-  .projects {
-    padding: 25px 6%;
-  }
+    .featured-card {
+      background-color: white;
+      border: 1px solid #d8ddd9;
+      border-top: 4px solid #9a6b32;
+      border-radius: 8px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
 
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+    .card-category {
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #9a6b32;
+      margin: 0 0 9px;
+    }
 
-  h1 {
-    font-size: 26px;
-  }
-}
-</style>
+    .featured-card h3 {
+      font-size: 21px;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    .featured-card p {
+      font-size: 0.95rem;
+      margin: 0 0 14px;
+    }
+
+    /* FEATURED RESULTS */
+
+    .result {
+      background-color: #e8ece6;
+      border-radius: 6px;
+      padding: 13px 16px;
+      margin: 4px 0 18px;
+    }
+
+    .result-number {
+      display: block;
+      color: #263c32;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .result-description {
+      display: block;
+      font-size: 0.85rem;
+      color: #4f5e56;
+      line-height: 1.45;
+    }
+
+    .button-area {
+      margin-top: auto;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #263c32;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 0.89rem;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #395547;
+    }
+
+    /* ADDITIONAL SOLUTIONS */
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .solution-card {
+      background-color: #f8f7f3;
+      border: 1px solid #e0e3df;
+      border-radius: 8px;
+      padding: 20px;
+      min-width: 0;
+    }
+
+    .solution-card h3 {
+      font-size: 19px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .solution-card p {
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    /* CONFIDENTIALITY NOTE */
+
+    .case-note {
+      background-color: #edf0eb;
+      padding: 25px 8%;
+    }
+
+    .case-note h2 {
+      font-size: 21px;
+      margin: 0 0 9px;
+    }
+
+    .case-note p {
+      font-size: 0.91rem;
+      max-width: 950px;
+      margin: 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background-color: #263c32;
+      color: #d8dedb;
+      text-align: center;
+      padding: 22px 8%;
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .solutions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        padding: 28px 6%;
+      }
+
+      .featured-section,
+      .additional-section {
+        padding: 30px 6%;
+      }
+
+      .featured-grid,
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-card,
+      .solution-card {
+        padding: 19px;
+      }
+
+      .case-note {
+        padding: 25px 6%;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .section-heading {
+        font-size: 22px;
+      }
+
+      .featured-card h3 {
+        font-size: 20px;
+      }
+
+      .solution-card h3 {
+        font-size: 18px;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a class="nav-name" href="index.html">
-    Lora Anderson
-  </a>
+  <!-- NAVIGATION -->
 
-  <div class="nav-links">
-    <a href="index.html">Portfolio Home</a>
-    <a href="northstar.html">Northstar</a>
-    <a href="projects.html">Projects</a>
-    <a href="guides.html">Guides</a>
-    <a href="recommendations.html">Recommendations</a>
-  </div>
-</nav>
+  <nav aria-label="Main navigation">
 
-<header class="hero">
-  <div class="container">
+    <a class="nav-name" href="index.html">
+      Lora Anderson
+    </a>
 
-    <div class="eyebrow">
-      Professional Experience
+    <div class="nav-links">
+
+      <a href="index.html">Portfolio Home</a>
+
+      <a href="#featured">Featured Work</a>
+
+      <a href="#additional">Other Solutions</a>
+
+      <a href="northstar.html">Northstar</a>
+
+      <a href="projects.html">Projects</a>
+
+      <a href="guides.html">Guides</a>
+
+      <a href="recommendations.html">Recommendations</a>
+
     </div>
 
-    <h1>Professional Solutions</h1>
+  </nav>
 
-    <p>
-      Real workplace challenges, solutions I've developed,
-      and improvements I've implemented throughout my career.
-      These case studies highlight the work I enjoy most:
-      finding problems and building practical solutions.
-    </p>
+  <!-- INTRODUCTION -->
 
-  </div>
-</header>
+  <header class="hero">
 
-<main>
+    <div class="container">
 
-<section class="projects">
-  <div class="container">
+      <p class="eyebrow">
+        Professional Experience
+      </p>
 
-    <div class="card-grid">
+      <h1>Professional Solutions</h1>
 
-      <!-- ONBOARDING CARD -->
+      <p class="hero-description">
+        Throughout my career, I've enjoyed finding better ways
+        to solve problems, improve processes, and build systems
+        that make work more effective. This collection highlights
+        some of the solutions I've developed and implemented
+        across different organizations and areas of responsibility.
+      </p>
 
-      <article class="card">
+    </div>
 
-        <div class="category">
-          Employee Experience &amp; Retention
-        </div>
+  </header>
 
-        <h2>Redesigning the First 90 Days</h2>
+  <main>
 
-        <p>
-          Redesigned onboarding for residential youth services
-          employees through structured training, peer mentorship,
-          and leadership support to improve early retention.
+    <!-- FEATURED CASE STUDIES -->
+
+    <section class="featured-section" id="featured">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          Documented Projects
         </p>
 
-        <div class="result">
-          <strong>90% → 30%</strong>
-          <span>
-            Approximate first 90 day turnover at one home
-            before and after implementation.
-          </span>
+        <h2 class="section-heading">
+          Featured Case Studies
+        </h2>
+
+        <p class="section-description">
+          Two examples of implemented solutions, with
+          supporting documentation describing the challenges,
+          approach, and results.
+        </p>
+
+        <div class="featured-grid">
+
+          <!-- FEATURED CARD 1 -->
+
+          <article class="featured-card">
+
+            <p class="card-category">
+              Employee Experience &amp; Retention
+            </p>
+
+            <h3>
+              Redesigning the First 90 Days
+            </h3>
+
+            <p>
+              Redesigned onboarding for employees in residential
+              youth services through structured training, peer
+              mentorship, and leadership support. The program
+              created a more gradual transition into demanding
+              direct care work and additional opportunities for
+              employees to raise concerns.
+            </p>
+
+            <div class="result">
+
+              <span class="result-number">
+                90% → 30%
+              </span>
+
+              <span class="result-description">
+                Approximate first 90 day turnover at one home
+                before and after implementation. Historical
+                estimates, not a controlled measure of causation.
+              </span>
+
+            </div>
+
+            <div class="button-area">
+
+              <a class="button"
+                 href="Onboarding_Case_Study.pdf"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Read Case Study
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- FEATURED CARD 2 -->
+
+          <article class="featured-card">
+
+            <p class="card-category">
+              Process Automation &amp; Compliance
+            </p>
+
+            <h3>
+              Policy Lifecycle Management &amp; Automation
+            </h3>
+
+            <p>
+              Developed interconnected Microsoft 365 workflows
+              to automate policy review scheduling, document
+              routing, and tracking activities. The design
+              reduced dependence on manual administrative
+              steps while preserving human compliance review
+              and board approval.
+            </p>
+
+            <div class="result">
+
+              <span class="result-number">
+                ~300 Policies
+              </span>
+
+              <span class="result-description">
+                Supported by automated workflows that remained
+                operational for approximately two years.
+                Time savings were not formally measured.
+              </span>
+
+            </div>
+
+            <div class="button-area">
+
+              <a class="button"
+                 href="Policy_Automation_Portfolio.pdf"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Read Case Study
+              </a>
+
+            </div>
+
+          </article>
+
         </div>
 
-        <div class="card-action">
-          <a class="button"
-             href="Onboarding_Case_Study.pdf"
-             target="_blank"
-             rel="noopener noreferrer">
-            Read Case Study
-          </a>
+      </div>
+
+    </section>
+
+    <!-- ADDITIONAL PROFESSIONAL SOLUTIONS -->
+
+    <section class="additional-section" id="additional">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          Additional Implementations
+        </p>
+
+        <h2 class="section-heading">
+          Other Solutions I've Developed
+        </h2>
+
+        <p class="section-description">
+          Not every project becomes a formal case study.
+          These examples reflect other systems, processes,
+          and improvements I've worked on throughout my career.
+        </p>
+
+        <div class="solutions-grid">
+
+          <!-- SOLUTION 1 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Human Resources &amp; Technology
+            </p>
+
+            <h3>
+              HRIS Implementation &amp; Organizational Change
+            </h3>
+
+            <p>
+              Supported transitions from existing HR processes
+              to systems including UKG, ADP Workforce Now,
+              and Paychex. Worked across HR, payroll, employee
+              records, and operational processes to align
+              system capabilities with organizational needs.
+              These implementations required coordinating
+              technology changes with the people responsible
+              for using and maintaining the systems.
+            </p>
+
+          </article>
+
+          <!-- SOLUTION 2 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Vendor Management &amp; Administration
+            </p>
+
+            <h3>
+              Contract Lifecycle Management
+            </h3>
+
+            <p>
+              Developed a centralized process for monitoring
+              organizational vendor contracts and important
+              renewal dates. Created a tracking system with
+              reminders to improve visibility into upcoming
+              decisions and reduce reliance on individual
+              memory. The approach supported more deliberate
+              vendor management and contract oversight.
+            </p>
+
+          </article>
+
+          <!-- SOLUTION 3 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Analytics &amp; Decision Support
+            </p>
+
+            <h3>
+              Operational Performance Dashboards
+            </h3>
+
+            <p>
+              Developed reporting tools and dashboards to
+              organize operational and workforce information
+              into more useful measures. Worked with Excel
+              and Power BI to make performance indicators
+              easier to review and discuss. The focus was
+              on providing leadership with information
+              that could support better decisions.
+            </p>
+
+          </article>
+
+          <!-- SOLUTION 4 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Property Operations &amp; Technology
+            </p>
+
+            <h3>
+              Property Management System Implementation
+            </h3>
+
+            <p>
+              Participated in selecting and implementing
+              Buildium to support property management
+              operations. The transition involved moving
+              away from paper based practices toward
+              more centralized digital processes.
+              This required considering the needs of
+              staff, property operations, and the
+              information used to manage daily work.
+            </p>
+
+          </article>
+
+          <!-- SOLUTION 5 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Safety &amp; Compliance
+            </p>
+
+            <h3>
+              Safety Management &amp; Compliance Processes
+            </h3>
+
+            <p>
+              Worked across workplace safety, regulatory
+              compliance, training, and operational risk.
+              Developed and supported processes intended
+              to make safety responsibilities more
+              consistent and visible within organizations.
+              My approach has emphasized that effective
+              safety programs require practical execution
+              and accountability, not simply written policies.
+            </p>
+
+          </article>
+
+          <!-- SOLUTION 6 -->
+
+          <article class="solution-card">
+
+            <p class="card-category">
+              Workforce Planning &amp; Operations
+            </p>
+
+            <h3>
+              Workforce Scheduling &amp; Staffing Processes
+            </h3>
+
+            <p>
+              Worked with staffing and scheduling processes
+              in environments where coverage, training,
+              and employee availability affected operations.
+              Applied structured planning to help balance
+              staffing needs with required training and
+              day to day service demands. These efforts
+              required coordination among managers and
+              employees rather than treating scheduling
+              as an isolated administrative task.
+            </p>
+
+          </article>
+
+          <!-- ADD NEW SOLUTION CARDS HERE -->
+
         </div>
 
-      </article>
+      </div>
 
-      <!-- AUTOMATION CARD -->
+    </section>
 
-      <article class="card">
+    <!-- CONFIDENTIALITY -->
 
-        <div class="category">
-          Process Automation &amp; Compliance
-        </div>
+    <section class="case-note">
+
+      <div class="container">
 
         <h2>
-          Policy Lifecycle Management &amp; Automation
+          Real Experience, Responsibly Shared
         </h2>
 
         <p>
-          Designed and implemented connected Microsoft 365
-          workflows to automate policy scheduling, document
-          tracking, and administrative routing while retaining
-          human compliance review and board approval.
+          These examples reflect professional work completed
+          in actual organizations. Confidential employee
+          information, internal organizational records,
+          and proprietary materials have been excluded.
+          Formal case studies provide additional context,
+          limitations, and documentation where available.
         </p>
 
-        <div class="result">
-          <strong>~300 Policies</strong>
-          <span>
-            Managed through automated workflows in use
-            for approximately two years.
-          </span>
-        </div>
+      </div>
 
-        <div class="card-action">
-          <a class="button"
-             href="Policy_Automation_Portfolio.pdf"
-             target="_blank"
-             rel="noopener noreferrer">
-            Read Case Study
-          </a>
-        </div>
+    </section>
 
-      </article>
+  </main>
 
-      <!-- ADD FUTURE CARDS HERE -->
+  <!-- FOOTER -->
 
-    </div>
-  </div>
-</section>
-
-<section class="note">
-  <div class="container">
-    <p>
-      These case studies describe real professional implementations.
-      Confidential employee information and proprietary organizational
-      materials have been excluded. Historical results are identified
-      as estimates where applicable.
-    </p>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  © 2026 Lora Anderson
-</footer>
+  <footer>
+    <p>© 2026 Lora Anderson</p>
+  </footer>
 
 </body>
 </html>
