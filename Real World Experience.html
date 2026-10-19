@@ -1,1075 +1,255 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Professional solutions developed and implemented by Lora Anderson across operations, finance, human resources, technology, and compliance.">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional solutions by Lora Anderson: workforce leadership, business systems, financial stewardship, and resourceful operational improvement.">
   <title>Professional Solutions | Lora Anderson</title>
-
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --forest:#263c32; --deep:#1d3027; --gold:#a87738;
+      --gold-light:#e7c993; --paper:#f8f7f3; --sage:#edf1eb;
+      --ink:#29372f; --muted:#536258; --line:#dfe5dc;
     }
+    *, *::before, *::after {box-sizing:border-box}
+    html {scroll-behavior:smooth;scroll-padding-top:100px}
+    body {margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
+    a {color:inherit}
+    a:focus-visible, summary:focus-visible {outline:3px solid var(--gold);outline-offset:3px}
+    .wrap {width:min(1100px,calc(100% - 48px));margin-inline:auto}
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+    /* Same site navigation as the homepage. */
+    .site-header {background:var(--deep);color:white;position:sticky;top:0;z-index:10}
+    .nav {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
+    .nav-name {font-size:1.05rem;font-weight:700;text-decoration:none;white-space:nowrap}
+    .nav-links {display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:5px 17px}
+    .nav-links a {color:#f3f6f1;text-decoration:none;font-size:.87rem;white-space:nowrap}
+    .nav-links a:hover {color:var(--gold-light);text-decoration:underline;text-underline-offset:4px}
+
+    .hero {background:var(--forest);color:white;padding:35px 0 38px}
+    .eyebrow {margin:0 0 7px;color:var(--gold-light);font-size:.76rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+    h1 {margin:0 0 13px;font-size:clamp(2.1rem,4vw,2.9rem);line-height:1.12}
+    .hero-intro {max-width:940px;margin:0;color:#eef2ee;font-size:1.01rem;line-height:1.65}
+    .jump-links {display:flex;flex-wrap:wrap;gap:9px;padding:18px 0 22px}
+    .jump-links a {display:inline-flex;padding:8px 13px;background:white;border:1px solid var(--forest);border-radius:5px;color:var(--forest);font-size:.88rem;font-weight:700;text-decoration:none}
+    .jump-links a:hover {background:var(--sage)}
+
+    /* The three featured stories appear before ANY supporting tiles, including on mobile. */
+    .featured-grid, .category-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+    .featured-card {min-width:0;background:white;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:9px;padding:20px;display:flex;flex-direction:column}
+    .kicker {font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#825e2f;margin:0 0 7px}
+    .featured-card h2 {font-size:1.27rem;color:var(--forest);line-height:1.25;margin:0 0 6px}
+    .employer {font-size:.76rem;font-weight:700;color:var(--muted);margin:0 0 13px}
+    .metric {display:block;font-size:1.45rem;line-height:1.18;font-weight:700;color:var(--forest);margin:0 0 7px}
+    .featured-card p.description {font-size:.9rem;line-height:1.51;margin:0 0 14px}
+    .case-link {margin-top:auto;display:inline-flex;align-self:flex-start;background:var(--forest);color:white;font-size:.82rem;font-weight:700;text-decoration:none;border-radius:5px;padding:9px 13px}
+    .case-link:hover {background:#3f5849}
+    .case-context {margin-top:auto;color:var(--muted);font-size:.8rem;font-weight:700}
+
+    .support-header {border-top:1px solid var(--line);margin:23px 0 13px;padding-top:22px}
+    .support-header h2 {font-size:1.46rem;line-height:1.25;color:var(--forest);margin:0 0 3px}
+    .support-header p {margin:0;font-size:.91rem;color:var(--muted)}
+    .category {min-width:0;scroll-margin-top:100px}
+    .category h3 {margin:0 0 9px;color:var(--forest);font-size:1.1rem}
+    .mini-card {background:white;border:1px solid var(--line);border-radius:6px;padding:12px 13px;margin-bottom:9px;min-width:0}
+    .mini-card h4 {font-size:.92rem;line-height:1.27;color:var(--forest);margin:0 0 4px}
+    .mini-card p {font-size:.82rem;line-height:1.43;margin:0;color:#455149}
+    details {margin-top:2px}
+    summary {cursor:pointer;color:var(--forest);font-size:.84rem;font-weight:700;padding:8px 3px;list-style-position:inside}
+    details[open] summary {margin-bottom:5px}
+    .notes {margin:19px 0 28px;padding:13px 15px;border-radius:6px;background:var(--sage);color:var(--muted);font-size:.81rem}
+    footer {background:var(--deep);color:#dce7df;text-align:center;padding:16px;font-size:.84rem}
+
+    @media(max-width:950px) {
+      .nav {flex-direction:column;align-items:flex-start;gap:7px}
+      .nav-links {justify-content:flex-start}
+      .featured-grid, .category-grid {gap:12px}
+      .featured-card {padding:16px}
     }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f7f3;
-      color: #2f3833;
-      line-height: 1.55;
+    @media(max-width:760px) {
+      html {scroll-padding-top:15px}
+      .site-header {position:relative}
+      .wrap {width:min(100% - 32px,1100px)}
+      .hero {padding:29px 0 31px}
+      .featured-grid, .category-grid {grid-template-columns:1fr;gap:12px}
+      .featured-card {padding:18px;scroll-margin-top:15px}
+      .category {scroll-margin-top:15px}
+      .category h3 {margin-top:5px}
+      .support-header {margin-top:20px}
+      .jump-links {gap:7px;padding:14px 0 19px}
     }
-
-    a {
-      color: inherit;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #9a6b32;
-      outline-offset: 3px;
-    }
-
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      background: #263c32;
-      color: white;
-      padding: 13px 4%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-name {
-      color: white;
-      font-size: 1.05rem;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 13px;
-    }
-
-    .nav-links a {
-      color: white;
-      font-size: 0.86rem;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* INTRODUCTION */
-
-    .hero {
-      background: #e8ece6;
-      padding: 30px 8%;
-    }
-
-    .eyebrow {
-      color: #9a6b32;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      font-size: 0.76rem;
-      font-weight: bold;
-      margin: 0 0 7px;
-    }
-
-    h1, h2, h3 {
-      color: #263c32;
-    }
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.2;
-      margin: 0 0 12px;
-    }
-
-    .hero p.intro {
-      max-width: 930px;
-      font-size: 1rem;
-      margin: 0 0 12px;
-    }
-
-    .hero p.intro:last-child {
-      margin-bottom: 0;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 34px 8%;
-    }
-
-    .featured-section {
-      background: #f8f7f3;
-    }
-
-    .solutions-section {
-      background: white;
-    }
-
-    .section-heading {
-      font-size: 25px;
-      line-height: 1.25;
-      margin: 0 0 9px;
-    }
-
-    .section-description {
-      max-width: 900px;
-      font-size: 0.95rem;
-      color: #536259;
-      margin: 0 0 20px;
-    }
-
-    .group-heading {
-      font-size: 21px;
-      line-height: 1.3;
-      margin: 0 0 14px;
-    }
-
-    .solution-group + .solution-group {
-      margin-top: 34px;
-    }
-
-    /* FEATURED CASE STUDIES */
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .featured-card {
-      background: white;
-      border: 1px solid #d8ddd9;
-      border-top: 4px solid #9a6b32;
-      border-radius: 8px;
-      padding: 21px;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .category {
-      color: #9a6b32;
-      font-size: 0.74rem;
-      font-weight: bold;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      margin: 0 0 8px;
-    }
-
-    .featured-card h3 {
-      font-size: 20px;
-      line-height: 1.3;
-      margin: 0 0 12px;
-    }
-
-    .featured-card p {
-      font-size: 0.94rem;
-      margin: 0 0 12px;
-    }
-
-    .result {
-      background: #e8ece6;
-      border-radius: 6px;
-      padding: 12px 15px;
-      margin: 5px 0 16px;
-    }
-
-    .result strong {
-      display: block;
-      color: #263c32;
-      font-size: 25px;
-      line-height: 1.2;
-      margin-bottom: 5px;
-    }
-
-    .result span {
-      display: block;
-      font-size: 0.83rem;
-      color: #4f5e56;
-    }
-
-    .card-action {
-      margin-top: auto;
-    }
-
-    .button {
-      display: inline-block;
-      background: #263c32;
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-size: 0.88rem;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #395547;
-    }
-
-    /* ADDITIONAL SOLUTIONS */
-
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 17px;
-      align-items: stretch;
-    }
-
-    .solution-card {
-      background: #f8f7f3;
-      border: 1px solid #e0e3df;
-      border-radius: 8px;
-      padding: 19px;
-      min-width: 0;
-    }
-
-    .solution-card h3 {
-      font-size: 18px;
-      line-height: 1.3;
-      margin: 0 0 11px;
-    }
-
-    .solution-card p {
-      font-size: 0.92rem;
-      margin: 0;
-    }
-
-    /* CLOSING */
-
-    .closing {
-      background: #edf0eb;
-      padding: 27px 8%;
-    }
-
-    .closing h2 {
-      font-size: 21px;
-      margin: 0 0 10px;
-    }
-
-    .closing p {
-      max-width: 940px;
-      font-size: 0.94rem;
-      margin: 0 0 12px;
-    }
-
-    .closing p:last-child {
-      margin-bottom: 0;
-    }
-
-    .disclosure {
-      color: #536259;
-      font-size: 0.84rem !important;
-    }
-
-    footer {
-      background: #263c32;
-      color: #d8dedb;
-      text-align: center;
-      padding: 22px 8%;
-      font-size: 0.88rem;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* RESPONSIVE LAYOUT */
-
-    @media (max-width: 950px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .solutions-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 700px) {
-      .hero,
-      .section,
-      .closing {
-        padding: 28px 6%;
-      }
-
-      .featured-grid,
-      .solutions-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-card,
-      .solution-card {
-        padding: 18px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-
-      .section-heading {
-        font-size: 22px;
-      }
-
-      .group-heading {
-        font-size: 20px;
-      }
-
-      .featured-card h3 {
-        font-size: 19px;
-      }
-
-      .solution-card h3 {
-        font-size: 18px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
   </style>
 </head>
-
 <body>
-
-  <!-- NAVIGATION -->
-
-  <nav aria-label="Main navigation">
-
-    <a class="nav-name" href="index.html">
-      Lora Anderson
-    </a>
-
-    <div class="nav-links">
-      <a href="index.html">Portfolio Home</a>
-      <a href="#featured">Case Studies</a>
-      <a href="#solutions">Other Solutions</a>
-      <a href="northstar.html">Northstar</a>
-      <a href="projects.html">Projects</a>
-      <a href="guides.html">Guides</a>
-      <a href="recommendations.html">Recommendations</a>
-    </div>
-
-  </nav>
-
-  <!-- INTRODUCTION -->
-
-  <header class="hero">
-
-    <div class="container">
-
-      <p class="eyebrow">
-        Professional Experience
-      </p>
-
-      <h1>Professional Solutions</h1>
-
-      <p class="intro">
-        Every organization has its own challenges,
-        resources, and limitations. I enjoy figuring
-        out what's actually causing a problem,
-        understanding what an organization needs,
-        and developing a solution that works
-        within those realities.
-      </p>
-
-      <p class="intro">
-        Sometimes the answer is a new system.
-        Other times, it's finding a creative way
-        to use the tools already available.
-        I've always found the most satisfaction
-        in turning a problem into something
-        practical that people can actually use.
-        These are some of the solutions I've
-        developed throughout my career.
-      </p>
-
-    </div>
-
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="nav-name" href="index.html">Lora Anderson</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="Real%20World%20Experience.html">Professional Solutions</a>
+        <a href="projects.html">Projects</a>
+        <a href="guides.html">Guides</a>
+        <a href="Redacted_Reference_Packet.pdf" target="_blank" rel="noopener noreferrer">Recommendations</a>
+        <a href="LA%20Resume-Public.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="https://www.linkedin.com/in/loraanderson410" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </nav>
   </header>
 
-  <main>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Leadership in Action</p>
+      <h1>Professional Solutions</h1>
+      <p class="hero-intro">Operations leadership means connecting people, systems, and financial decisions to the organization's goals. Throughout my career, I've entered unfamiliar environments, learned how their operations really work, and found practical ways to improve them. Sometimes that calls for new technology; often it means making better use of the people, tools, and budgets already available. The examples below show both the results and the resourcefulness behind them.</p>
+    </div>
+  </header>
 
-    <!-- FEATURED CASE STUDIES -->
+  <main class="wrap">
+    <nav class="jump-links" aria-label="Explore professional solutions">
+      <a href="#workforce">Workforce</a>
+      <a href="#systems">Systems</a>
+      <a href="#finance">Finance</a>
+    </nav>
 
-    <section class="section featured-section" id="featured">
+    <!-- FEATURED PROJECTS: intentionally always first in mobile reading order. -->
+    <section class="featured-grid" aria-label="Featured leadership case studies">
+      <article class="featured-card" id="workforce">
+        <p class="kicker">Workforce · Featured case study</p>
+        <h2>Onboarding &amp; Employee Retention</h2>
+        <p class="employer">Friends of Children and Families</p>
+        <span class="metric">~65% reduction</span>
+        <p class="description">Co-designed phased onboarding, mentoring, and early leadership check-ins. Regrettable attrition declined by approximately 65% at one residential program. This was a collaborative intervention; the historical comparison does not establish a single cause.</p>
+        <a class="case-link" href="Onboarding_Case_Study.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
+      </article>
 
-      <div class="container">
+      <article class="featured-card" id="systems">
+        <p class="kicker">Systems · Featured case study</p>
+        <h2>Policy Governance &amp; Automation</h2>
+        <p class="employer">Family Solutions</p>
+        <span class="metric">~300 policies</span>
+        <p class="description">Used existing Microsoft 365 tools to build a more dependable policy review, routing, reminder, and approval-tracking process. Improved visibility into responsibilities and deadlines while preserving human review and approval.</p>
+        <a class="case-link" href="Policy_Automation_Portfolio.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
+      </article>
 
-        <p class="eyebrow">
-          Documented Implementations
-        </p>
+      <article class="featured-card" id="finance">
+        <p class="kicker">Finance · Featured project</p>
+        <h2>Property Redevelopment &amp; Budget Management</h2>
+        <p class="employer">National Builders and Acceptance Corporation</p>
+        <span class="metric">From renovation to rental</span>
+        <p class="description">Managed renovation and financial tracking for major apartment improvements, including a deteriorated building at 322 Amber Street in Pittsburgh. The 2019 project involved a down-to-the-studs rehabilitation; the renovated property was being rented by 2021.</p>
+        <span class="case-context">Construction budgets · Vendors · Project execution</span>
+      </article>
+    </section>
 
-        <h2 class="section-heading">
-          Featured Case Studies
-        </h2>
+    <div class="support-header" id="more-work">
+      <h2>Additional Accomplishments</h2>
+      <p>Selected work prioritized for leadership impact and versatility. Expand any category to see more.</p>
+    </div>
 
-        <p class="section-description">
-          A closer look at two challenges, the solutions
-          I implemented, and the results observed.
-        </p>
-
-        <div class="featured-grid">
-
-          <!-- ONBOARDING CASE STUDY -->
-
-          <article class="featured-card">
-
-            <p class="category">
-              Employee Experience &amp; Retention
-            </p>
-
-            <h3>
-              Redesigning the First 90 Days
-            </h3>
-
-            <p>
-              One residential youth services home was
-              losing approximately 90% of new employees
-              within their first three months.
-              The existing onboarding approach
-              wasn't preparing or supporting staff
-              adequately for demanding work.
-            </p>
-
-            <p>
-              I redesigned the process using existing
-              training resources, experienced volunteer
-              mentors, phased responsibilities, and
-              structured leadership conversations.
-              The approach focused on employee readiness
-              and support rather than introducing
-              another technology platform.
-            </p>
-
-            <div class="result">
-
-              <strong>90% → 30%</strong>
-
-              <span>
-                Approximate first 90 day turnover at
-                one home before and after implementation.
-                Historical estimates, not proof of
-                a single cause.
-              </span>
-
-            </div>
-
-            <div class="card-action">
-
-              <a class="button"
-                 href="Onboarding_Case_Study.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                Read Case Study
-              </a>
-
-            </div>
-
+    <section class="category-grid" aria-label="Additional accomplishments by function">
+      <div class="category" aria-labelledby="workforce-more">
+        <h3 id="workforce-more">Workforce</h3>
+        <article class="mini-card">
+          <h4>Supervisor Development &amp; Workforce Stability</h4>
+          <p>Helped build the management structure as PC Geeks grew to approximately 42 employees; annual turnover remained below 10%.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Multisite People Operations</h4>
+          <p>Managed HR, employee relations, payroll, performance, and compliance across a multisite nonprofit at Friends of Children and Families.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Workforce Data for Leadership Decisions</h4>
+          <p>Developed turnover, workforce, and compliance reporting for recurring board review at Friends of Children and Families.</p>
+        </article>
+        <details>
+          <summary>More workforce accomplishments</summary>
+          <article class="mini-card">
+            <h4>Staffing &amp; Training Coordination</h4>
+            <p>Balanced service coverage with employee readiness and mandatory training requirements in residential operations.</p>
           </article>
-
-          <!-- POLICY AUTOMATION CASE STUDY -->
-
-          <article class="featured-card">
-
-            <p class="category">
-              Workflow Automation &amp; Compliance
-            </p>
-
-            <h3>
-              Policy Lifecycle Management &amp; Automation
-            </h3>
-
-            <p>
-              Hundreds of organizational policies
-              required recurring reviews, document
-              collection, compliance assessment,
-              approval tracking, and publication.
-              The manual process depended heavily
-              on administrative follow through.
-            </p>
-
-            <p>
-              I connected existing Microsoft 365
-              tools to automate review requests,
-              document routing, status updates,
-              and notifications. Compliance review
-              and board approval remained human
-              responsibilities, while the routine
-              administrative work became more
-              systematic.
-            </p>
-
-            <div class="result">
-
-              <strong>~300 Policies</strong>
-
-              <span>
-                Supported by connected workflows
-                operating for approximately two years.
-                Time savings were not formally measured.
-              </span>
-
-            </div>
-
-            <div class="card-action">
-
-              <a class="button"
-                 href="Policy_Automation_Portfolio.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                Read Case Study
-              </a>
-
-            </div>
-
+          <article class="mini-card">
+            <h4>Training Compliance &amp; Reporting</h4>
+            <p>Developed automated completion reporting and administered learning workflows, including Relias at Friends of Children and Families.</p>
           </article>
-
-        </div>
-
+        </details>
       </div>
 
-    </section>
-
-    <!-- ADDITIONAL SOLUTIONS -->
-
-    <section class="section solutions-section" id="solutions">
-
-      <div class="container">
-
-        <p class="eyebrow">
-          Additional Implementations
-        </p>
-
-        <h2 class="section-heading">
-          Practical Solutions Across the Organization
-        </h2>
-
-        <p class="section-description">
-          Not every solution needs a formal case study.
-          These examples show how I've addressed
-          different operational challenges, often
-          by making better use of existing technology,
-          information, and resources.
-        </p>
-
-        <!-- GROUP 1 -->
-
-        <div class="solution-group">
-
-          <h3 class="group-heading">
-            Financial Controls &amp; Accountability
-          </h3>
-
-          <div class="solutions-grid">
-
-            <!-- CREDIT CARD MANAGEMENT -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Financial Controls &amp; Automation
-              </p>
-
-              <h3>
-                Agency Credit Card Management
-              </h3>
-
-              <p>
-                Agency credit cards were being issued
-                without a formal process, creating
-                unnecessary accountability risks.
-                I developed a credit card policy,
-                a documented card issuance process,
-                and receipt collection procedures.
-                I also built a macro enabled Excel
-                tracker that incorporated monthly
-                credit card statements and provided
-                spending dashboards by location
-                and cardholder.
-              </p>
-
-            </article>
-
-            <!-- CONSTRUCTION DASHBOARD -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Project Management &amp; Financial Analysis
-              </p>
-
-              <h3>
-                Construction Budget &amp; Project Tracking
-              </h3>
-
-              <p>
-                Renovation projects needed clearer
-                oversight of budgets and progress,
-                but purchasing project management
-                software wasn't an option.
-                I built an Excel tracking system,
-                wrote a query to incorporate updated
-                QuickBooks data each month, and
-                created a dashboard showing budget
-                performance and the status of
-                individual construction activities.
-              </p>
-
-            </article>
-
-            <!-- FUNDRAISING -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Development Operations
-              </p>
-
-              <h3>
-                Fundraising &amp; Donor Tracking
-              </h3>
-
-              <p>
-                Fundraising information needed to
-                be organized and accessible, but
-                the budget didn't support a
-                dedicated CRM.
-                I developed a tracking solution
-                using Excel and Access to manage
-                information with tools already
-                available to the organization.
-                It provided a practical alternative
-                to purchasing another system.
-              </p>
-
-            </article>
-
-            <!-- CONTRACTS -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Vendor Management &amp; Risk Reduction
-              </p>
-
-              <h3>
-                Contract Lifecycle Management
-              </h3>
-
-              <p>
-                Vendor contracts and renewal dates
-                needed a more reliable tracking
-                process than depending on individual
-                reminders or scattered records.
-                I developed a centralized contract
-                tracker with automated reminders
-                using available tools.
-                The system helped bring upcoming
-                contract decisions into view
-                before deadlines arrived.
-              </p>
-
-            </article>
-
-          </div>
-
-        </div>
-
-        <!-- GROUP 2 -->
-
-        <div class="solution-group">
-
-          <h3 class="group-heading">
-            Technology &amp; Operational Systems
-          </h3>
-
-          <div class="solutions-grid">
-
-            <!-- HRIS -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Human Resources &amp; Systems
-              </p>
-
-              <h3>
-                HRIS Selection &amp; Implementation
-              </h3>
-
-              <p>
-                Different organizations needed HR
-                systems suited to their size,
-                operations, and administrative
-                requirements.
-                I've been involved in implementing
-                Paychex and UKG Ready.
-                At NBAC, I led the evaluation of
-                approximately a dozen HRIS options
-                before selecting and implementing
-                ADP Workforce Now for the organization.
-              </p>
-
-            </article>
-
-            <!-- SHAREPOINT -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                IT Governance &amp; Information Security
-              </p>
-
-              <h3>
-                SharePoint Access Audit &amp; Cleanup
-              </h3>
-
-              <p>
-                SharePoint files and access permissions
-                needed a thorough audit, but the
-                available tools were limited.
-                I developed a PowerShell script
-                to identify files and access
-                information, then led the manual
-                cleanup of the findings.
-                The solution combined technical
-                investigation with the detailed
-                work needed to address problems.
-              </p>
-
-            </article>
-
-            <!-- MAINTENANCE -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Facilities &amp; Operations
-              </p>
-
-              <h3>
-                Maintenance Request Tracking
-              </h3>
-
-              <p>
-                Maintenance activities needed
-                a consistent way to capture
-                requests and monitor outstanding
-                work.
-                A dedicated maintenance portal
-                wasn't an available option.
-                I developed an alternative
-                tracking process using existing
-                resources to provide better
-                visibility without the expense
-                of another platform.
-              </p>
-
-            </article>
-
-            <!-- PROPERTY MANAGEMENT -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Property Operations &amp; Technology
-              </p>
-
-              <h3>
-                Property Management System Implementation
-              </h3>
-
-              <p>
-                Paper based practices made property
-                management information and daily
-                administrative activities harder
-                to coordinate.
-                I helped select and implement
-                Buildium to centralize information
-                and support the organization's
-                property management processes.
-                The transition required considering
-                existing workflows and how staff
-                would use the system.
-              </p>
-
-            </article>
-
-          </div>
-
-        </div>
-
-        <!-- GROUP 3 -->
-
-        <div class="solution-group">
-
-          <h3 class="group-heading">
-            Safety, Compliance &amp; Employee Support
-          </h3>
-
-          <div class="solutions-grid">
-
-            <!-- SAFETY AUTOMATION -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Workplace Safety &amp; Reporting
-              </p>
-
-              <h3>
-                Safety Monitoring &amp; Incident Reporting
-              </h3>
-
-              <p>
-                Safety oversight involved inspections,
-                drills, and workplace incidents
-                that needed consistent tracking
-                and management visibility.
-                I developed an Excel based system
-                with automated monthly email reports.
-                Microsoft Forms incident submissions
-                were also automated into the
-                safety spreadsheet, reducing
-                manual data handling.
-              </p>
-
-            </article>
-
-            <!-- TRAINING REPORTING -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Training Compliance &amp; Analytics
-              </p>
-
-              <h3>
-                Training Monitoring &amp; Automated Reports
-              </h3>
-
-              <p>
-                Managers needed timely information
-                about training activity and
-                compliance requirements.
-                I developed reporting processes
-                that organized training data and
-                automatically distributed monthly
-                reports by email.
-                The reports provided regular
-                information for monitoring
-                completion and identifying
-                areas needing attention.
-              </p>
-
-            </article>
-
-            <!-- AI GOVERNANCE -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                AI Governance &amp; Confidentiality
-              </p>
-
-              <h3>
-                Organizational AI Use Policy
-              </h3>
-
-              <p>
-                I discovered employees entering
-                sensitive clinical and personnel
-                information into public AI tools,
-                raising serious privacy and
-                confidentiality concerns.
-                I developed an organizational
-                AI policy to address appropriate
-                use and information protection.
-                The goal was to establish practical
-                safeguards while recognizing
-                that AI was becoming part
-                of everyday work.
-              </p>
-
-            </article>
-
-            <!-- EVACUATION MAPS -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Emergency Preparedness &amp; Facilities
-              </p>
-
-              <h3>
-                Emergency Evacuation Map Redesign
-              </h3>
-
-              <p>
-                Existing evacuation maps were
-                hand drawn, visually inconsistent,
-                and difficult for people to follow.
-                Specialized mapping software
-                couldn't be justified financially.
-                I used Excel to create clearer,
-                more professional evacuation
-                maps using a tool the organization
-                already owned.
-              </p>
-
-            </article>
-
-            <!-- STANDARD OPERATING PROCEDURES -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Knowledge Management &amp; Training
-              </p>
-
-              <h3>
-                Training Manuals &amp; Standard Procedures
-              </h3>
-
-              <p>
-                Important job knowledge can be
-                lost or inconsistently communicated
-                when employees change positions
-                or leave an organization.
-                I've developed detailed operating
-                procedures and training resources,
-                including a complete accounts
-                payable manual, program staff
-                instructions, and IT guides.
-                The goal was to make knowledge
-                easier to transfer and daily
-                processes easier to follow.
-              </p>
-
-            </article>
-
-            <!-- WORKFORCE PLANNING -->
-
-            <article class="solution-card">
-
-              <p class="category">
-                Workforce Planning &amp; Operations
-              </p>
-
-              <h3>
-                Staffing &amp; Training Coordination
-              </h3>
-
-              <p>
-                Staffing in residential services
-                required balancing coverage,
-                employee readiness, and mandatory
-                training requirements.
-                I helped coordinate staffing
-                approaches that allowed employees
-                to complete training while
-                maintaining service coverage.
-                The work required cooperation
-                among managers and experienced
-                staff across locations.
-              </p>
-
-            </article>
-
-          </div>
-
-        </div>
-
-        <!-- ADD FUTURE SOLUTION GROUPS OR CARDS HERE -->
-
+      <div class="category" aria-labelledby="systems-more">
+        <h3 id="systems-more">Systems</h3>
+        <article class="mini-card">
+          <h4>Executive Reporting &amp; 100+ KPIs</h4>
+          <p>Established Family Solutions' organization-wide KPI framework and Power BI reporting for executive and board discussions.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Enterprise Systems Implementation</h4>
+          <p>Led ADP Workforce Now selection at National Builders and Acceptance Corporation; worked with UKG Ready and Microsoft 365 at Family Solutions and Paychex at Friends of Children and Families.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Safety Monitoring Built to Scale</h4>
+          <p>Developed an inspection and incident reporting system at National Builders and Acceptance Corporation, then adapted it at Friends of Children and Families and Family Solutions.</p>
+        </article>
+        <details>
+          <summary>More systems accomplishments</summary>
+          <article class="mini-card">
+            <h4>SharePoint Security &amp; Governance</h4>
+            <p>Used PowerShell to audit access and supported permissions cleanup at Family Solutions.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Solutions Without New Software</h4>
+            <p>Used available tools to create clearer evacuation maps, organizational charts, and maintenance request tracking at Family Solutions.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Operational Documentation &amp; AI Safeguards</h4>
+            <p>Developed SOPs across organizations and an AI-use confidentiality policy at Family Solutions.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Digital Presence &amp; Outreach</h4>
+            <p>Created Main Street Enid's website; managed sites for PC Geeks, National Builders and Acceptance Corporation, and Family Solutions, including social media at the latter two.</p>
+          </article>
+        </details>
       </div>
 
-    </section>
-
-    <!-- CLOSING -->
-
-    <section class="closing">
-
-      <div class="container">
-
-        <h2>
-          Finding What Works
-        </h2>
-
-        <p>
-          I don't believe every challenge
-          requires new software, another
-          consultant, or a larger budget.
-          Sometimes those investments make sense.
-          Other times, the best solution is
-          a spreadsheet, an automation,
-          a clearer process, or a better
-          way to use existing information.
-        </p>
-
-        <p>
-          The important part is understanding
-          the problem, recognizing the
-          organization's requirements and
-          limitations, and creating something
-          people can actually use and maintain.
-          That's the kind of work I enjoy.
-        </p>
-
-        <p class="disclosure">
-          These examples are drawn from actual
-          professional experience. Confidential
-          information and proprietary organizational
-          materials have been excluded.
-          The featured case studies provide
-          additional implementation details
-          and explain the limitations of
-          reported results.
-        </p>
-
+      <div class="category" aria-labelledby="finance-more">
+        <h3 id="finance-more">Finance &amp; Growth</h3>
+        <article class="mini-card">
+          <h4>$100K+ in Annual Vendor Savings</h4>
+          <p>Renegotiated three major vendor relationships at Family Solutions. Also worked on vendor cost reduction at National Builders and Acceptance Corporation and PC Geeks.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Regional Business Growth &amp; Profitable Sale</h4>
+          <p>Helped grow PC Geeks into a regional technology business with hundreds of contracts and multiple service lines; it was ultimately sold profitably.</p>
+        </article>
+        <article class="mini-card">
+          <h4>Competitive Contract Awards &amp; Grant Funding</h4>
+          <p>Prepared three successful OregonBuys proposals and secured approximately $60,000 in grants at Family Solutions.</p>
+        </article>
+        <details>
+          <summary>More finance accomplishments</summary>
+          <article class="mini-card">
+            <h4>Financial Controls That Changed Operations</h4>
+            <p>At Family Solutions, created a dedicated credit-card policy and automated Excel spending tracker feeding KPI dashboards; spending analysis helped reveal costly food-delivery practices later addressed by hiring a cook.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Accounting Modernization &amp; Project Budgets</h4>
+            <p>Rebuilt financial controls and accounting processes at National Builders and Acceptance Corporation, implemented QuickBooks Desktop, and tracked renovation budgets and vendors.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Continuity &amp; Emergency Funding</h4>
+            <p>Obtained a Paycheck Protection Program loan and adapted rental strategy during the pandemic at National Builders and Acceptance Corporation.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Contract &amp; Resource Accountability</h4>
+            <p>Built renewal reminders, spending controls, and practical tracking tools to strengthen oversight without unnecessary software expense.</p>
+          </article>
+        </details>
       </div>
-
     </section>
 
+    <p class="notes">These examples are drawn from actual professional experience. Confidential company documents and data are excluded; reported results are scoped to the organizations and periods described. Illustrative materials, where added later, will be identified as reconstructions.</p>
   </main>
-
-  <!-- FOOTER -->
-
-  <footer>
-    <p>© 2026 Lora Anderson</p>
-  </footer>
-
+  <footer>© 2026 Lora Anderson</footer>
 </body>
 </html>
