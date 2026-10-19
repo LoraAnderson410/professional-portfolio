@@ -19,7 +19,6 @@
     a:focus-visible, summary:focus-visible {outline:3px solid var(--gold);outline-offset:3px}
     .wrap {width:min(1100px,calc(100% - 48px));margin-inline:auto}
 
-    /* Same site navigation as the homepage. */
     .site-header {background:var(--deep);color:white;position:sticky;top:0;z-index:10}
     .nav {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
     .nav-name {font-size:1.05rem;font-weight:700;text-decoration:none;white-space:nowrap}
@@ -31,12 +30,9 @@
     .eyebrow {margin:0 0 7px;color:var(--gold-light);font-size:.76rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
     h1 {margin:0 0 13px;font-size:clamp(2.1rem,4vw,2.9rem);line-height:1.12}
     .hero-intro {max-width:940px;margin:0;color:#eef2ee;font-size:1.01rem;line-height:1.65}
-    .jump-links {display:flex;flex-wrap:wrap;gap:9px;padding:18px 0 22px}
-    .jump-links a {display:inline-flex;padding:8px 13px;background:white;border:1px solid var(--forest);border-radius:5px;color:var(--forest);font-size:.88rem;font-weight:700;text-decoration:none}
-    .jump-links a:hover {background:var(--sage)}
 
-    /* The three featured stories appear before ANY supporting tiles, including on mobile. */
     .featured-grid, .category-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+    .featured-grid {margin-top:24px}
     .featured-card {min-width:0;background:white;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:9px;padding:20px;display:flex;flex-direction:column}
     .kicker {font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#825e2f;margin:0 0 7px}
     .featured-card h2 {font-size:1.27rem;color:var(--forest);line-height:1.25;margin:0 0 6px}
@@ -50,7 +46,12 @@
     .support-header {border-top:1px solid var(--line);margin:23px 0 13px;padding-top:22px}
     .support-header h2 {font-size:1.46rem;line-height:1.25;color:var(--forest);margin:0 0 3px}
     .support-header p {margin:0;font-size:.91rem;color:var(--muted)}
-    .category {min-width:0;scroll-margin-top:100px}
+
+    /* Shared rows keep all three columns aligned. */
+    .category-grid {grid-template-rows:repeat(5,auto);row-gap:9px}
+    .category {min-width:0;scroll-margin-top:100px;display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:9px}
+    .category > .mini-card {margin-bottom:0}
+    .category > details {align-self:start}
     .category h3 {margin:0 0 9px;color:var(--forest);font-size:1.1rem}
     .mini-card {background:white;border:1px solid var(--line);border-radius:6px;padding:12px 13px;margin-bottom:9px;min-width:0}
     .mini-card h4 {font-size:.92rem;line-height:1.27;color:var(--forest);margin:0 0 4px}
@@ -58,7 +59,6 @@
     details {margin-top:2px}
     summary {cursor:pointer;color:var(--forest);font-size:.84rem;font-weight:700;padding:8px 3px;list-style-position:inside}
     details[open] summary {margin-bottom:5px}
-    .notes {margin:19px 0 28px;padding:13px 15px;border-radius:6px;background:var(--sage);color:var(--muted);font-size:.81rem}
     footer {background:var(--deep);color:#dce7df;text-align:center;padding:16px;font-size:.84rem}
 
     @media(max-width:950px) {
@@ -74,14 +74,18 @@
       .hero {padding:29px 0 31px}
       .featured-grid, .category-grid {grid-template-columns:1fr;gap:12px}
       .featured-card {padding:18px;scroll-margin-top:15px}
-      .category {scroll-margin-top:15px}
+      .category-grid {grid-template-rows:none;row-gap:12px}
+      .category {scroll-margin-top:15px;display:block;grid-row:auto}
+      .category > .mini-card {margin-bottom:9px}
       .category h3 {margin-top:5px}
       .support-header {margin-top:20px}
-      .jump-links {gap:7px;padding:14px 0 19px}
     }
-    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
+    @media(prefers-reduced-motion:reduce) {
+      html {scroll-behavior:auto}
+    }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main navigation">
@@ -109,16 +113,14 @@
 
   <main class="wrap">
 
-    <!-- FEATURED PROJECTS: intentionally always first in mobile reading order. -->
-    
-<section class="featured-grid" style="margin-top: 24px;" aria-label="Featured leadership case studies">
+    <section class="featured-grid" aria-label="Featured leadership case studies">
 
       <article class="featured-card" id="workforce">
         <p class="kicker">Workforce · Featured case study</p>
         <h2>Onboarding &amp; Employee Retention</h2>
         <p class="employer">Friends of Children and Families</p>
         <span class="metric">~65% reduction</span>
-        <p class="description">Co-designed phased onboarding, mentoring, and early leadership check-ins. Regrettable attrition declined by approximately 65% at one residential program. </p>
+        <p class="description">At a residential program struggling with employee retention, I helped redesign onboarding through phased training, experienced mentors, and structured leadership check-ins. Regrettable attrition declined by approximately 65%.</p>
         <a class="case-link" href="Onboarding_Case_Study.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
       </article>
 
@@ -127,35 +129,18 @@
         <h2>Policy Governance &amp; Automation</h2>
         <p class="employer">Family Solutions</p>
         <span class="metric">~300 policies</span>
-        <p class="description">Used existing Microsoft 365 tools to build a more dependable policy review, routing, reminder, and approval-tracking process. Improved visibility into responsibilities and deadlines while preserving human review and approval.</p>
+        <p class="description">Designed and implemented automated Microsoft 365 workflows for policy review, routing, reminders, and approval tracking, strengthening governance and accountability across approximately 300 organizational policies.</p>
         <a class="case-link" href="Policy_Automation_Portfolio.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
       </article>
 
- 
-<article class="featured-card" id="finance">
-
-  <p class="kicker">Finance · Featured Case Study</p>
-
-  <h2>Property Portfolio Growth &amp; Strategic Redevelopment</h2>
-
-  <p class="employer">
-    National Builders and Acceptance Corporation
-  </p>
-
-  <span class="metric">100% Growth in Rental Revenue</span>
-
-  <p class="description">
-    Led a strategy to improve occupancy and rental performance
-    across a portfolio of more than 100 units. Prioritized
-    vacant properties, directed targeted renovations, and
-    developed targeted marketing strategies.
-  </p>
-
-  <span class="case-context">
-    Business Strategy · Financial Oversight · Property Redevelopment
-  </span>
-
-</article>
+      <article class="featured-card" id="finance">
+        <p class="kicker">Finance · Featured accomplishment</p>
+        <h2>Property Portfolio Growth &amp; Strategic Redevelopment</h2>
+        <p class="employer">National Builders and Acceptance Corporation</p>
+        <span class="metric">100% Growth in Rental Revenue</span>
+        <p class="description">Led a strategy to improve occupancy and rental performance across a portfolio of more than 100 units. Prioritized vacant properties, directed targeted renovations, and developed targeted marketing strategies.</p>
+        <span class="case-context">Business Strategy · Financial Oversight · Redevelopment</span>
+      </article>
 
     </section>
 
@@ -165,26 +150,33 @@
     </div>
 
     <section class="category-grid" aria-label="Additional accomplishments by function">
+
       <div class="category" aria-labelledby="workforce-more">
         <h3 id="workforce-more">Workforce</h3>
+
         <article class="mini-card">
           <h4>Supervisor Development &amp; Workforce Stability</h4>
           <p>Helped build the management structure as PC Geeks grew to approximately 42 employees; annual turnover remained below 10%.</p>
         </article>
+
         <article class="mini-card">
           <h4>Multisite People Operations</h4>
           <p>Managed HR, employee relations, payroll, performance, and compliance across a multisite nonprofit at Friends of Children and Families.</p>
         </article>
+
         <article class="mini-card">
           <h4>Workforce Data for Leadership Decisions</h4>
           <p>Developed turnover, workforce, and compliance reporting for recurring board review at Friends of Children and Families.</p>
         </article>
+
         <details>
           <summary>More workforce accomplishments</summary>
+
           <article class="mini-card">
             <h4>Staffing &amp; Training Coordination</h4>
             <p>Balanced service coverage with employee readiness and mandatory training requirements in residential operations.</p>
           </article>
+
           <article class="mini-card">
             <h4>Training Compliance &amp; Reporting</h4>
             <p>Developed automated completion reporting and administered learning workflows, including Relias at Friends of Children and Families.</p>
@@ -194,32 +186,40 @@
 
       <div class="category" aria-labelledby="systems-more">
         <h3 id="systems-more">Systems</h3>
+
         <article class="mini-card">
           <h4>Executive Reporting &amp; 100+ KPIs</h4>
           <p>Established Family Solutions' organization-wide KPI framework and Power BI reporting for executive and board discussions.</p>
         </article>
+
         <article class="mini-card">
           <h4>Enterprise Systems Implementation</h4>
-          <p>Led ADP Workforce Now selection at National Builders and Acceptance Corporation; worked with UKG Ready and Microsoft 365 at Family Solutions and Paychex at Friends of Children and Families.</p>
+          <p>Led ADP Workforce Now selection and implementation at National Builders and Acceptance Corporation; implemented or supported UKG Ready and Microsoft 365 at Family Solutions and Paychex at Friends of Children and Families.</p>
         </article>
+
         <article class="mini-card">
           <h4>Safety Monitoring Built to Scale</h4>
           <p>Developed an inspection and incident reporting system at National Builders and Acceptance Corporation, then adapted it at Friends of Children and Families and Family Solutions.</p>
         </article>
+
         <details>
           <summary>More systems accomplishments</summary>
+
           <article class="mini-card">
             <h4>SharePoint Security &amp; Governance</h4>
-            <p>Used PowerShell to audit access and supported permissions cleanup at Family Solutions.</p>
+            <p>Created a PowerShell script to audit SharePoint access at Family Solutions and led the subsequent permissions cleanup.</p>
           </article>
+
           <article class="mini-card">
             <h4>Solutions Without New Software</h4>
             <p>Used available tools to create clearer evacuation maps, organizational charts, and maintenance request tracking at Family Solutions.</p>
           </article>
+
           <article class="mini-card">
             <h4>Operational Documentation &amp; AI Safeguards</h4>
             <p>Developed SOPs across organizations and an AI-use confidentiality policy at Family Solutions.</p>
           </article>
+
           <article class="mini-card">
             <h4>Digital Presence &amp; Outreach</h4>
             <p>Created Main Street Enid's website; managed sites for PC Geeks, National Builders and Acceptance Corporation, and Family Solutions, including social media at the latter two.</p>
@@ -229,42 +229,53 @@
 
       <div class="category" aria-labelledby="finance-more">
         <h3 id="finance-more">Finance &amp; Growth</h3>
+
         <article class="mini-card">
           <h4>$100K+ in Annual Vendor Savings</h4>
-          <p>Renegotiated three major vendor relationships at Family Solutions. Also worked on vendor cost reduction at National Builders and Acceptance Corporation and PC Geeks.</p>
+          <p>Renegotiated three major vendor relationships at Family Solutions, reducing recurring annual operating expenses by more than $100,000.</p>
         </article>
+
         <article class="mini-card">
           <h4>Regional Business Growth &amp; Profitable Sale</h4>
           <p>Helped grow PC Geeks into a regional technology business with hundreds of contracts and multiple service lines; it was ultimately sold profitably.</p>
         </article>
+
         <article class="mini-card">
           <h4>Competitive Contract Awards &amp; Grant Funding</h4>
           <p>Prepared three successful OregonBuys proposals and secured approximately $60,000 in grants at Family Solutions.</p>
         </article>
+
         <details>
           <summary>More finance accomplishments</summary>
+
           <article class="mini-card">
             <h4>Financial Controls That Changed Operations</h4>
-            <p>At Family Solutions, created a dedicated credit-card policy and automated Excel spending tracker feeding KPI dashboards; spending analysis helped reveal costly food-delivery practices later addressed by hiring a cook.</p>
+            <p>Created a dedicated credit card policy and automated Excel tracker feeding financial KPI dashboards at Family Solutions. Used spending analysis to identify rising food-delivery costs and inform the decision to hire a cook for a residential program.</p>
           </article>
+
           <article class="mini-card">
             <h4>Accounting Modernization &amp; Project Budgets</h4>
             <p>Rebuilt financial controls and accounting processes at National Builders and Acceptance Corporation, implemented QuickBooks Desktop, and tracked renovation budgets and vendors.</p>
           </article>
+
           <article class="mini-card">
             <h4>Continuity &amp; Emergency Funding</h4>
             <p>Obtained a Paycheck Protection Program loan and adapted rental strategy during the pandemic at National Builders and Acceptance Corporation.</p>
           </article>
+
           <article class="mini-card">
             <h4>Contract &amp; Resource Accountability</h4>
             <p>Built renewal reminders, spending controls, and practical tracking tools to strengthen oversight without unnecessary software expense.</p>
           </article>
+
         </details>
       </div>
+
     </section>
 
-    <p class="notes">These examples are drawn from actual professional experience. Confidential company documents and data are excluded; reported results are scoped to the organizations and periods described. Illustrative materials, where added later, will be identified as reconstructions.</p>
   </main>
+
   <footer>© 2026 Lora Anderson</footer>
 </body>
 </html>
+
