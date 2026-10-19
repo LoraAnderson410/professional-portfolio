@@ -2,583 +2,757 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Independent projects by Lora Anderson exploring business analytics, process improvement, financial management, and practical problem solving.">
-  <title>Projects | Lora Anderson</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --green: #263c32;
-      --dark: #1e2f27;
-      --gold: #a87738;
-      --cream: #f8f7f3;
-      --sage: #e8ece6;
-      --ink: #2f3833;
-      --muted: #536258;
-      --line: #dce2db;
-    }
+<title>Projects & Applied Analysis | Lora Anderson</title>
+<meta name="description" content="Independent projects demonstrating business analysis, operational problem solving, process improvement, systems design, and financial management.">
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+:root {
+  --green:#263c32;
+  --dark:#1e2f27;
+  --gold:#a87738;
+  --cream:#f8f7f3;
+  --sage:#e8ece6;
+  --text:#2f3833;
+  --muted:#526258;
+  --border:#dce2db;
+}
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 95px;
-    }
+* { box-sizing:border-box; }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.5;
-    }
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
 
-    a {
-      color: inherit;
-    }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
 
-    .container {
-      width: min(1100px, calc(100% - 48px));
-      margin: 0 auto;
-    }
+a { color:inherit; }
 
-    /* Navigation */
+a:focus-visible,
+summary:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
 
-    nav {
-      background: var(--green);
-      color: white;
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.container {
+  width:min(1100px,calc(100% - 40px));
+  margin:auto;
+}
 
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
+/* NAVIGATION */
 
-    .nav-name {
-      font-size: 1.05rem;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+.site-nav {
+  background:var(--green);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px 16px;
-    }
+.nav-content {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:14px 0;
+}
 
-    .nav-links a {
-      font-size: 0.86rem;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+.nav-name {
+  font-weight:bold;
+  font-size:1.05rem;
+  text-decoration:none;
+  white-space:nowrap;
+}
 
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
+.nav-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+}
 
-    /* Introduction */
+.nav-links a {
+  font-size:.86rem;
+  text-decoration:none;
+  white-space:nowrap;
+}
 
-    .hero {
-      background: var(--sage);
-      padding: 36px 0 39px;
-    }
+.nav-links a:hover {
+  text-decoration:underline;
+}
 
-    .eyebrow {
-      margin: 0 0 8px;
-      color: #92652f;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-    }
+/* INTRODUCTION */
 
-    h1 {
-      margin: 0;
-      color: var(--green);
-      font-size: clamp(2rem, 4vw, 2.85rem);
-      line-height: 1.15;
-    }
+.hero {
+  background:var(--sage);
+  padding:38px 0 41px;
+}
 
-    .subtitle {
-      margin: 10px 0;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #52645a;
-    }
+.eyebrow {
+  color:#91662f;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  font-size:.75rem;
+  font-weight:bold;
+  margin:0 0 8px;
+}
 
-    .intro {
-      max-width: 890px;
-      margin: 12px 0 0;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+h1 {
+  color:var(--green);
+  margin:0 0 10px;
+  font-size:clamp(2rem,4vw,2.8rem);
+  line-height:1.15;
+}
 
-    /* Project sections */
+.hero-subtitle {
+  color:var(--green);
+  font-weight:bold;
+  font-size:1.1rem;
+  margin:0 0 12px;
+}
 
-    .project-section {
-      padding: 28px 0 32px;
-    }
+.hero-description {
+  max-width:930px;
+  font-size:1rem;
+  line-height:1.65;
+  margin:0;
+}
 
-    .project-section + .project-section {
-      border-top: 1px solid var(--line);
-    }
+/* SECTIONS */
 
-    .section-heading {
-      margin-bottom: 17px;
-    }
+.project-section {
+  padding:29px 0 34px;
+}
 
-    .section-heading h2 {
-      color: var(--green);
-      font-size: 1.55rem;
-      line-height: 1.2;
-      margin: 0 0 5px;
-    }
+.project-section + .project-section {
+  border-top:1px solid var(--border);
+}
 
-    .section-heading p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.91rem;
-    }
+.section-heading {
+  margin-bottom:18px;
+}
 
-    /* Compact, consistently aligned cards */
+.section-heading h2 {
+  color:var(--green);
+  font-size:1.6rem;
+  line-height:1.2;
+  margin:0 0 5px;
+}
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 15px;
-      align-items: stretch;
-    }
+.section-heading p {
+  color:var(--muted);
+  margin:0;
+  font-size:.92rem;
+}
 
-    .project-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--gold);
-      border-radius: 8px;
-      padding: 17px 18px;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      height: 100%;
-    }
+/* CARDS */
 
-    .card-type {
-      margin: 0 0 8px;
-      color: #875e30;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-    }
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;
+  align-items:stretch;
+}
 
-    .project-card h3 {
-      margin: 0 0 9px;
-      color: var(--green);
-      font-size: 1.1rem;
-      line-height: 1.3;
-    }
+.project-card {
+  min-width:0;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  background:white;
+  border:1px solid var(--border);
+  border-top:4px solid var(--gold);
+  border-radius:8px;
+  padding:18px;
+}
 
-    .project-card p {
-      margin: 0 0 13px;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
+.card-type {
+  color:#895f30;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  font-size:.7rem;
+  font-weight:bold;
+  margin:0 0 8px;
+}
 
-    .card-links {
-      margin-top: auto;
-      padding-top: 5px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 7px 12px;
-    }
+.project-card h3 {
+  color:var(--green);
+  font-size:1.12rem;
+  line-height:1.27;
+  margin:0 0 9px;
+}
 
-    .card-links a {
-      color: var(--green);
-      font-size: 0.81rem;
-      font-weight: bold;
-      text-decoration: underline;
-      text-decoration-color: var(--gold);
-      text-underline-offset: 3px;
-    }
+.project-card p {
+  font-size:.88rem;
+  line-height:1.5;
+  margin:0 0 13px;
+}
 
-    .card-links a:hover {
-      color: #895f2b;
-    }
+.card-links {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 14px;
+  margin-top:auto;
+  padding-top:5px;
+}
 
-    /* Multiple sample links stay inside one card */
+.card-links a,
+.sample-links a {
+  color:var(--green);
+  font-size:.82rem;
+  font-weight:bold;
+  text-decoration:underline;
+  text-decoration-color:var(--gold);
+  text-underline-offset:3px;
+}
 
-    details {
-      margin-top: auto;
-      padding-top: 7px;
-      font-size: 0.83rem;
-    }
+.card-links a:hover,
+.sample-links a:hover {
+  color:#895f30;
+}
 
-    summary {
-      color: var(--green);
-      font-weight: bold;
-      cursor: pointer;
-    }
+/* EXPANDABLE FILE LINKS */
 
-    .sample-links {
-      display: grid;
-      gap: 8px;
-      padding: 12px 0 3px 10px;
-    }
+details {
+  margin-top:auto;
+  padding-top:5px;
+}
 
-    .sample-links a {
-      color: var(--green);
-      font-size: 0.81rem;
-      text-decoration: underline;
-      text-decoration-color: var(--gold);
-      text-underline-offset: 3px;
-    }
+summary {
+  cursor:pointer;
+  color:var(--green);
+  font-size:.83rem;
+  font-weight:bold;
+}
 
-    footer {
-      margin-top: 8px;
-      background: var(--dark);
-      color: #d8dedb;
-      text-align: center;
-      padding: 18px;
-      font-size: 0.85rem;
-    }
+.sample-links {
+  display:grid;
+  gap:8px;
+  padding:11px 0 4px 10px;
+}
 
-    /* Tablet */
+.sample-links a {
+  font-size:.8rem;
+}
 
-    @media (max-width: 960px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
+/* FOOTER */
 
-      .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+footer {
+  background:var(--dark);
+  color:#d8dedb;
+  text-align:center;
+  padding:18px;
+  font-size:.85rem;
+}
 
-    /* Mobile */
+/* RESPONSIVE */
 
-    @media (max-width: 650px) {
-      html {
-        scroll-padding-top: 15px;
-      }
+@media(max-width:950px) {
+  .nav-content {
+    flex-direction:column;
+    align-items:flex-start;
+    gap:9px;
+  }
 
-      nav {
-        position: relative;
-      }
+  .card-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
 
-      .container {
-        width: calc(100% - 32px);
-      }
+@media(max-width:650px) {
+  html { scroll-padding-top:15px; }
 
-      .hero {
-        padding: 27px 0 30px;
-      }
+  .site-nav { position:relative; }
 
-      .card-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
+  .container {
+    width:calc(100% - 32px);
+  }
 
-      .project-section {
-        padding: 23px 0;
-      }
+  .hero {
+    padding:29px 0 32px;
+  }
 
-      .project-card {
-        padding: 16px;
-      }
-    }
+  .card-grid {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
 
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+  .project-section {
+    padding:24px 0;
+  }
+
+  .project-card {
+    padding:16px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- SITE NAVIGATION -->
+<!-- NAVIGATION -->
 
-  <nav aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a class="nav-name" href="index.html">Lora Anderson</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-content">
 
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="Real%20World%20Experience.html">Professional Solutions</a>
-        <a href="projects.html">Projects</a>
-        <a href="guides.html">Guides</a>
-        <a href="Redacted_Reference_Packet.pdf" target="_blank" rel="noopener noreferrer">Recommendations</a>
-        <a href="LA%20Resume-Public.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <a href="https://www.linkedin.com/in/loraanderson410" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
+    <a class="nav-name" href="index.html">
+      Lora Anderson
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="Real%20World%20Experience.html">Professional Solutions</a>
+      <a href="projects.html">Projects</a>
+      <a href="guides.html">Guides</a>
+      <a href="Redacted_Reference_Packet.pdf" target="_blank" rel="noopener noreferrer">Recommendations</a>
+      <a href="LA%20Resume-Public.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="https://www.linkedin.com/in/loraanderson410" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
     </div>
-  </nav>
 
-  <!-- INTRODUCTION -->
+  </div>
+</nav>
 
-  <header class="hero">
-    <div class="container">
-      <p class="eyebrow">Curiosity + Problem Solving</p>
-      <h1>Problems I Couldn't Leave Alone</h1>
+<!-- INTRODUCTION -->
 
-      <p class="subtitle">Some projects are assigned. These weren't.</p>
+<header class="hero">
+  <div class="container">
 
-      <p class="intro">
-        These started because something wasn't working, didn't make sense,
-        or kept bothering me enough that I had to dig into it.
-        Sometimes that turns into a business analysis. Sometimes it turns
-        into a spreadsheet for my dog. It always starts with wanting
-        to understand what's really going on.
+    <p class="eyebrow">Independent Projects & Applied Learning</p>
+
+    <h1>Projects &amp; Applied Analysis</h1>
+
+    <p class="hero-subtitle">
+      Business questions. Practical solutions.
+    </p>
+
+    <p class="hero-description">
+      I approach independent projects much like I approach operations
+      leadership: define the problem, examine the evidence, and build
+      something useful. Whether I'm investigating performance, designing
+      a workflow, or creating a new tool, the goal is the same:
+      turn information into clearer decisions and better processes.
+    </p>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ANALYTICS -->
+
+<section class="project-section" id="analytics">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Analytics</h2>
+      <p>
+        Turning complex information into findings,
+        operational insight, and decision support.
       </p>
     </div>
-  </header>
 
-  <main>
+    <div class="card-grid">
 
-    <!-- ANALYTICS -->
+      <!-- WORKFORCE ANALYSIS -->
 
-    <section class="project-section" id="analytics">
-      <div class="container">
+      <article class="project-card">
 
-        <div class="section-heading">
-          <h2>Analytics</h2>
-          <p>Investigating questions, identifying patterns, and making information useful.</p>
+        <p class="card-type">
+          Business Analysis · Operational Risk
+        </p>
+
+        <h3>Workforce Risk &amp; Retention Analysis</h3>
+
+        <p>
+          Evaluated turnover, retention, staffing, overtime,
+          and training data to identify workforce patterns
+          and operational risks. Developed findings and
+          recommendations to support leadership decisions
+          about workforce stability and resource allocation.
+        </p>
+
+        <div class="card-links">
+          <a href="Northstar_Workforce_Analysis.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Analysis ↗
+          </a>
         </div>
 
-        <div class="card-grid">
+      </article>
 
-          <!-- SQL -->
+      <!-- SUPPORT SERVICES ANALYSIS -->
 
-          <article class="project-card">
-            <p class="card-type">SQL · MariaDB · Data Validation</p>
-            <h3>SQL &amp; Data Analysis</h3>
+      <article class="project-card">
 
-            <p>
-              Built reusable reporting views, investigated business
-              questions, examined turnover patterns, and developed
-              data-quality checks. My focus is on making sure the
-              underlying data can support reliable analysis.
-            </p>
+        <p class="card-type">
+          Business Analysis · Service Performance
+        </p>
 
-            <details>
-              <summary>Explore SQL samples</summary>
+        <h3>Support Services Performance Analysis</h3>
 
-              <div class="sample-links">
-                <a href="01_Analytical_Views.sql" target="_blank" rel="noopener noreferrer">Analytical Views</a>
-                <a href="02_Ad_Hoc_Analysis.sql" target="_blank" rel="noopener noreferrer">Ad Hoc Analysis</a>
-                <a href="03_Turnover_Retention_Analysis.sql" target="_blank" rel="noopener noreferrer">Turnover &amp; Retention Queries</a>
-                <a href="04_Data_Quality_Reconciliation.sql" target="_blank" rel="noopener noreferrer">Data Quality &amp; Reconciliation</a>
-              </div>
-            </details>
-          </article>
+        <p>
+          Examined service performance to identify operational
+          patterns, potential risks, and improvement opportunities.
+          Organized the findings into a business-focused report
+          connecting performance measures with management
+          considerations and recommendations.
+        </p>
 
-          <!-- WORKFORCE REPORT -->
-
-          <article class="project-card">
-            <p class="card-type">Operational Analysis · Leadership</p>
-            <h3>Workforce Risk &amp; Retention Analysis</h3>
-
-            <p>
-              Examined workforce patterns across retention, turnover,
-              staffing, overtime, and training. Connected the findings
-              to operational risks and developed recommendations
-              to support better workforce decisions.
-            </p>
-
-            <div class="card-links">
-              <a href="Northstar_Workforce_Analysis.pdf" target="_blank" rel="noopener noreferrer">Read Analysis ↗</a>
-            </div>
-          </article>
-
-          <!-- SUPPORT REPORT -->
-
-          <article class="project-card">
-            <p class="card-type">Operational Analysis · Service Delivery</p>
-            <h3>Support Services Performance Analysis</h3>
-
-            <p>
-              Investigated service delivery and support performance,
-              looking beyond individual metrics to understand
-              operational patterns, potential risks, and opportunities
-              for improvement.
-            </p>
-
-            <div class="card-links">
-              <a href="Northstar_Support_Services_Analysis.pdf" target="_blank" rel="noopener noreferrer">Read Analysis ↗</a>
-            </div>
-          </article>
-
-          <!-- AUTOIMMUNE TRACKER -->
-
-          <article class="project-card">
-            <p class="card-type">Excel · Tracking &amp; Pattern Analysis</p>
-            <h3>Autoimmune Pattern &amp; Care Tracker</h3>
-
-            <p>
-              Designed a customizable Excel system to organize
-              symptoms, treatments, lab results, triggers, nutrition,
-              and care history. Included a demonstration workbook
-              using fictional data to make the tool easier to explore.
-            </p>
-
-            <div class="card-links">
-              <a href="Autoimmune_Tracker.xlsx" download>Tracker</a>
-              <a href="Autoimmune_Tracker_Demo.xlsx" download>Demo Version</a>
-            </div>
-          </article>
-
-          <!-- THOR TRACKER -->
-
-          <article class="project-card">
-            <p class="card-type">Excel · Personal Analytics</p>
-            <h3>Thor's Allergy Tracker</h3>
-
-            <p>
-              Built a tracker to compare symptoms, treatments,
-              food changes, and environmental conditions over time.
-              It replaces guesswork with organized observations
-              that can help guide conversations with his veterinarian.
-            </p>
-
-            <div class="card-links">
-              <a href="Thor%20Allergy%20Tracker.xlsx" download>View Tracker ↗</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-
-    <section class="project-section" id="process">
-      <div class="container">
-
-        <div class="section-heading">
-          <h2>Process</h2>
-          <p>Understanding how work moves, where it breaks down, and how to make it better.</p>
+        <div class="card-links">
+          <a href="Northstar_Support_Services_Analysis.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Analysis ↗
+          </a>
         </div>
 
-        <div class="card-grid">
+      </article>
 
-          <!-- UNEMPLOYMENT STUDY -->
+      <!-- SQL -->
 
-          <article class="project-card">
-            <p class="card-type">Process Improvement · Case Study</p>
-            <h3>Unemployment Verification Process Study</h3>
+      <article class="project-card">
 
-            <p>
-              Turned a frustrating experience with Oregon's
-              identity-verification process into a practical
-              improvement study. Mapped confusing steps,
-              communication gaps, and recurring loops, then
-              proposed ways to improve the claimant experience.
-            </p>
+        <p class="card-type">
+          SQL · MariaDB · Data Quality
+        </p>
 
-            <div class="card-links">
-              <a href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf" target="_blank" rel="noopener noreferrer">Read Case Study ↗</a>
-            </div>
-          </article>
+        <h3>SQL &amp; Data Analysis</h3>
 
-          <!-- JOB TRACKER -->
+        <p>
+          Developed reporting views, analytical queries,
+          and reconciliation checks to investigate business
+          questions and validate underlying data. Applied
+          SQL to examine workforce trends, connect data
+          sources, and strengthen the reliability of reporting.
+        </p>
 
-          <article class="project-card">
-            <p class="card-type">Excel · Workflow &amp; Reporting</p>
-            <h3>Job Search Tracker</h3>
+        <details>
+          <summary>View SQL Examples</summary>
 
-            <p>
-              Created a customizable Excel tool that combines
-              application tracking, a visual analytics dashboard,
-              and weekly reporting. It makes a complicated job
-              search easier to organize, review, and evaluate.
-            </p>
+          <div class="sample-links">
 
-            <div class="card-links">
-              <a href="Job_Search_Tracker_Blank_Template.xlsx" download>Download Free Tracker ↗</a>
-            </div>
-          </article>
+            <a href="01_Analytical_Views.sql"
+               target="_blank"
+               rel="noopener noreferrer">
+              Analytical Views
+            </a>
 
-          <!-- PROCESS MAPPING -->
+            <a href="02_Ad_Hoc_Analysis.sql"
+               target="_blank"
+               rel="noopener noreferrer">
+              Ad Hoc Analysis
+            </a>
 
-          <article class="project-card">
-            <p class="card-type">Process Design · Workflow Mapping</p>
-            <h3>Business Process &amp; Lifecycle Mapping</h3>
+            <a href="03_Turnover_Retention_Analysis.sql"
+               target="_blank"
+               rel="noopener noreferrer">
+              Turnover &amp; Retention
+            </a>
 
-            <p>
-              Mapped customer, employee, and support lifecycles
-              to clarify handoffs, decision points, escalation
-              paths, and operational responsibilities.
-              The maps connect everyday workflows with the
-              information needed to manage them.
-            </p>
+            <a href="04_Data_Quality_Reconciliation.sql"
+               target="_blank"
+               rel="noopener noreferrer">
+              Data Quality &amp; Reconciliation
+            </a>
 
-            <details>
-              <summary>Explore process maps</summary>
+          </div>
+        </details>
 
-              <div class="sample-links">
-                <a href="02_Customer_Lifecycle_Flowchart.png" target="_blank" rel="noopener noreferrer">Customer Lifecycle</a>
-                <a href="03_Support_Escalation_Flowchart.png" target="_blank" rel="noopener noreferrer">Support Escalation</a>
-                <a href="04_Employee_Lifecycle_Flowchart.png" target="_blank" rel="noopener noreferrer">Employee Lifecycle</a>
-              </div>
-            </details>
-          </article>
+      </article>
 
-        </div>
-      </div>
-    </section>
+      <!-- AUTOIMMUNE TRACKER -->
 
-    <!-- FINANCE -->
+      <article class="project-card">
 
-    <section class="project-section" id="finance">
-      <div class="container">
+        <p class="card-type">
+          Excel · Information Design
+        </p>
 
-        <div class="section-heading">
-          <h2>Finance</h2>
-          <p>Building practical tools for financial visibility and better decisions.</p>
-        </div>
+        <h3>Health Pattern &amp; Care Tracker</h3>
 
-        <div class="card-grid">
+        <p>
+          Designed a customizable Excel system to consolidate
+          symptoms, treatment history, laboratory results,
+          appointments, and potential triggers. Structured
+          scattered information into a practical tracking
+          tool, with a demonstration workbook to help
+          others understand and adapt it.
+        </p>
 
-          <!-- PERSONAL FINANCE TRACKER -->
+        <div class="card-links">
 
-          <article class="project-card">
-            <p class="card-type">Excel · Financial Management</p>
-            <h3>Personal Finance Management Tracker</h3>
+          <a href="Autoimmune_Tracker.xlsx" download>
+            Tracker
+          </a>
 
-            <p>
-              Built a custom financial tracking system to replace
-              Quicken, creating a more flexible way to organize
-              financial information and review spending.
-              Rather than adapting my needs to the software,
-              I built a tool around the way I wanted to manage
-              the information.
-            </p>
-          </article>
+          <a href="Autoimmune_Tracker_Demo.xlsx" download>
+            Demo Version
+          </a>
 
         </div>
-      </div>
-    </section>
 
-  </main>
+      </article>
 
-  <footer>
-    © 2026 Lora Anderson
-  </footer>
+      <!-- THOR -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Excel · Tracking &amp; Trend Analysis
+        </p>
+
+        <h3>Thor's Allergy Tracker</h3>
+
+        <p>
+          Developed a structured system to document symptoms,
+          treatments, dietary changes, and environmental
+          factors over time. Replaced fragmented observations
+          with consistent records to make patterns easier
+          to evaluate and discuss with his veterinarian.
+        </p>
+
+        <div class="card-links">
+          <a href="Thor%20Allergy%20Tracker.xlsx" download>
+            View Tracker ↗
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section class="project-section" id="process">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Process</h2>
+      <p>
+        Identifying inefficiencies, clarifying accountability,
+        and developing workable solutions.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- PROCESS IMPROVEMENT STUDY -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Process Analysis · Service Experience
+        </p>
+
+        <h3>Identity Verification Process Improvement</h3>
+
+        <p>
+          Analyzed Oregon's unemployment identity-verification
+          process from the claimant perspective. Documented
+          communication gaps, repeated steps, and unclear
+          handoffs, then developed recommendations to
+          improve process clarity and reduce unnecessary
+          complexity.
+        </p>
+
+        <div class="card-links">
+          <a href="Unemployment%20Identity%20Verification%20Process%20Improvement%20Study.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Case Study ↗
+          </a>
+        </div>
+
+      </article>
+
+      <!-- LIFECYCLE MAPS -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Process Design · Operational Systems
+        </p>
+
+        <h3>Business Process &amp; Lifecycle Mapping</h3>
+
+        <p>
+          Created process maps covering customer relationships,
+          employee lifecycles, and service escalation.
+          Defined key activities, decision points, and
+          handoffs to illustrate how processes connect
+          across departments and where better coordination
+          can strengthen execution.
+        </p>
+
+        <details>
+          <summary>View Process Maps</summary>
+
+          <div class="sample-links">
+
+            <a href="02_Customer_Lifecycle_Flowchart.png"
+               target="_blank"
+               rel="noopener noreferrer">
+              Customer Lifecycle
+            </a>
+
+            <a href="03_Support_Escalation_Flowchart.png"
+               target="_blank"
+               rel="noopener noreferrer">
+              Support Escalation
+            </a>
+
+            <a href="04_Employee_Lifecycle_Flowchart.png"
+               target="_blank"
+               rel="noopener noreferrer">
+              Employee Lifecycle
+            </a>
+
+          </div>
+        </details>
+
+      </article>
+
+      <!-- GOVERNANCE -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Governance · Risk Management
+        </p>
+
+        <h3>Operational Governance Framework</h3>
+
+        <p>
+          Developed an integrated governance workbook
+          covering responsibilities, risk tracking,
+          policy and procedure indexes, succession
+          planning, data ownership, and KPI definitions.
+          Designed the framework to improve organizational
+          consistency, accountability, and management oversight.
+        </p>
+
+        <details>
+          <summary>View Governance Materials</summary>
+
+          <div class="sample-links">
+
+            <a href="Northstar_Governance_Matrices.xlsx"
+               target="_blank"
+               rel="noopener noreferrer">
+              Governance Workbook
+            </a>
+
+            <a href="Northstar_RACI_preview.png"
+               target="_blank"
+               rel="noopener noreferrer">
+              RACI Matrix
+            </a>
+
+            <a href="Northstar_Risk_preview.png"
+               target="_blank"
+               rel="noopener noreferrer">
+              Risk Register
+            </a>
+
+          </div>
+        </details>
+
+      </article>
+
+      <!-- JOB SEARCH TRACKER -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Excel · Process Management
+        </p>
+
+        <h3>Job Search Management Tracker</h3>
+
+        <p>
+          Built a customizable system for managing applications,
+          tracking follow-ups, and reviewing job-search activity.
+          Combined a structured workflow with an analytics
+          dashboard and weekly reporting to improve
+          organization and visibility into results.
+        </p>
+
+        <div class="card-links">
+          <a href="Job_Search_Tracker_Blank_Template.xlsx" download>
+            Download Tracker ↗
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINANCE -->
+
+<section class="project-section" id="finance">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Finance</h2>
+      <p>
+        Creating practical financial tools that improve
+        organization, visibility, and control.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- PERSONAL FINANCE -->
+
+      <article class="project-card">
+
+        <p class="card-type">
+          Financial Management · Custom Tool Development
+        </p>
+
+        <h3>Personal Financial Management System</h3>
+
+        <p>
+          Designed a custom financial tracking system
+          as an alternative to Quicken. Built around
+          practical financial management needs rather
+          than a fixed software structure, demonstrating
+          the ability to evaluate an existing tool,
+          identify its limitations, and develop a
+          more flexible solution.
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Lora Anderson
+</footer>
 
 </body>
 </html>
