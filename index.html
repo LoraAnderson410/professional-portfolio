@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Lora Anderson | Operations leadership, business strategy, and process improvement. Explore professional solutions, independent projects, experience, and recommendations.">
+
   <title>Lora Anderson | Operations Leadership &amp; Business Strategy</title>
 
   <style>
@@ -251,6 +253,25 @@
       border-color: var(--forest);
     }
 
+    /* PROFESSIONAL SOLUTIONS BUTTON ROW */
+
+    .solutions-actions {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+      width: 100%;
+    }
+
+    .solutions-actions .button {
+      width: 100%;
+      min-width: 0;
+      padding: 9px 5px;
+      font-size: .83rem;
+      white-space: nowrap;
+    }
+
+    /* SECOND ROW CARDS */
+
     .cards-three .card {
       padding: 21px 22px;
     }
@@ -321,6 +342,14 @@
       }
     }
 
+    /* NARROW TABLET BUTTON ADJUSTMENT */
+
+    @media (max-width: 850px) {
+      .solutions-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     /* MOBILE */
 
     @media (max-width: 720px) {
@@ -376,6 +405,10 @@
         margin-top: 0;
       }
 
+      .solutions-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .about {
         grid-template-columns: 1fr;
         gap: 17px;
@@ -405,20 +438,43 @@
 
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main navigation">
-      <a class="nav-name" href="index.html">Lora Anderson</a>
+
+      <a class="nav-name" href="index.html">
+        Lora Anderson
+      </a>
 
       <div class="nav-links">
+
         <a href="index.html">Home</a>
+
         <a href="#about">About</a>
-        <a href="Real%20World%20Experience.html">Professional Solutions</a>
+
+        <a href="Real%20World%20Experience.html">
+          Professional Solutions
+        </a>
+
         <a href="projects.html">Projects</a>
+
         <a href="guides.html">Guides</a>
+
         <a href="Redacted_Reference_Packet.pdf"
-           target="_blank" rel="noopener noreferrer">Recommendations</a>
+           target="_blank"
+           rel="noopener noreferrer">
+          Recommendations
+        </a>
+
         <a href="LA%20Resume-Public.pdf"
-           target="_blank" rel="noopener noreferrer">Resume</a>
+           target="_blank"
+           rel="noopener noreferrer">
+          Resume
+        </a>
+
         <a href="https://www.linkedin.com/in/loraanderson410"
-           target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+           target="_blank"
+           rel="noopener noreferrer">
+          LinkedIn ↗
+        </a>
+
       </div>
     </nav>
   </header>
@@ -458,12 +514,17 @@
 
     <div class="cards-two">
 
+      <!-- PROFESSIONAL SOLUTIONS -->
+
       <section class="card card-feature"
                id="real-world"
                aria-labelledby="solutions-title">
 
         <p class="card-label">Leadership in Action</p>
-        <h2 id="solutions-title">Professional Solutions</h2>
+
+        <h2 id="solutions-title">
+          Professional Solutions
+        </h2>
 
         <p>
           Throughout my career, I've led initiatives to strengthen
@@ -477,41 +538,47 @@
           the decisions behind them, and the outcomes of that work.
         </p>
 
-        <div class="card-actions"
+        <!-- FOUR EQUAL-WIDTH BUTTONS -->
+
+        <div class="card-actions solutions-actions"
              aria-label="Explore professional solutions by area">
 
           <a class="button button-outline"
              href="Onboarding_Case_Study.pdf"
              target="_blank"
              rel="noopener noreferrer">
-            Workforce &amp; Retention
+            Workforce
           </a>
 
           <a class="button button-outline"
              href="Policy_Automation_Portfolio.pdf"
              target="_blank"
              rel="noopener noreferrer">
-            Systems &amp; Governance
+            Systems
           </a>
 
           <a class="button button-outline"
              href="Real%20World%20Experience.html#solutions">
-            Operational Improvements
+            Operations
           </a>
 
           <a class="button"
              href="Real%20World%20Experience.html">
-            Explore All Solutions
+            View All
           </a>
 
         </div>
+
       </section>
+
+      <!-- PROJECTS -->
 
       <section class="card"
                id="projects"
                aria-labelledby="projects-title">
 
         <p class="card-label">Independent Work</p>
+
         <h2 id="projects-title">Projects</h2>
 
         <p>
@@ -542,9 +609,12 @@
 
     <div class="cards-three">
 
+      <!-- EXPERIENCE -->
+
       <section class="card" aria-labelledby="resume-title">
 
         <p class="card-label">Professional Background</p>
+
         <h2 id="resume-title">Experience</h2>
 
         <p>
@@ -566,10 +636,16 @@
 
       </section>
 
-      <section class="card" aria-labelledby="recommendations-title">
+      <!-- RECOMMENDATIONS -->
+
+      <section class="card"
+               aria-labelledby="recommendations-title">
 
         <p class="card-label">Professional Credibility</p>
-        <h2 id="recommendations-title">Recommendations</h2>
+
+        <h2 id="recommendations-title">
+          Recommendations
+        </h2>
 
         <p>
           Leadership is also reflected in the experience of those
@@ -589,9 +665,13 @@
 
       </section>
 
-      <section class="card" aria-labelledby="linkedin-title">
+      <!-- LINKEDIN -->
+
+      <section class="card"
+               aria-labelledby="linkedin-title">
 
         <p class="card-label">Leadership Perspectives</p>
+
         <h2 id="linkedin-title">LinkedIn</h2>
 
         <p>
@@ -623,7 +703,10 @@
       <div class="about-copy">
 
         <p class="card-label">About Me</p>
-        <h2 id="about-title">My Approach to Leadership</h2>
+
+        <h2 id="about-title">
+          My Approach to Leadership
+        </h2>
 
         <p>
           I believe effective leadership requires understanding more
