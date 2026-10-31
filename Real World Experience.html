@@ -41,7 +41,10 @@
     .featured-card p.description {font-size:.9rem;line-height:1.51;margin:0 0 14px}
     .case-link {margin-top:auto;display:inline-flex;align-self:flex-start;background:var(--forest);color:white;font-size:.82rem;font-weight:700;text-decoration:none;border-radius:5px;padding:9px 13px}
     .case-link:hover {background:#3f5849}
-    .case-context {margin-top:auto;color:var(--muted);font-size:.8rem;font-weight:700}
+    .case-context {margin:0 0 13px;color:var(--muted);font-size:.8rem;font-weight:700}
+    .mini-links {display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:7px}
+    .mini-links a {color:var(--forest);font-size:.76rem;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+    .mini-links a:hover {color:#825e2f}
 
     .support-header {border-top:1px solid var(--line);margin:23px 0 13px;padding-top:22px}
     .support-header h2 {font-size:1.46rem;line-height:1.25;color:var(--forest);margin:0 0 3px}
@@ -56,6 +59,7 @@
     .mini-card {background:white;border:1px solid var(--line);border-radius:6px;padding:12px 13px;margin-bottom:9px;min-width:0}
     .mini-card h4 {font-size:.92rem;line-height:1.27;color:var(--forest);margin:0 0 4px}
     .mini-card p {font-size:.82rem;line-height:1.43;margin:0;color:#455149}
+    .category-jump {display:none}
     details {margin-top:2px}
     summary {cursor:pointer;color:var(--forest);font-size:.84rem;font-weight:700;padding:8px 3px;list-style-position:inside}
     details[open] summary {margin-bottom:5px}
@@ -67,7 +71,19 @@
       .featured-grid, .category-grid {gap:12px}
       .featured-card {padding:16px}
     }
-    @media(max-width:760px) {
+    /* Preserve three function columns on compact laptop and preview windows. */
+    @media(min-width:621px) and (max-width:760px) {
+      .wrap {width:calc(100% - 28px)}
+      .featured-grid, .category-grid {gap:10px}
+      .featured-card {padding:12px}
+      .featured-card h2 {font-size:1.08rem}
+      .featured-card p.description {font-size:.83rem}
+      .mini-card {padding:10px}
+      .mini-card h4 {font-size:.85rem}
+      .mini-card p {font-size:.77rem}
+      .category h3 {font-size:1.03rem}
+    }
+    @media(max-width:620px) {
       html {scroll-padding-top:15px}
       .site-header {position:relative}
       .wrap {width:min(100% - 32px,1100px)}
@@ -79,6 +95,9 @@
       .category > .mini-card {margin-bottom:9px}
       .category h3 {margin-top:5px}
       .support-header {margin-top:20px}
+      .category-jump {display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 15px}
+      .category-jump a {background:white;border:1px solid var(--line);border-radius:5px;padding:6px 9px;color:var(--forest);font-size:.8rem;font-weight:700;text-decoration:none}
+      .category-jump a:hover {border-color:var(--gold)}
     }
     @media(prefers-reduced-motion:reduce) {
       html {scroll-behavior:auto}
@@ -113,33 +132,34 @@
 
   <main class="wrap">
 
-    <section class="featured-grid" aria-label="Featured leadership case studies">
+    <section class="featured-grid" aria-label="Featured professional solutions">
 
       <article class="featured-card" id="workforce">
-        <p class="kicker">Workforce · Featured case study</p>
+        <p class="kicker">People Operations · Featured solution</p>
         <h2>Onboarding &amp; Employee Retention</h2>
         <p class="employer">Friends of Children and Families</p>
-        <span class="metric">~65% reduction</span>
-        <p class="description">At a residential program struggling with employee retention, I helped redesign onboarding through phased training, experienced mentors, and structured leadership check-ins. Regrettable attrition declined by approximately 65%.</p>
-        <a class="case-link" href="Onboarding_Case_Study.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
+        <span class="metric">~90% to ~30%</span>
+        <p class="description">At one residential program, helped redesign onboarding through phased training, experienced mentors and leadership check-ins. First-90-day turnover declined from approximately 90% to 30%.</p>
+        <a class="case-link" href="Onboarding_Case_Study.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
       </article>
 
       <article class="featured-card" id="systems">
-        <p class="kicker">Systems · Featured case study</p>
+        <p class="kicker">Systems · Featured solution</p>
         <h2>Policy Governance &amp; Automation</h2>
         <p class="employer">Family Solutions</p>
         <span class="metric">~300 policies</span>
         <p class="description">Designed and implemented automated Microsoft 365 workflows for policy review, routing, reminders, and approval tracking, strengthening governance and accountability across approximately 300 organizational policies.</p>
-        <a class="case-link" href="Policy_Automation_Portfolio.pdf" target="_blank" rel="noopener noreferrer">Read case study ↗</a>
+        <a class="case-link" href="Policy_Automation_Portfolio.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
       </article>
 
       <article class="featured-card" id="finance">
-        <p class="kicker">Finance · Featured accomplishment</p>
+        <p class="kicker">Finance · Featured solution</p>
         <h2>Property Portfolio Growth &amp; Strategic Redevelopment</h2>
         <p class="employer">National Builders and Acceptance Corporation</p>
         <span class="metric">100% Growth in Rental Revenue</span>
-        <p class="description">Led a strategy to improve occupancy and rental performance across a portfolio of more than 100 units. Prioritized vacant properties, directed targeted renovations, and developed targeted marketing strategies.</p>
+        <p class="description">Partnered with the owner to restore a portfolio of more than 100 rental units through renovations, targeted leasing and operational improvements. Rental revenue doubled by 2019, with full occupancy by 2021.</p>
         <span class="case-context">Business Strategy · Financial Oversight · Redevelopment</span>
+        <a class="case-link" href="NBAC_Business_Turnaround_and_Strategic_Growth.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
       </article>
 
     </section>
@@ -148,11 +168,16 @@
       <h2>Additional Accomplishments</h2>
       <p>Selected work prioritized for leadership impact and versatility. Expand any category to see more.</p>
     </div>
+    <nav class="category-jump" aria-label="Jump to professional area">
+      <a href="#workforce-more">People Operations</a>
+      <a href="#systems-more">Systems</a>
+      <a href="#finance-more">Finance &amp; Growth</a>
+    </nav>
 
     <section class="category-grid" aria-label="Additional accomplishments by function">
 
       <div class="category" aria-labelledby="workforce-more">
-        <h3 id="workforce-more">Workforce</h3>
+        <h3 id="workforce-more">People Operations</h3>
 
         <article class="mini-card">
           <h4>Supervisor Development &amp; Workforce Stability</h4>
@@ -170,11 +195,11 @@
         </article>
 
         <details>
-          <summary>More workforce accomplishments</summary>
+          <summary>More people operations accomplishments</summary>
 
           <article class="mini-card">
             <h4>Staffing &amp; Training Coordination</h4>
-            <p>Balanced service coverage with employee readiness and mandatory training requirements in residential operations.</p>
+            <p>Coordinated staffing coverage, safety training and required learning across sites; tracked completion and coached teams on new systems.</p>
           </article>
 
           <article class="mini-card">
@@ -189,17 +214,24 @@
 
         <article class="mini-card">
           <h4>Executive Reporting &amp; 100+ KPIs</h4>
-          <p>Established Family Solutions' organization-wide KPI framework and Power BI reporting for executive and board discussions.</p>
+          <p>Built 100+ validated financial, workforce and program KPIs; migrated from Excel to Power BI for interactive trends and data governance.</p>
+          <div class="mini-links">
+            <a href="Executive_KPI_Reporting_and_Data_Governance_Family_Solutions.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
+          </div>
         </article>
 
         <article class="mini-card">
           <h4>Enterprise Systems Implementation</h4>
-          <p>Led ADP Workforce Now selection and implementation at National Builders and Acceptance Corporation; implemented or supported UKG Ready and Microsoft 365 at Family Solutions and Paychex at Friends of Children and Families.</p>
+          <p>Independently implemented ADP, QuickBooks and Buildium at NBAC; led UKG data preparation and served as HRIS administrator at Family Solutions. Also supported Paychex.</p>
+          <div class="mini-links">
+            <a href="ADP_Workforce_Now_HRIS_Implementation_and_Payroll_Transformation.pdf" target="_blank" rel="noopener noreferrer">ADP implementation ↗</a>
+            <a href="UKG_HRIS_Modernization_Data_Integrity_and_Operational_Controls.pdf" target="_blank" rel="noopener noreferrer">UKG implementation ↗</a>
+          </div>
         </article>
 
         <article class="mini-card">
           <h4>Safety Monitoring Built to Scale</h4>
-          <p>Developed an inspection and incident reporting system at National Builders and Acceptance Corporation, then adapted it at Friends of Children and Families and Family Solutions.</p>
+          <p>Built dashboards tracking incidents, inspections, drills and safety training at NBAC, then adapted the system at subsequent organizations.</p>
         </article>
 
         <details>
@@ -207,17 +239,20 @@
 
           <article class="mini-card">
             <h4>SharePoint Security &amp; Governance</h4>
-            <p>Created a PowerShell script to audit SharePoint access at Family Solutions and led the subsequent permissions cleanup.</p>
+            <p>Corrected SharePoint access and PHI risks, restricted document editing, archived outdated files and established quarterly access reviews.</p>
+            <div class="mini-links">
+              <a href="SharePoint_Security_Access_Controls_and_Document_Governance.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
+            </div>
           </article>
 
           <article class="mini-card">
-            <h4>Solutions Without New Software</h4>
-            <p>Used available tools to create clearer evacuation maps, organizational charts, and maintenance request tracking at Family Solutions.</p>
+            <h4>Resourceful Solutions With Existing Software</h4>
+            <p>Created organizational charts, evacuation maps and operational tools with existing software; an improved safety map earned positive licensing feedback.</p>
           </article>
 
           <article class="mini-card">
-            <h4>Operational Documentation &amp; AI Safeguards</h4>
-            <p>Developed SOPs across organizations and an AI-use confidentiality policy at Family Solutions.</p>
+            <h4>AI Data Safeguards &amp; Operating Procedures</h4>
+            <p>Developed SOPs and an AI-use policy after identifying risks to confidential employee and client data.</p>
           </article>
 
           <article class="mini-card">
@@ -231,8 +266,11 @@
         <h3 id="finance-more">Finance &amp; Growth</h3>
 
         <article class="mini-card">
-          <h4>$100K+ in Annual Vendor Savings</h4>
-          <p>Renegotiated three major vendor relationships at Family Solutions, reducing recurring annual operating expenses by more than $100,000.</p>
+          <h4>$500K+ in Cost Savings</h4>
+          <p>Documented $500K+ in savings through vendor reviews and service changes, including $100K+ in annual recurring reductions from three vendors.</p>
+          <div class="mini-links">
+            <a href="Strategic_Cost_Reduction_Vendor_Management_and_Resource_Optimization.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
+          </div>
         </article>
 
         <article class="mini-card">
@@ -249,8 +287,11 @@
           <summary>More finance accomplishments</summary>
 
           <article class="mini-card">
-            <h4>Financial Controls That Changed Operations</h4>
-            <p>Created a dedicated credit card policy and automated Excel tracker feeding financial KPI dashboards at Family Solutions. Used spending analysis to identify rising food-delivery costs and inform the decision to hire a cook for a residential program.</p>
+            <h4>Corporate Card Controls &amp; Reconciliation</h4>
+            <p>Redesigned credit card policies, program budgets, receipt controls and automated reconciliation, improving AP close and exposing avoidable spending.</p>
+            <div class="mini-links">
+              <a href="Financial_Controls_Corporate_Credit_Card_Management_Transformation.pdf" target="_blank" rel="noopener noreferrer">Read solution ↗</a>
+            </div>
           </article>
 
           <article class="mini-card">
@@ -264,8 +305,8 @@
           </article>
 
           <article class="mini-card">
-            <h4>Contract &amp; Resource Accountability</h4>
-            <p>Built renewal reminders, spending controls, and practical tracking tools to strengthen oversight without unnecessary software expense.</p>
+            <h4>Subscription &amp; Contract Accountability</h4>
+            <p>Reviewed recurring contracts, subscriptions and licensed seats across employers to uncover unused services and unnecessary expenses.</p>
           </article>
 
         </details>
@@ -278,4 +319,3 @@
   <footer>© 2026 Lora Anderson</footer>
 </body>
 </html>
-
